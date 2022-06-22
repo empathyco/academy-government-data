@@ -4,15 +4,19 @@ from urllib.error import HTTPError
 import pandas as pd
 import ssl
 
-def complete_bdns_mk2(crawled_data, lost):
+def complete_bdns_mk2(original_data):
     
+    no_encontrado = []
+    indice = list(original_data.index)
+    
+    crawled_data = pd.DataFrame(original_data.codigo_bdns)
     crawled_data['importe_total'] = ''
     crawled_data['tipo_beneficiario'] = ''
     crawled_data['sector_beneficiario'] = ''
     crawled_data['region_impacto'] = ''
     crawled_data['finalidad'] = ''
 
-    for i in crawled_data.index:
+    for i in indice:
         # Allows the crawler to conect to the web page
         ssl._create_default_https_context = ssl._create_unverified_context
         
@@ -22,7 +26,7 @@ def complete_bdns_mk2(crawled_data, lost):
            rawpage = request.urlopen(url) # Open the url
         except HTTPError as err:
            if err.code == 404:
-               lost.append(crawled_data.codigo_bdns[i])
+               no_encontrado.append(crawled_data.codigo_bdns[i])
                
         else:
             # Parsing to html
@@ -66,10 +70,7 @@ def complete_bdns_mk2(crawled_data, lost):
 
         if i % 100 == 0:
             print(round(i / len(crawled_data.index) * 100, 2), '%')
-            
-            
-            
-data = pd.DataFrame(convocatorias.iloc[:100].codigo_bdns)
-no_encontrado = []
+    
+    return crawled_data, no_encontrado
 
-complete_bdns_mk2(data, no_encontrado)
+crawled_data, no_encontrado = complete_bdns_mk2(datos)
