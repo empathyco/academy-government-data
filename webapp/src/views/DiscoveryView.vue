@@ -6,6 +6,7 @@
     <BubbleChart :series="getData"></BubbleChart>
     <WordCloud :series="getDataSingleSerie"></WordCloud>
     <PieChart :series="getDataSingleSerie"></PieChart>
+    <LinePlotChart :series="getDataBarChart"></LinePlotChart>
   </div>
 </template>
 
@@ -14,10 +15,11 @@ import BubbleChart from "@/components/insights/BubbleChart";
 import WordCloud from "@/components/insights/WordCloud";
 import PieChart from "@/components/insights/PieChart";
 import BarChart from "@/components/insights/BarChart";
+import LinePlotChart from "@/components/insights/LinePlotChart";
 
 export default {
   name: "DiscoveryView",
-  components: { BubbleChart, WordCloud, PieChart, BarChart },
+  components: { LinePlotChart, BubbleChart, WordCloud, PieChart, BarChart },
   computed: {
     getDataSingleSerie() {
       return {
