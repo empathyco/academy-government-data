@@ -15,6 +15,16 @@ export default Vue.extend({
       selected: true,
       categories: [],
       processedseries: [],
+      colors: [
+        "#D44A6F",
+        "#53B9C9",
+        "#FDCB5B",
+        "#8B6391",
+        "#80C0A1",
+        "#E67962",
+        "#0086B2",
+      ],
+      counter: 0,
     };
   },
   props: {
@@ -40,6 +50,7 @@ export default Vue.extend({
         },
         yAxis: {
           min: 0,
+          title: "",
         },
         tooltip: {
           headerFormat:
@@ -50,6 +61,17 @@ export default Vue.extend({
           footerFormat: "</table>",
           shared: true,
           useHTML: true,
+        },
+        title: {
+          text: "",
+          style: {
+            color: "#243D48",
+            fontFamily: "Avenir, Helvetica, Arial, sans-serif",
+            fontSize: "24px",
+          },
+        },
+        legend: {
+          enabled: false,
         },
         plotOptions: {
           column: {
@@ -72,24 +94,9 @@ export default Vue.extend({
       );
       this.processedseries = this.series.content.map((current) => ({
         name: current.name,
+        color: this.getColor(),
         data: current.data.map((currentElem) => currentElem.value),
       }));
-      return this.series.content.reduce(
-        (list, current) => [
-          ...list,
-          {
-            type: "wordcloud",
-            data: current.data.reduce((finalList, currentElement) => {
-              return [
-                ...finalList,
-                { name: currentElement.name, weight: currentElement.value },
-              ];
-            }, []),
-            name: "Ocurrences",
-          },
-        ],
-        []
-      );
     },
   },
   mounted() {
