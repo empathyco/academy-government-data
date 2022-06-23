@@ -3,19 +3,21 @@
     <h1>Explora</h1>
     <p>Aquí verás todo lo que necesites de las subvenciones</p>
     <BubbleChart :series="getData"></BubbleChart>
-    <WordCloud :series="getDataWordCloud"></WordCloud>
+    <WordCloud :series="getDataSingleSerie"></WordCloud>
+    <PieChart :series="getDataSingleSerie"></PieChart>
   </div>
 </template>
 
 <script>
 import BubbleChart from "@/components/insights/BubbleChart";
 import WordCloud from "@/components/insights/WordCloud";
+import PieChart from "@/components/insights/PieChart";
 
 export default {
   name: "DiscoveryView",
-  components: { BubbleChart, WordCloud },
+  components: { BubbleChart, WordCloud, PieChart },
   computed: {
-    getDataWordCloud() {
+    getDataSingleSerie() {
       return {
         content: [
           {

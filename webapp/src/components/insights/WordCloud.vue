@@ -144,7 +144,6 @@ export default Vue.extend({
       return this.colors[this.counter++];
     },
     preprocess() {
-      let res = [];
       return this.series.content.reduce(
         (list, current) => [
           ...list,

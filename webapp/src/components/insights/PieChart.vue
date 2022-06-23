@@ -7,8 +7,10 @@
 <script>
 import Vue from "vue";
 import Highcharts from "highcharts";
+import loadPie from "highcharts/modules/variable-pie";
 import highchartsMore from "highcharts/highcharts-more";
 
+loadPie(Highcharts);
 highchartsMore(Highcharts);
 
 export default Vue.extend({
@@ -26,66 +28,64 @@ export default Vue.extend({
   },
   methods: {
     createChart() {
-      Highcharts.chart("container", {
+      const data = this.preprocess();
+      Highcharts.chart("pie", {
+        colors: [
+          "#8B6391",
+          "#53B9C9",
+          "#D44A6F",
+          "#FDCB5B",
+          "#80C0A1",
+          "#E67962",
+          "#0086B2",
+        ],
         chart: {
-          type: "variablepie",
+          plotBackgroundColor: null,
+          plotBorderWidth: null,
+          plotShadow: false,
+          type: "pie",
         },
         title: {
-          text: "Countries compared by population density and total area.",
+          text: "", //Here would go the title
         },
         tooltip: {
-          headerFormat: "",
-          pointFormat:
-            '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-            "Area (square km): <b>{point.y}</b><br/>" +
-            "Population density (people per square km): <b>{point.z}</b><br/>",
+          pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
         },
-        series: [
+        accessibility: {
+          point: {
+            valueSuffix: "%",
+          },
+        },
+        plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: "pointer",
+            dataLabels: {
+              enabled: true,
+              format: "<b>{point.name}</b>: {point.percentage:.1f} %",
+            },
+          },
+        },
+        series: data,
+      });
+    },
+    preprocess() {
+      return this.series.content.reduce(
+        (list, current) => [
+          ...list,
           {
-            minPointSize: 10,
-            innerSize: "20%",
-            zMin: 0,
-            name: "countries",
-            data: [
-              {
-                name: "Spain",
-                y: 505370,
-                z: 92.9,
-              },
-              {
-                name: "France",
-                y: 551500,
-                z: 118.7,
-              },
-              {
-                name: "Poland",
-                y: 312685,
-                z: 124.6,
-              },
-              {
-                name: "Czech Republic",
-                y: 78867,
-                z: 137.5,
-              },
-              {
-                name: "Italy",
-                y: 301340,
-                z: 201.8,
-              },
-              {
-                name: "Switzerland",
-                y: 41277,
-                z: 214.5,
-              },
-              {
-                name: "Germany",
-                y: 357022,
-                z: 235.6,
-              },
-            ],
+            name: "", //To be determined
+            colorByPoint: true,
+            data: current.data.reduce((finalList, currentElement) => {
+              return [
+                ...finalList,
+                { name: currentElement.name, y: currentElement.value },
+              ];
+            }, []),
           },
         ],
-      });
+        []
+      );
     },
   },
   mounted() {
