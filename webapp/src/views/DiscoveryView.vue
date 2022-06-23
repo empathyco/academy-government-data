@@ -2,17 +2,20 @@
   <div>
     <h1>Explora</h1>
     <p>Aquí verás todo lo que necesites de las subvenciones</p>
-    <img src="../assets/WIP.jpeg" alt="Work in progress" />
     <BarChart :series="getDataBarChart" />
+    <BubbleChart :series="getData"></BubbleChart>
+    <WordCloud :series="getDataWordCloud"></WordCloud>
   </div>
 </template>
 
 <script>
+import BubbleChart from "@/components/insights/BubbleChart";
+import WordCloud from "@/components/insights/WordCloud";
 import BarChart from "@/components/insights/BarChart";
 
 export default {
   name: "DiscoveryView",
-  components: { BarChart },
+  components: { BubbleChart, WordCloud, BarChart },
   computed: {
     getDataWordCloud() {
       return {
@@ -233,7 +236,6 @@ export default {
         ],
       };
     },
-
     getDataBarChart() {
       return {
         content: [
