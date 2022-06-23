@@ -2,6 +2,7 @@
   <div>
     <h1>Explora</h1>
     <p>Aquí verás todo lo que necesites de las subvenciones</p>
+    <BarChart :series="getDataBarChart" />
     <BubbleChart :series="getData"></BubbleChart>
     <WordCloud :series="getDataSingleSerie"></WordCloud>
     <PieChart :series="getDataSingleSerie"></PieChart>
@@ -12,10 +13,11 @@
 import BubbleChart from "@/components/insights/BubbleChart";
 import WordCloud from "@/components/insights/WordCloud";
 import PieChart from "@/components/insights/PieChart";
+import BarChart from "@/components/insights/BarChart";
 
 export default {
   name: "DiscoveryView",
-  components: { BubbleChart, WordCloud, PieChart },
+  components: { BubbleChart, WordCloud, PieChart, BarChart },
   computed: {
     getDataSingleSerie() {
       return {
@@ -230,6 +232,81 @@ export default {
               {
                 value: 32,
                 name: "Reality-TV",
+              },
+            ],
+          },
+        ],
+      };
+    },
+    getDataBarChart() {
+      return {
+        content: [
+          {
+            name: "Documentary",
+            data: [
+              {
+                // name property is used for the datalabel
+                // value property is used for the volume of the bubble
+                value: 812,
+                name: "Films",
+              },
+              {
+                value: 951,
+                name: "TVReality",
+              },
+              {
+                value: 117,
+                name: "Series",
+              },
+              {
+                value: 17,
+                name: "Short",
+              },
+            ],
+          },
+          {
+            name: "Drama",
+            data: [
+              {
+                // name property is used for the datalabel
+                // value property is used for the volume of the bubble
+                value: 612,
+                name: "Films",
+              },
+              {
+                value: 251,
+                name: "TVReality",
+              },
+              {
+                value: 17,
+                name: "Series",
+              },
+              {
+                value: 317,
+                name: "Short",
+              },
+            ],
+          },
+          {
+            name: "Comedy",
+            data: [
+              {
+                // name property is used for the datalabel
+                // value property is used for the volume of the bubble
+                value: 312,
+                name: "Films",
+              },
+              {
+                value: 351,
+                name: "TVReality",
+              },
+              {
+                value: 217,
+                name: "Series",
+              },
+              {
+                value: 217,
+                name: "Short",
               },
             ],
           },
