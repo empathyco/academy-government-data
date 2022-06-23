@@ -108,6 +108,7 @@ nav {
     position: relative;
     opacity: 0;
     top: -20px;
+    -webkit-transition: all 1s;
     transition: all 1s;
   }
 
