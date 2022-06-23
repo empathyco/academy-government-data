@@ -22,9 +22,9 @@
 :root {
   //Colours that will be used in the web
   --background-colour: rgb(255, 255, 255);
-  --font-colour: rgb(36, 61, 72);
-  --font-selected-link: #42b983;
-  --font-unselected-link: rgb(36, 61, 72);
+  --font-colour: #243d48;
+  --font-selected-link: #53b9c9;
+  --font-unselected-link: #243d48;
 }
 #app {
   font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
@@ -79,11 +79,13 @@ nav {
   justify-content: flex-end;
   position: fixed;
   right: 0;
+  z-index: 2;
   a {
     margin-right: 10px;
     padding: 8px 10px;
     font-weight: bold;
     color: var(--font-unselected-link);
+    background-color: white;
     border: solid 5px;
     border-radius: 30px;
     transition: 0.5s;
