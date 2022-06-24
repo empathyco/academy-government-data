@@ -12,8 +12,7 @@
     </nav>
     <router-view class="view" />
     <footer>
-      <a href="https://www.empathy.co/"> ©2021 Empathy.co, Inc. </a>
-      <p>Hecho por los Academy de primavera</p>
+      <a href="https://www.empathy.co/"> powered by empathy.co </a>
     </footer>
   </div>
 </template>
@@ -138,5 +137,6 @@ footer {
     text-decoration: none;
     align-self: center;
   }
+  margin-bottom: 20px;
 }
 </style>

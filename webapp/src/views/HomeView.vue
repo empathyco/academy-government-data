@@ -255,6 +255,9 @@ a {
   padding: 10px 20px;
   width: 400px;
 }
+::placeholder {
+  color: #243d48;
+}
 .search-input {
   background: transparent;
   border: none;
