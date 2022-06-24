@@ -49,7 +49,7 @@
             src="@/assets/jose.png"
             alt="Foto de Jose María"
           />
-          <p class="dev-name">José María Llorian</p>
+          <p class="dev-name">José María Llorián</p>
           <p class="dev-description">Product Owner</p>
         </div>
         <div class="dev-card">
@@ -130,7 +130,7 @@ article {
   border-radius: 30px;
   margin: 30px;
   padding: 15px;
-  width: 400px;
+  width: 300px;
 }
 .dev-icon {
   border-radius: 50%;
