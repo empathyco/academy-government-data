@@ -8,6 +8,8 @@
 import Vue from "vue";
 import Highcharts from "highcharts";
 import highchartsMore from "highcharts/highcharts-more";
+import { colorList, empathyBlack } from "@/utils/GlobalVariables";
+import { seriesConstructor } from "@/utils/DataConstructor";
 
 highchartsMore(Highcharts);
 
@@ -15,31 +17,16 @@ export default Vue.extend({
   data() {
     return {
       selected: true,
-      colors: [
-        "#8B6391",
-        "#53B9C9",
-        "#D44A6F",
-        "#FDCB5B",
-        "#80C0A1",
-        "#E67962",
-        "#0086B2",
-      ],
+      colors: colorList,
       counter: 0,
     };
   },
   props: {
-    series: {
-      content: Array({
-        name: String,
-        data: Array({
-          name: String,
-          value: Number,
-        }),
-      }),
-    },
+    series: seriesConstructor,
   },
   methods: {
     createChart() {
+      const data = this.preprocess();
       Highcharts.chart("bubble", {
         chart: {
           type: "packedbubble",
@@ -50,7 +37,7 @@ export default Vue.extend({
         title: {
           text: "",
           style: {
-            color: "#243D48",
+            color: empathyBlack,
             fontFamily: "Avenir, Helvetica, Arial, sans-serif",
             fontSize: "24px",
           },
@@ -59,8 +46,7 @@ export default Vue.extend({
           enabled: false,
         },
         tooltip: {
-          headerFormat:
-            '<span style="font-size: 16px; font-weight: bolder ; color:#243D48;">{point.key}</span><br/>',
+          headerFormat: `<span style="font-size: 16px; font-weight: bolder ; color:${empathyBlack};">{point.key}</span><br/>`,
           style: {
             fontSize: 16,
           },
@@ -77,7 +63,7 @@ export default Vue.extend({
               enabled: true,
               format: "{point.name}",
               style: {
-                color: "#243D48",
+                color: empathyBlack,
                 textOutline: "none",
                 fontWeight: "normal",
                 fontFamily: "Avenir, Helvetica, Arial, sans-serif",
@@ -86,16 +72,7 @@ export default Vue.extend({
             },
           },
         },
-        series: this.series.content.reduce((totalSeries, serie) => {
-          return [
-            ...totalSeries,
-            {
-              name: serie.name, // Coffee series
-              color: this.getColor(),
-              data: serie.data,
-            },
-          ];
-        }, []),
+        series: data,
       });
     },
     getColor() {
@@ -103,6 +80,18 @@ export default Vue.extend({
         this.counter = 0;
       }
       return this.colors[this.counter++];
+    },
+    preprocess() {
+      return this.series.content.reduce((totalSeries, serie) => {
+        return [
+          ...totalSeries,
+          {
+            name: serie.name, // Coffee series
+            color: this.getColor(),
+            data: serie.data,
+          },
+        ];
+      }, []);
     },
   },
   mounted() {

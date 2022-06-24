@@ -8,6 +8,8 @@
 import Vue from "vue";
 import Highcharts from "highcharts";
 import highchartsMore from "highcharts/highcharts-more";
+import { colorList } from "@/utils/GlobalVariables";
+import { seriesConstructor } from "@/utils/DataConstructor";
 
 highchartsMore(Highcharts);
 
@@ -18,28 +20,12 @@ export default Vue.extend({
       selected: true,
       categories: [],
       processedseries: [],
-      colors: [
-        "#D44A6F",
-        "#53B9C9",
-        "#FDCB5B",
-        "#8B6391",
-        "#80C0A1",
-        "#E67962",
-        "#0086B2",
-      ],
+      colors: colorList,
       counter: 0,
     };
   },
   props: {
-    series: {
-      content: Array({
-        name: String,
-        data: Array({
-          name: String,
-          value: Number,
-        }),
-      }),
-    },
+    series: seriesConstructor,
   },
   methods: {
     createChart() {
