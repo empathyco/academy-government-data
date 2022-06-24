@@ -1,0 +1,39 @@
+version: "3"
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.2
+    container_name: governmentdata-elasticsearch
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    environment:
+      - "discovery.type=single-node" #Disable bootstrap checks
+    ports:
+      - 9200:9200
+  indexing_job:
+    build:
+      context: ./testing-environment
+      dockerfile: Dockerfile
+    container_name: governmentdata-indexing-job-local
+    volumes:
+      - ./testing-environment/collection-data-files:/collection-data-files
+    depends_on:
+      - elasticsearch
+  search:
+    image: search-governmentdata-plugin:local
+    container_name: search-governmentdata-plugin
+    build: ""
+    environment:
+      - JAVA_HEAP=256m
+      - SPRING_PROFILES_ACTIVE=plugins-files.local,plugins-configs.local
+      - COLLECTION_NAMING_CONFIG_PROVIDER=local
+      - COLLECTION_NAMING_CONFIG_LOCAL_PATH=/srv/collection-config/collection-name-config.json
+      - COLLECTION_NAMING_CONFIG_INSTANCE=test
+      - PLUGINS_CONFIGS_LOCAL_PATH=/srv/plugin-configs
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
+      - ELASTIC_READ_URL=http://elasticsearch:9200
+      - TRACKING_ENABLED=false
+    ports:
+      - 8080:8080
+      - 5005:5005
+volumes:
+  esdata:
