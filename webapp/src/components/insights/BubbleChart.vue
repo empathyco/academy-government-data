@@ -96,6 +96,5 @@ export default Vue.extend({
 .highcharts-figure {
   min-width: 320px;
   max-width: 1000px;
-  margin: 1em auto;
 }
 </style>

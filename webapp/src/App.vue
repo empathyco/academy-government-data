@@ -10,7 +10,7 @@
         ><i class="fa fa-info-circle fa-2x"></i
       ></router-link>
     </nav>
-    <router-view />
+    <router-view class="view" />
     <footer>
       <a href="https://www.empathy.co/"> ©2021 Empathy.co, Inc. </a>
       <p>Hecho por los Academy de primavera</p>
@@ -40,13 +40,13 @@
 
   h1 {
     font-size: 3.3125rem;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 4.3125rem;
   }
 
   h2 {
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 36px;
+    font-weight: 600;
     line-height: 36px;
   }
 
@@ -127,7 +127,9 @@ nav {
     content: "Info";
   }
 }
-
+.view {
+  margin-bottom: 200px;
+}
 footer {
   display: flex;
   justify-content: space-between;
