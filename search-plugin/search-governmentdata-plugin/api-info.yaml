@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: search-governmentdata-plugin
+  description: The governmentdata plugin api
+  tags:
+    - search
+    - plugin
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: search
+  definition:
+    $text: https://github.com/empathyco/search-governmentdata-plugin/blob/main/docs/api/openapi.yml

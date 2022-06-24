@@ -1,0 +1,2 @@
+_extends: search-github-settings
+name-template: 'Index governmentdata: $RESOLVED_VERSION'
