@@ -10,6 +10,12 @@ import Highcharts from "highcharts";
 import highchartsMore from "highcharts/highcharts-more";
 import { colorList } from "@/utils/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
+import {
+  legendVal,
+  titleVal,
+  xAxisVal,
+  yAxisVal,
+} from "@/utils/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 
@@ -33,26 +39,19 @@ export default Vue.extend({
         chart: {
           type: "line",
         },
-        title: {
-          text: "Monthly Average Temperature",
-        },
+        title: titleVal("Monthly Average Temperature"),
         subtitle: {
           text: "Source: WorldClimate.com",
         },
-        xAxis: {
-          categories: this.categories,
-        },
-        yAxis: {
-          title: {
-            text: "",
-          },
-        },
+        legend: legendVal(false),
+        xAxis: xAxisVal(this.categories),
+        yAxis: yAxisVal(),
         plotOptions: {
           line: {
             dataLabels: {
               enabled: true,
             },
-            enableMouseTracking: false,
+            enableMouseTracking: true,
           },
         },
         series: this.processedseries,

@@ -6,8 +6,14 @@
 <script>
 import Vue from "vue";
 import Highcharts from "highcharts";
-import { colorList, empathyBlack } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
+import {
+  legendVal,
+  titleVal,
+  xAxisVal,
+  yAxisVal,
+} from "@/utils/HighchartOptConfig";
 
 export default Vue.extend({
   data() {
@@ -28,14 +34,8 @@ export default Vue.extend({
         chart: {
           type: "column",
         },
-        xAxis: {
-          categories: this.categories,
-          crosshair: true,
-        },
-        yAxis: {
-          min: 0,
-          title: "",
-        },
+        xAxis: xAxisVal(this.categories),
+        yAxis: yAxisVal(),
         tooltip: {
           headerFormat:
             '<span style="font-size:10px">{point.key}</span><table>',
@@ -46,17 +46,8 @@ export default Vue.extend({
           shared: true,
           useHTML: true,
         },
-        title: {
-          text: "",
-          style: {
-            color: empathyBlack,
-            fontFamily: "Avenir, Helvetica, Arial, sans-serif",
-            fontSize: "24px",
-          },
-        },
-        legend: {
-          enabled: false,
-        },
+        title: titleVal("Bar chart"),
+        legend: legendVal(false),
         plotOptions: {
           column: {
             pointPadding: 0.2,

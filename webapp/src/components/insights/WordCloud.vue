@@ -11,6 +11,7 @@ import loadWordcloud from "highcharts/modules/wordcloud";
 import highchartsMore from "highcharts/highcharts-more";
 import { colorList, empathyBlack } from "@/utils/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
+import { legendVal, titleVal } from "@/utils/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 loadWordcloud(Highcharts);
@@ -31,17 +32,8 @@ export default Vue.extend({
       console.log(data);
       Highcharts.chart("word-cloud", {
         colors: colorList,
-        title: {
-          text: "",
-          style: {
-            color: empathyBlack,
-            fontFamily: "Avenir, Helvetica, Arial, sans-serif",
-            fontSize: "24px",
-          },
-        },
-        legend: {
-          enabled: false,
-        },
+        title: titleVal("Word cloud"),
+        legend: legendVal(false),
         tooltip: {
           headerFormat: `<span style="font-size: 16px; font-weight: bolder ; color:${empathyBlack};">{point.key}</span><br/>`,
           style: {
