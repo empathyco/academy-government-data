@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: index-governmentdata-plugin
+  tags:
+    - docs
+    - index
+  description: governmentdata Index Plugin
+  annotations:
+    github.com/project-slug: empathyco/index-governmentdata-plugin
+    backstage.io/techdocs-ref: url:https://github.com/empathyco/index-governmentdata-plugin/tree/main
+    backstage.io/edit-url: https://github.com/empathyco/index-governmentdata-plugin/edit/main/catalog-info.yaml
+    argocd/app-name: index-governmentdata-plugin
+    jira/project-key: HOR
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=index-governmentdata-plugin'
+    sonarqube.org/project-key: co.empathy:index-governmentdata-plugin
+    jenkins.io/github-folder: GitHub Search/index-governmentdata-plugin
+spec:
+  type: service
+  owner: Index
+  lifecycle: development
