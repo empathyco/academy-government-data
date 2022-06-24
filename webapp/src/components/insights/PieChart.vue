@@ -9,6 +9,8 @@ import Vue from "vue";
 import Highcharts from "highcharts";
 import loadPie from "highcharts/modules/variable-pie";
 import highchartsMore from "highcharts/highcharts-more";
+import { colorList } from "@/utils/GlobalVariables";
+import { seriesConstructor } from "@/utils/DataConstructor";
 
 loadPie(Highcharts);
 highchartsMore(Highcharts);
@@ -16,29 +18,13 @@ highchartsMore(Highcharts);
 export default Vue.extend({
   name: "PieChart",
   props: {
-    series: {
-      content: Array({
-        name: String,
-        data: Array({
-          name: String,
-          value: Number,
-        }),
-      }),
-    },
+    series: seriesConstructor,
   },
   methods: {
     createChart() {
       const data = this.preprocess();
       Highcharts.chart("pie", {
-        colors: [
-          "#8B6391",
-          "#53B9C9",
-          "#D44A6F",
-          "#FDCB5B",
-          "#80C0A1",
-          "#E67962",
-          "#0086B2",
-        ],
+        colors: colorList,
         chart: {
           plotBackgroundColor: null,
           plotBorderWidth: null,
@@ -74,7 +60,7 @@ export default Vue.extend({
         (list, current) => [
           ...list,
           {
-            name: "", //To be determined
+            name: "Example", //Name of the unit of measurement
             colorByPoint: true,
             data: current.data.reduce((finalList, currentElement) => {
               return [
