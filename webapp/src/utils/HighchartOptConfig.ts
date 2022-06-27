@@ -49,6 +49,23 @@ export const legendVal: (display: boolean) => { enabled: boolean } = (
 };
 
 /**
+ * Generates an object of the tooltip
+ */
+export const quickTooltipVal: () => {
+  headerFormat: string;
+  style: {
+    fontSize: number;
+  };
+} = () => {
+  return {
+    headerFormat: `<span style="font-size: 16px; font-weight: bolder ; color:${empathyBlack};">{point.key}</span><br/>`,
+    style: {
+      fontSize: 16,
+    },
+  };
+};
+
+/**
  * Function that, given the categories in a list,
  * generates an object of the categories and a crosshair
  * so that Highchart graph that uses a X axis can process it

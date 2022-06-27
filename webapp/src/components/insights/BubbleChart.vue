@@ -10,7 +10,11 @@ import Highcharts from "highcharts";
 import highchartsMore from "highcharts/highcharts-more";
 import { colorList, empathyBlack } from "@/utils/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
-import { legendVal, titleVal } from "@/utils/HighchartOptConfig";
+import {
+  legendVal,
+  quickTooltipVal,
+  titleVal,
+} from "@/utils/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 
@@ -37,12 +41,7 @@ export default Vue.extend({
         },
         title: titleVal("Bubble chart"),
         legend: legendVal(false),
-        tooltip: {
-          headerFormat: `<span style="font-size: 16px; font-weight: bolder ; color:${empathyBlack};">{point.key}</span><br/>`,
-          style: {
-            fontSize: 16,
-          },
-        },
+        tooltip: quickTooltipVal(),
         plotOptions: {
           packedbubble: {
             minSize: "45%",
