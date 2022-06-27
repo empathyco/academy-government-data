@@ -53,59 +53,87 @@
           <p class="dev-description">Product Owner</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Miguel" />
+          <img
+            class="dev-icon"
+            src="@/assets/miguel.png"
+            alt="Foto de Miguel"
+          />
           <p class="dev-name">Miguel Ligero</p>
           <p class="dev-description">Front dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Carmen" />
+          <img
+            class="dev-icon"
+            src="@/assets/carmen.png"
+            alt="Foto de Carmen"
+          />
           <p class="dev-name">Carmen Rendueles</p>
           <p class="dev-description">Front dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Marcos" />
+          <img
+            class="dev-icon"
+            src="@/assets/marcos.png"
+            alt="Foto de Marcos"
+          />
           <p class="dev-name">Marcos Tobias</p>
           <p class="dev-description">Search dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Daniel" />
+          <img
+            class="dev-icon"
+            src="@/assets/daniel.png"
+            alt="Foto de Daniel"
+          />
           <p class="dev-name">Daniel Barrientos</p>
           <p class="dev-description">Search dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Alberto" />
+          <img
+            class="dev-icon"
+            src="@/assets/alberto.png"
+            alt="Foto de Alberto"
+          />
           <p class="dev-name">Alberto Díez</p>
           <p class="dev-description">Search dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Pablo" />
+          <img class="dev-icon" src="@/assets/pablo.png" alt="Foto de Pablo" />
           <p class="dev-name">Pablo Santurio</p>
           <p class="dev-description">Data dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Rodrigo" />
+          <img
+            class="dev-icon"
+            src="@/assets/rodri.png"
+            alt="Foto de Rodrigo"
+          />
           <p class="dev-name">Rodrigo Álvarez</p>
           <p class="dev-description">Data dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Enrique" />
+          <img
+            class="dev-icon"
+            src="@/assets/enrique.png"
+            alt="Foto de Enrique"
+          />
           <p class="dev-name">Enrique Carnero</p>
           <p class="dev-description">Data dev</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Ángel" />
+          <img class="dev-icon" src="@/assets/angel.png" alt="Foto de Ángel" />
           <p class="dev-name">Ángel Maldonado</p>
           <p class="dev-description">CO of empathy.co and client</p>
         </div>
         <div class="dev-card">
-          <img class="dev-icon" src="@/assets/jose.png" alt="Foto de Jaime" />
+          <img class="dev-icon" src="@/assets/jaime.png" alt="Foto de Jaime" />
           <p class="dev-name">Jaime Obregón</p>
           <p class="dev-description">Project inspiration</p>
         </div>
         <div class="dev-card">
           <img
             class="dev-icon"
-            src="@/assets/jose.png"
+            src="@/assets/empathy.png"
             alt="Foto de colaboradores"
           />
           <p class="dev-name">Collaborators from empathy</p>
@@ -124,6 +152,7 @@ article {
 .devs-container {
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 }
 .dev-card {
   border: solid 5px #243d48;
@@ -144,5 +173,13 @@ article {
 }
 .dev-description {
   font-size: 22px;
+}
+p {
+  font-size: 22px;
+  margin: 20px 100px;
+  text-align: center;
+}
+article {
+  padding: 30px;
 }
 </style>
