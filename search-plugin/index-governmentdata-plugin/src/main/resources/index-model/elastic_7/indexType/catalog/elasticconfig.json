@@ -1,0 +1,150 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "index.unassigned.node_left.delayed_timeout": "25m",
+    "similarity": {
+      "default": {
+        "type": "boolean"
+      }
+    },
+    "analysis": {
+      "filter": {
+        "english_stop": {
+          "type": "stop",
+          "stopwords": [
+            // Add stopwords
+          ]
+        },
+        "english_stemmer": {
+          "type": "stemmer",
+          "name": "light_english"
+        },
+        "ngram_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 1,
+          "max_gram": 20
+        },
+        "synonyms": {
+          "type": "synonym_graph",
+          "synonyms": [
+            // Add synonyms
+          ]
+        },
+        "worddelimiter": {
+          "type": "word_delimiter_graph",
+          "preserve_original": true,
+          "split_on_numerics": true,
+          "catenate_all": true,
+          "stem_english_possessive": false
+        },
+        "shingle": {
+          "type": "shingle",
+          "min_shingle_size": 2,
+          "max_shingle_size": 3
+        }
+      },
+      "normalizer": {
+        "lowercase_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "analyzer": {
+        "searchable_index_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "remove_duplicates"
+          ]
+        },
+        "searchable_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "english_stop",
+            "asciifolding"
+          ]
+        },
+        "searchauto_index_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "ngram_tokenizer",
+            "remove_duplicates"
+          ]
+        },
+        "searchderived_index_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "worddelimiter",
+            "english_stemmer"
+          ]
+        },
+        "searchderived_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "english_stop",
+            "asciifolding",
+            "english_stemmer",
+            "synonyms"
+          ]
+        },
+        "spellcheck_index_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ]
+        },
+        "spellcheck_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "english_stop",
+            "asciifolding"
+          ]
+        },
+        "trigram": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "shingle"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+      "properties": {
+        // Implement
+        "spellcheck": {
+          "type": "text",
+          "fields": {
+            "trigram": {
+              "type": "text",
+              "analyzer": "trigram"
+            }
+          },
+          "store": true,
+          "analyzer": "spellcheck_index_analyzer",
+          "search_analyzer": "spellcheck_search_analyzer"
+        }
+      }
+  }
+}

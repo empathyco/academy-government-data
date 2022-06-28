@@ -1,0 +1,87 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "filter": {
+        "shingle": {
+          "type": "shingle",
+          "min_shingle_size": 2,
+          "max_shingle_size": 3
+        }
+      },
+      "analyzer": {
+        "trigram": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "shingle"
+          ]
+        },
+        "spellcheck_index_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ]
+        },
+        "spellcheck_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "spellcheck": {
+        "type": "text",
+        "fields": {
+          "trigram": {
+            "type": "text",
+            "analyzer": "trigram"
+          }
+        },
+        "store": true,
+        "analyzer": "spellcheck_index_analyzer",
+        "search_analyzer": "spellcheck_search_analyzer"
+      },
+      "name": {
+        "type": "text",
+        "copy_to": "spellcheck"
+      },
+      "description": {
+        "type": "text",
+        "copy_to": "spellcheck"
+      },
+      "boost_category": {
+        "type": "keyword"
+      },
+      "facet_brand": {
+        "type": "keyword"
+      },
+      "facet_price": {
+        "type": "float"
+      },
+      "facet_categories": {
+        "type": "keyword"
+      },
+      "facet_categoriesIds": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "categoryIds": {
+        "type": "alias",
+        "path": "facet_categoriesIds"
+      }
+    }
+  }
+}
