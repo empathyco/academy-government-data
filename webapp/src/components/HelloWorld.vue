@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import SearchBoxComponent from "@/components/SearchBoxComponent.vue";
+import SearchBoxComponent from "@/components/search/SearchBoxComponent.vue";
 import { ResultsList } from "@empathyco/x-components/search";
 
 export default Vue.extend({
