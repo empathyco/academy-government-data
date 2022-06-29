@@ -22,7 +22,14 @@
     </template>
     <template #header-start>
       <div class="botones-filtros">
-        <p>boton filtros??</p>
+        <button
+          title="Filtros"
+          class="boton-filtro"
+          @click="changeFilterSelected"
+          ref="filterButton"
+        >
+          <FiltersIcon class="filter-icon"></FiltersIcon>
+        </button>
       </div>
     </template>
     <template #sub-header>
@@ -41,12 +48,12 @@
     -->
 
     <template #main-body>
-      <p>Aquí iría todo lo que es el grid</p>
-      <BarChart :series="getData()" />
-      <BubbleChart :series="getData()"></BubbleChart>
-      <WordCloud :series="getDataSingleSerie()"></WordCloud>
-      <PieChart :series="getDataSingleSerie()"></PieChart>
-      <LinePlotChart :series="getData()"></LinePlotChart>
+      <div v-if="filtersSelected">
+        <FiltersComponent></FiltersComponent>
+      </div>
+      <div v-else>
+        <DisplayCharts></DisplayCharts>
+      </div>
     </template>
 
     <template #scroll-to-top>
@@ -56,27 +63,35 @@
 </template>
 
 <script>
-import BubbleChart from "@/components/insights/BubbleChart";
-import WordCloud from "@/components/insights/WordCloud";
-import PieChart from "@/components/insights/PieChart";
-import BarChart from "@/components/insights/BarChart";
-import LinePlotChart from "@/components/insights/LinePlotChart";
 import { severalSeries, singleSerie } from "@/utils/SampleData";
 import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
+import FiltersComponent from "@/components/search/FiltersComponent";
+import DisplayCharts from "@/components/insights/DisplayCharts";
+import { FiltersIcon } from "@empathyco/x-components";
 
 export default {
   name: "DiscoveryView",
+  data() {
+    return {
+      filtersSelected: false,
+    };
+  },
   components: {
+    DisplayCharts,
+    FiltersComponent,
     SearchBoxComponent,
-    LinePlotChart,
-    BubbleChart,
-    WordCloud,
-    PieChart,
-    BarChart,
     MultiColumnMaxWidthLayout,
+    FiltersIcon,
   },
   methods: {
+    changeFilterSelected() {
+      this.filtersSelected = !this.filtersSelected;
+      this.filtersSelected
+        ? (this.$refs.filterButton.className += " boton-selected")
+        : (this.$refs.filterButton.className =
+            this.$refs.filterButton.className.split(" ")[0]);
+    },
     getDataSingleSerie() {
       return singleSerie;
     },
@@ -98,6 +113,33 @@ h1 {
 .botones-filtros {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   height: 100%;
+}
+.filter-icon {
+  height: 24px;
+  width: 24px;
+  stroke: #243d48;
+}
+.boton-filtro {
+  background-color: white;
+  color: #243d48;
+  border: solid 5px #243d48;
+  border-radius: 35px;
+  padding: 8px 12px;
+}
+.boton-filtro:hover > * {
+  stroke: var(--font-selected-link);
+}
+.boton-filtro:hover {
+  color: var(--font-selected-link);
+  border-color: var(--font-selected-link);
+}
+.boton-selected > * {
+  stroke: var(--font-selected-link);
+}
+.boton-selected {
+  color: var(--font-selected-link);
+  border-color: var(--font-selected-link);
 }
 </style>

@@ -1,8 +1,10 @@
 <template class="search-group">
   <div class="x-input-group">
-    <i class="fa fa-search fa-x"></i>
+    <SearchIcon class="x-icon"></SearchIcon>
     <SearchInput placeholder="Busca aquí tus filtros" class="search" />
-    <ClearSearchInput class="clear-search-button">X</ClearSearchInput>
+    <ClearSearchInput class="clear-search-button">
+      <CrossIcon class="x-icon"></CrossIcon>
+    </ClearSearchInput>
   </div>
 </template>
 
@@ -12,7 +14,7 @@ import {
   SearchButton,
   SearchInput,
 } from "@empathyco/x-components/search-box";
-import { SearchIcon } from "@empathyco/x-components";
+import { SearchIcon, CrossIcon } from "@empathyco/x-components";
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
 
@@ -22,6 +24,7 @@ import { Component } from "vue-property-decorator";
     SearchButton,
     SearchIcon,
     SearchInput,
+    CrossIcon,
   },
 })
 export default class SearchBox extends Vue {}
@@ -39,10 +42,13 @@ export default class SearchBox extends Vue {}
   width: 80%;
   min-width: 300px;
   padding: 5px 15px;
+  margin-bottom: 4px;
 }
-.fa-search {
-  margin-top: 4px;
-  font-weight: bold;
+.x-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #243d48;
+  padding-top: 5px;
 }
 .search {
   border: none;

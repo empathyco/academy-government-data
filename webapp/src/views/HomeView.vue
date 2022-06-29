@@ -67,7 +67,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import BubbleChart from "@/components/insights/BubbleChart.vue";
+import BubbleChart from "@/components/insights/charts/BubbleChart.vue";
 
 export default Vue.extend({
   name: "HomeView",
