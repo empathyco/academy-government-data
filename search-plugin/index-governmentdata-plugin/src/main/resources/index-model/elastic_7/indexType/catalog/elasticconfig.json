@@ -12,9 +12,7 @@
       "filter": {
         "english_stop": {
           "type": "stop",
-          "stopwords": [
-            // Add stopwords
-          ]
+          "stopwords": "_english_"
         },
         "english_stemmer": {
           "type": "stemmer",
@@ -132,7 +130,6 @@
   },
   "mappings": {
       "properties": {
-        // Implement
         "codigo_bdns": {
           "type": "integer"
         },

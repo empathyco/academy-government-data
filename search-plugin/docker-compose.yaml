@@ -1,0 +1,34 @@
+version: "3"
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.2
+    container_name: elasticsearch
+    environment:
+      - "cluster.name=elasticsearch-cluster" #Sets the cluster name
+      - "node.name=elasticsearch" #Sets node name
+      - "network.host=0.0.0.0"  #Sets binding IP to all
+      - "xpack.security.enabled=false" #Disables xpack security
+      - "xpack.monitoring.enabled=true" #Disables xpack monitoring
+      - "xpack.monitoring.collection.enabled=true"
+      - "xpack.watcher.enabled=false" #Disables xpack watcher
+      - "xpack.ml.enabled=false" #Disables xpack machine learning
+      - "bootstrap.memory_lock=true"  #Disables memory swap
+      - "discovery.type=single-node" #Disable bootstrap checks
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m" #Sets allocated memory
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./esdata:/user/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  cerebro:
+    image: lmenezes/cerebro:latest
+    container_name: cerebro
+    ports:
+      - "9000:9000"
+    external_links:
+      - elasticsearch:elasticsearch
