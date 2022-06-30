@@ -82,10 +82,9 @@ nav {
   a {
     margin-right: 10px;
     padding: 8px 10px;
-    font-weight: bold;
     color: var(--font-unselected-link);
     background-color: white;
-    border: solid 5px;
+    border: solid 3px;
     border-radius: 30px;
     transition: 0.5s;
 

@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .discover-card {
-  border: solid 5px #243d48;
+  border: solid 3px #243d48;
   border-radius: 30px;
   padding: 10px;
   margin: 10px;

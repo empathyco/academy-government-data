@@ -28,7 +28,7 @@
           @click="changeFilterSelected"
           ref="filterButton"
         >
-          <FiltersIcon class="filter-icon"></FiltersIcon>
+          <FiltersStyled></FiltersStyled>
         </button>
       </div>
     </template>
@@ -68,7 +68,7 @@ import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import FiltersComponent from "@/components/search/FiltersComponent";
 import DisplayCharts from "@/components/insights/DisplayCharts";
-import { FiltersIcon } from "@empathyco/x-components";
+import FiltersStyled from "@/components/icons/FiltersStyled";
 
 export default {
   name: "DiscoveryView",
@@ -78,11 +78,11 @@ export default {
     };
   },
   components: {
+    FiltersStyled,
     DisplayCharts,
     FiltersComponent,
     SearchBoxComponent,
     MultiColumnMaxWidthLayout,
-    FiltersIcon,
   },
   methods: {
     changeFilterSelected() {
@@ -116,15 +116,10 @@ h1 {
   justify-content: flex-end;
   height: 100%;
 }
-.filter-icon {
-  height: 24px;
-  width: 24px;
-  stroke: #243d48;
-}
 .boton-filtro {
   background-color: white;
   color: #243d48;
-  border: solid 5px #243d48;
+  border: solid 3px #243d48;
   border-radius: 35px;
   padding: 8px 12px;
 }
