@@ -1,14 +1,5 @@
 version: "3"
 services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.2
-    container_name: governmentdata-elasticsearch
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
-    environment:
-      - "discovery.type=single-node" #Disable bootstrap checks
-    ports:
-      - 9200:9200
   indexing_job:
     build:
       context: testing-environment
@@ -16,8 +7,6 @@ services:
     container_name: governmentdata-indexing-job-local
     volumes:
       - ./testing-environment/collection-data-files:/collection-data-files
-    depends_on:
-      - elasticsearch
   search:
     image: search-governmentdata-plugin:local
     container_name: search-governmentdata-plugin

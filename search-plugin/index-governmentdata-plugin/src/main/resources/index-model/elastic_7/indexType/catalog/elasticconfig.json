@@ -12,9 +12,7 @@
       "filter": {
         "english_stop": {
           "type": "stop",
-          "stopwords": [
-            // Add stopwords
-          ]
+          "stopwords": "_english_"
         },
         "english_stemmer": {
           "type": "stemmer",
@@ -132,7 +130,55 @@
   },
   "mappings": {
       "properties": {
-        // Implement
+        "codigo_bdns": {
+          "type": "integer"
+        },
+        "mrr": {
+          "type": "boolean"
+        },
+        "administracion": {
+          "type": "text"
+        },
+        "departamento": {
+          "type": "text"
+        },
+        "organo": {
+          "type": "text"
+        },
+        "fecha_registro": {
+          "type": "date"
+        },
+        "titulo_convocatoria": {
+          "type" : "text",
+          "fields" : {
+            "raw": {
+              "type": "keyword"
+            }
+          }
+        },
+        "url_bases_regul": {
+          "type": "url.full"
+        },
+        "importe_total": {
+          "type": "float"
+        },
+        "tipo_beneficiario": {
+          "type" : "text",
+          "fields" : {
+            "raw": {
+              "type": "keyword"
+            }
+          }
+        },
+        "sector_beneficiario": {
+          "type": "text"
+        },
+        "region_impacto": {
+          "type": "text"
+        },
+        "finalidad": {
+          "type": "text"
+        },
         "spellcheck": {
           "type": "text",
           "fields": {
