@@ -9,7 +9,11 @@ import {
   SearchRequest,
   SearchResponse,
 } from "@empathyco/x-adapter";
-import { Result } from "@empathyco/x-types";
+import {
+  RelatedTagsRequest,
+  RelatedTagsResponse,
+  Result,
+} from "@empathyco/x-types";
 /*import { bannerMapper } from './demo-banner-mapper';
 import { HierarchicalFacetMapper } from './demo-hierarchical-mapper';
 import { promotedMapper } from './demo-promoted-mapper';
@@ -78,4 +82,23 @@ export const adapter: SearchAdapter = {
         ),
       })) as any;
   },
+  /*
+      getRelatedTags(request: RelatedTagsRequest): RelatedTagsResponse {
+        console.log({
+          relatedTags: [
+            { modelName: "RelatedTag", query: "q", tag: "tag1" },
+            { modelName: "RelatedTag", query: "q", tag: "tag2" },
+            { modelName: "RelatedTag", query: "q", tag: "tag3" },
+          ],
+        });
+        return {
+          relatedTags: [
+            { modelName: "RelatedTag", query: "q", tag: "tag1" },
+            { modelName: "RelatedTag", query: "q", tag: "tag2" },
+            { modelName: "RelatedTag", query: "q", tag: "tag3" },
+          ],
+        };
+      },
+
+   */
 } as any; //TODO Implement rest of methods;
