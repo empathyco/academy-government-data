@@ -145,7 +145,7 @@
 </template>
 <style>
 article {
-  border: solid 5px #243d48;
+  border: solid 3px #243d48;
   border-radius: 30px;
   margin: 50px;
 }
@@ -155,7 +155,7 @@ article {
   justify-content: center;
 }
 .dev-card {
-  border: solid 5px #243d48;
+  border: solid 3px #243d48;
   border-radius: 30px;
   margin: 30px;
   padding: 15px;
@@ -163,7 +163,7 @@ article {
 }
 .dev-icon {
   border-radius: 50%;
-  border: solid 5px #243d48;
+  border: solid 3px #243d48;
   width: 200px;
   height: 200px;
 }

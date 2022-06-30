@@ -41,7 +41,7 @@
         >
           <RelatedTag class="related-tag" :relatedTag="relatedTag">
             <p id="tag-text">{{ relatedTag.tag }}</p>
-            <CrossTinyIcon />
+            <CrossTinyStyled />
           </RelatedTag>
         </div>
       </div>
@@ -77,16 +77,13 @@
 
 <script>
 import { severalSeries, singleSerie } from "@/utils/SampleData";
-import {
-  CrossTinyIcon,
-  MultiColumnMaxWidthLayout,
-} from "@empathyco/x-components";
+import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import FiltersComponent from "@/components/search/FiltersComponent";
 import DisplayCharts from "@/components/insights/DisplayCharts";
-import { FiltersIcon } from "@empathyco/x-components";
 import { RelatedTag } from "@empathyco/x-components/related-tags";
 import FiltersStyled from "@/components/icons/FiltersStyled";
+import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 
 export default {
   name: "DiscoveryView",
@@ -112,9 +109,8 @@ export default {
     FiltersComponent,
     SearchBoxComponent,
     MultiColumnMaxWidthLayout,
-    FiltersIcon,
     RelatedTag,
-    CrossTinyIcon,
+    CrossTinyStyled,
   },
   methods: {
     removeTag(tagText) {
@@ -129,12 +125,6 @@ export default {
         ? (this.$refs.filterButton.className += " boton-selected")
         : (this.$refs.filterButton.className =
             this.$refs.filterButton.className.split(" ")[0]);
-    },
-    getDataSingleSerie() {
-      return singleSerie;
-    },
-    getData() {
-      return severalSeries;
     },
   },
 };

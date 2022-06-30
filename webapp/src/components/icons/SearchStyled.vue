@@ -1,20 +1,15 @@
 <template>
-  <SearchIcon class="x-icon"></SearchIcon>
+  <i class="material-symbols-outlined search"> search </i>
 </template>
 
 <script>
-import { SearchIcon } from "@empathyco/x-components";
-
 export default {
   name: "SearchStyled",
-  components: {
-    SearchIcon,
-  },
 };
 </script>
 
 <style scoped>
-.x-icon {
+.search {
   width: 24px;
   height: 24px;
   stroke: #243d48;

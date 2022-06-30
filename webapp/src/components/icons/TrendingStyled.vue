@@ -1,7 +1,6 @@
 <template>
   <TrendingIcon class="filter-icon"></TrendingIcon>
 </template>
-
 <script>
 import { TrendingIcon } from "@empathyco/x-components";
 

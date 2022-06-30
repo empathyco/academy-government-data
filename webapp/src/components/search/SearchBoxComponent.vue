@@ -1,7 +1,7 @@
 <template class="search-group">
   <div class="x-input-group">
     <SearchStyled></SearchStyled>
-    <SearchInput placeholder="Busca aquí tus filtros" class="search" />
+    <SearchInput placeholder="Busca aquí tus filtros" class="search-input" />
     <ClearSearchInput class="clear-search-button">
       <CrossStyled></CrossStyled>
     </ClearSearchInput>
@@ -45,7 +45,7 @@ export default class SearchBox extends Vue {}
   padding: 5px 15px;
   margin-bottom: 4px;
 }
-.search {
+.search-input {
   border: none;
   width: 100%;
   padding: 0px 10px;
@@ -53,11 +53,11 @@ export default class SearchBox extends Vue {}
   font-size: 1rem;
   color: #243d48;
 }
-.search::placeholder {
+.search-input::placeholder {
   font-family: Montserrat;
   color: #243d48;
 }
-.search:focus {
+.search-input:focus {
   outline: none;
 }
 .clear-search-button {

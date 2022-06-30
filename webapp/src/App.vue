@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/"><i class="fa fa-home fa-2x"></i></router-link>
-      <router-link to="/busca"><i class="fa fa-search fa-2x"></i></router-link>
+      <router-link to="/"
+        ><i class="material-symbols-outlined home"> home </i></router-link
+      >
+      <router-link to="/busca"
+        ><i class="material-symbols-outlined search"> search </i></router-link
+      >
       <router-link to="/explora"
-        ><i class="fa fa-line-chart fa-2x"></i
-      ></router-link>
+        ><i class="material-symbols-outlined explora">
+          auto_graph
+        </i></router-link
+      >
       <router-link to="/info"
-        ><i class="fa fa-info-circle fa-2x"></i
-      ></router-link>
+        ><i class="material-symbols-outlined info"> info </i></router-link
+      >
     </nav>
     <router-view class="view" />
     <footer>
@@ -16,7 +22,6 @@
     </footer>
   </div>
 </template>
-
 <style lang="scss">
 :root {
   //Colours that will be used in the web
@@ -84,7 +89,7 @@ nav {
     padding: 8px 10px;
     color: var(--font-unselected-link);
     background-color: white;
-    border: solid 3px;
+    border: solid 2px;
     border-radius: 30px;
     transition: 0.5s;
 
@@ -93,14 +98,17 @@ nav {
     }
   }
 
+  i:hover {
+    margin-right: 0px;
+  }
+
   i:hover:after {
     content: "Otro";
-    padding-left: 10px;
+    margin-right: -10px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
-    font-weight: bold;
     font-size: 22px;
     opacity: 1;
-    top: 0px;
+    top: -4px;
   }
 
   i:after {
@@ -108,20 +116,21 @@ nav {
     position: relative;
     opacity: 0;
     top: -20px;
+    left: -15px;
     -webkit-transition: all 1s;
     transition: all 1s;
   }
 
-  .fa-home:hover:after {
+  .home:hover:after {
     content: "Inicio";
   }
-  .fa-search:hover:after {
+  .search:hover:after {
     content: "Busca";
   }
-  .fa-line-chart:hover:after {
+  .explora:hover:after {
     content: "Explora";
   }
-  .fa-info-circle:hover:after {
+  .info:hover:after {
     content: "Info";
   }
 }
