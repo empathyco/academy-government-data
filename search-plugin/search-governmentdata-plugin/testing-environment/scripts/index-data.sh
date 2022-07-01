@@ -124,7 +124,7 @@ function wait_for_elastic() {
     echo "***** STATUS CODE GET ELASTIC $status_code"
   done
 }
-
+s
 function refresh_indexes() {
   echo "Refresh indexes"
   curl -XPOST "$elasticsearch/_refresh"
