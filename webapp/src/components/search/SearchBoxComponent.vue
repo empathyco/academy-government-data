@@ -1,7 +1,7 @@
 <template class="search-group">
   <div class="x-input-group">
     <SearchStyled></SearchStyled>
-    <SearchInput placeholder="Busca aquí tus filtros" class="search-input" />
+    <SearchInput :placeholder="placeholder" class="search-input" />
     <ClearSearchInput class="clear-search-button">
       <CrossStyled></CrossStyled>
     </ClearSearchInput>
@@ -27,6 +27,7 @@ import CrossStyled from "@/components/icons/CrossStyled.vue";
     SearchButton,
     SearchInput,
   },
+  props: ["placeholder"],
 })
 export default class SearchBox extends Vue {}
 </script>
