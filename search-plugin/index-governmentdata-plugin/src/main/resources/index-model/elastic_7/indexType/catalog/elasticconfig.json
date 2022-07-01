@@ -157,7 +157,7 @@
           }
         },
         "url_bases_regul": {
-          "type": "url.full"
+          "type": "text"
         },
         "importe_total": {
           "type": "float"
