@@ -17,7 +17,7 @@ export default {
 .x-icon {
   width: 24px;
   height: 24px;
-  stroke: #243d48;
+  stroke: var(--font-colour);
   padding-top: 5px;
 }
 </style>

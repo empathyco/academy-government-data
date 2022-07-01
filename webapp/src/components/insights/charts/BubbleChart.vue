@@ -94,5 +94,6 @@ export default Vue.extend({
 <style scoped>
 .highcharts-figure {
   min-width: 320px;
+  width: 100%;
 }
 </style>

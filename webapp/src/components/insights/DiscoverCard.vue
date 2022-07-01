@@ -20,6 +20,13 @@
       v-else-if="item.modelName === 'wordcloud'"
       :series="item.data"
     ></WordCloud>
+    <button
+      id="dowload-button"
+      @click="dowlowadContent"
+      class="download-contents"
+    >
+      Descargar datos
+    </button>
   </div>
 </template>
 
@@ -42,6 +49,11 @@ export default {
   props: {
     item: { data: String, modelName: String },
   },
+  methods: {
+    dowlowadContent() {
+      console.log(this.item);
+    },
+  },
 };
 </script>
 
@@ -49,8 +61,18 @@ export default {
 .discover-card {
   border: solid 3px #243d48;
   border-radius: 30px;
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
   height: 450px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.download-contents {
+  background-color: var(--background-colour);
+  color: var(--font-colour);
+  border-radius: 30px;
+  width: 50%;
 }
 </style>

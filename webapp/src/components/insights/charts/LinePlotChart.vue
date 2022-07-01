@@ -82,4 +82,8 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.highcharts-figure {
+  width: 100%;
+}
+</style>

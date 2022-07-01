@@ -150,7 +150,7 @@ h1 {
   stroke: #243d48;
 }
 .boton-filtro {
-  background-color: white;
+  background-color: var(--background-colour);
   color: #243d48;
   border: solid 3px #243d48;
   border-radius: 35px;
@@ -171,7 +171,7 @@ h1 {
   border-color: var(--font-selected-link);
 }
 .related-tag {
-  background-color: white;
+  background-color: var(--background-colour);
   color: #243d48;
   border: solid 3px #243d48;
   border-radius: 30px;

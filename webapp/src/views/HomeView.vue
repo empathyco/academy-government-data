@@ -53,7 +53,7 @@
         <div class="section-container" @click="$router.push('/busca')">
           <div class="searchinput-container">
             <input
-              class="search-input"
+              class="search-input-home"
               type="text"
               placeholder="Empieza a buscar..."
             />
@@ -116,7 +116,7 @@ a {
 }
 .searchinput-container {
   display: flex;
-  border: solid 3px #243d48;
+  border: solid 3px var(--border-color);
   border-radius: 30px;
   justify-content: space-between;
   align-items: center;
@@ -127,7 +127,7 @@ a {
 ::placeholder {
   color: #243d48;
 }
-.search-input {
+.search-input-home {
   background: transparent;
   border: none;
   outline: none;
@@ -149,9 +149,9 @@ a {
   justify-content: center;
 }
 .nav-link {
-  background-color: #d44a6f;
+  background-color: var(--homeview-explore-button);
   padding: 20px;
-  color: white;
+  color: var(--font-dark-background-color);
   font-size: 20px;
   font-weight: bold;
   border-radius: 30px;

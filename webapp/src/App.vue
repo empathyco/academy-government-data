@@ -27,8 +27,14 @@
   //Colours that will be used in the web
   --background-colour: rgb(255, 255, 255);
   --font-colour: #243d48;
+  --empathy-black: --font-colour;
+  --empathy-red: #d44a6f;
+  --empathy-gray: #f5f6f7;
   --font-selected-link: #53b9c9;
   --font-unselected-link: #243d48;
+  --homeview-explore-button: --empathy-red;
+  --font-dark-background-color: --background-colour;
+  --border-color: #243d48;
 }
 #app {
   font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
@@ -99,7 +105,7 @@ nav {
   }
 
   i:hover {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   i:hover:after {

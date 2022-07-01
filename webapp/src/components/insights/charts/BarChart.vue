@@ -83,5 +83,6 @@ export default Vue.extend({
 <style scoped>
 .highcharts-figure {
   margin: 1em auto;
+  width: 100%;
 }
 </style>

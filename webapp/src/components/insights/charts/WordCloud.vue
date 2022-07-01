@@ -81,5 +81,6 @@ export default Vue.extend({
   min-width: 320px;
   max-width: 1000px;
   margin: 1em auto;
+  width: 100%;
 }
 </style>
