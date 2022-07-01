@@ -10,7 +10,7 @@
       <div
         class="x-list x-list--vertical x-list--gap-05 x-list--align-stretch x-list__item--expand"
       >
-        <SearchBoxComponent />
+        <SearchBoxComponent placeholder="Busca aquí tus filtros"/>
         <!--
         <LocationProvider location="predictive_layer">
           <RelatedTags
