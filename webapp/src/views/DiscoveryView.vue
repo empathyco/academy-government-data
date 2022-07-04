@@ -10,7 +10,7 @@
       <div
         class="x-list x-list--vertical x-list--gap-05 x-list--align-stretch x-list__item--expand"
       >
-        <SearchBoxComponent placeholder="Busca aquí tus filtros"/>
+        <SearchBoxComponent placeholder="Busca aquí tus filtros" />
         <!--
         <LocationProvider location="predictive_layer">
           <RelatedTags
@@ -76,7 +76,6 @@
 </template>
 
 <script>
-import { severalSeries, singleSerie } from "@/utils/SampleData";
 import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import FiltersComponent from "@/components/search/FiltersComponent";

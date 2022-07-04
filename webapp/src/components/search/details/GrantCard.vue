@@ -1,6 +1,6 @@
 <template>
   <div class="discover-card">
-    <p>{{ item.name }}</p>
+    <h2>{{ item.name }}</h2>
     <p>Fecha de inicio: {{ item.dateStart }}</p>
     <p>Fecha de fin: {{ item.dateFinish }}</p>
     <p>Cantidad total: {{ item.amount }}</p>

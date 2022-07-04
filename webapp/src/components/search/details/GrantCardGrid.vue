@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import GrantCard from "@/components/search/GrantCard";
+import GrantCard from "@/components/search/details/GrantCard";
 import { BaseGrid } from "@empathyco/x-components";
 
 export default {

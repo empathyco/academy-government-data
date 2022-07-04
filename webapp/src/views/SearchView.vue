@@ -17,7 +17,7 @@
     </template>
     <template #main-body>
       <div>
-        <GrantCardGrid></GrantCardGrid>
+        <GrantCardGrid />
       </div>
     </template>
   </MultiColumnMaxWidthLayout>
@@ -27,7 +27,7 @@
 import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
-import GrantCardGrid from "@/components/search/GrantCardGrid";
+import GrantCardGrid from "@/components/search/details/GrantCardGrid";
 
 export default {
   name: "SearchView",

@@ -32,8 +32,8 @@
   --empathy-gray: #f5f6f7;
   --font-selected-link: #53b9c9;
   --font-unselected-link: #243d48;
-  --homeview-explore-button: --empathy-red;
-  --font-dark-background-color: --background-colour;
+  --homeview-explore-button: #d44a6f;
+  --font-dark-background-color: rgb(255, 255, 255);
   --border-color: #243d48;
 }
 #app {
