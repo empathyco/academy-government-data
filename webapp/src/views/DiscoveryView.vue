@@ -33,17 +33,21 @@
       </div>
     </template>
     <template #sub-header>
+      <!--<PredictiveLayer></PredictiveLayer>-->
       <div class="related-tags">
-        <div
-          v-bind:key="relatedTag.tag"
-          v-for="relatedTag in relatedTags"
-          @click="removeTag(relatedTag.tag)"
-        >
-          <RelatedTag class="related-tag" :relatedTag="relatedTag">
-            <p id="tag-text">{{ relatedTag.tag }}</p>
-            <CrossTinyStyled />
-          </RelatedTag>
-        </div>
+        <SelectedFiltersList class="filter-list">
+          <template #default="{ filter }">
+            <SimpleFilter class="x-tag" :filter="filter" />
+          </template>
+        </SelectedFiltersList>
+        <RelatedTags>
+          <template #related-tag="{ relatedTag }">
+            <div class="related-tag">
+              <p id="tag-text">{{ relatedTag.tag }}</p>
+              <CrossTinyStyled @click="removeTag(relatedTag.tag)" />
+            </div>
+          </template>
+        </RelatedTags>
       </div>
     </template>
     <!--
@@ -60,7 +64,7 @@
 
     <template #main-body>
       <div v-if="filtersSelected">
-        <FiltersComponent></FiltersComponent>
+        <FiltersComponent :filters="filters"></FiltersComponent>
       </div>
       <div v-else>
         <DisplayCharts></DisplayCharts>
@@ -80,9 +84,11 @@ import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import FiltersComponent from "@/components/search/FiltersComponent";
 import DisplayCharts from "@/components/insights/DisplayCharts";
-import { RelatedTag } from "@empathyco/x-components/related-tags";
+import { RelatedTag, RelatedTags } from "@empathyco/x-components/related-tags";
 import FiltersStyled from "@/components/icons/FiltersStyled";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
+import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
+import { SelectedFiltersList } from "@empathyco/x-components/facets";
 
 export default {
   name: "DiscoveryView",
@@ -100,16 +106,186 @@ export default {
         { isCurated: false, tag: "tag8" },
         { isCurated: false, tag: "tag9" },
       ],
+      filters: {
+        content: [
+          {
+            title: "Provincias",
+            content: [
+              {
+                label: "Asturias",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "asturias",
+                value: "asturias",
+                facetId: "asturias",
+                totalResults: 1,
+              },
+              {
+                label: "Andalucía",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "andalucía",
+                value: "andalucía",
+                facetId: "andalucía",
+                totalResults: 1,
+              },
+              {
+                label: "Castilla y León",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "castilla",
+                value: "castilla",
+                facetId: "castilla",
+                totalResults: 1,
+              },
+              {
+                label: "Galicia",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "galicia",
+                value: "galicia",
+                facetId: "galicia",
+                totalResults: 1,
+              },
+              {
+                label: "País Vasco",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "vasco",
+                value: "vasco",
+                facetId: "vasco",
+                totalResults: 1,
+              },
+            ],
+          },
+          {
+            title: "Sector",
+            content: [
+              {
+                label: "Industria",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "industria",
+                value: "industria",
+                facetId: "industria",
+                totalResults: 1,
+              },
+              {
+                label: "Agricultura",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "agricultura",
+                value: "agricultura",
+                facetId: "agricultura",
+                totalResults: 1,
+              },
+              {
+                label: "Cultura",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "cultura",
+                value: "cultura",
+                facetId: "cultura",
+                totalResults: 1,
+              },
+              {
+                label: "Hostelería",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "hostelería",
+                value: "hostelería",
+                facetId: "hostelería",
+                totalResults: 1,
+              },
+            ],
+          },
+          {
+            title: "Año",
+            content: [
+              {
+                label: "2019",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "2019",
+                value: "2019",
+                facetId: "2019",
+                totalResults: 1,
+              },
+              {
+                label: "2020",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "2020",
+                value: "2020",
+                facetId: "2020",
+                totalResults: 1,
+              },
+              {
+                label: "2021",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "2021",
+                value: "2021",
+                facetId: "2021",
+                totalResults: 1,
+              },
+              {
+                label: "2022",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "2022",
+                value: "2022",
+                facetId: "2022",
+                totalResults: 1,
+              },
+            ],
+          },
+          {
+            title: "Periodo",
+            content: [
+              {
+                label: "Primer trimestre",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "primer",
+                value: "primer",
+                facetId: "primer",
+                totalResults: 1,
+              },
+              {
+                label: "Segundo trimestre",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "segundo",
+                value: "segundo",
+                facetId: "segundo",
+                totalResults: 1,
+              },
+              {
+                label: "Tercer trimestre",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "tercer",
+                value: "tercer",
+                facetId: "tercer",
+                totalResults: 1,
+              },
+            ],
+          },
+        ],
+      },
     };
   },
   components: {
+    //PredictiveLayer,
     FiltersStyled,
     DisplayCharts,
     FiltersComponent,
     SearchBoxComponent,
     MultiColumnMaxWidthLayout,
-    RelatedTag,
     CrossTinyStyled,
+    RelatedTags,
+    SelectedFiltersList,
   },
   methods: {
     removeTag(tagText) {

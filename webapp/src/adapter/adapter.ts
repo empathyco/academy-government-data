@@ -82,23 +82,26 @@ export const adapter: SearchAdapter = {
         ),
       })) as any;
   },
-  /*
-      getRelatedTags(request: RelatedTagsRequest): RelatedTagsResponse {
-        console.log({
-          relatedTags: [
-            { modelName: "RelatedTag", query: "q", tag: "tag1" },
-            { modelName: "RelatedTag", query: "q", tag: "tag2" },
-            { modelName: "RelatedTag", query: "q", tag: "tag3" },
-          ],
-        });
-        return {
-          relatedTags: [
-            { modelName: "RelatedTag", query: "q", tag: "tag1" },
-            { modelName: "RelatedTag", query: "q", tag: "tag2" },
-            { modelName: "RelatedTag", query: "q", tag: "tag3" },
-          ],
-        };
-      },
-
-   */
+  getRelatedTags(request: RelatedTagsRequest): Promise<{
+    relatedTags: (
+      | { modelName: string; query: string; tag: string }
+      | { modelName: string; query: string; tag: string }
+      | { modelName: string; query: string; tag: string }
+    )[];
+  }> {
+    console.log({
+      relatedTags: [
+        { modelName: "RelatedTag", query: "q", tag: "tageñe" },
+        { modelName: "RelatedTag", query: "q", tag: "tag2" },
+        { modelName: "RelatedTag", query: "q", tag: "tag3" },
+      ],
+    });
+    return Promise.resolve({
+      relatedTags: [
+        { modelName: "RelatedTag", query: "q", tag: "tag1" },
+        { modelName: "RelatedTag", query: "q", tag: "tag2" },
+        { modelName: "RelatedTag", query: "q", tag: "tag3" },
+      ],
+    });
+  },
 } as any; //TODO Implement rest of methods;
