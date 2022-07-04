@@ -51,6 +51,7 @@ export default class SearchBox extends Vue {}
   width: 100%;
   padding: 0 10px;
   font-size: 1rem;
+  font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
   color: var(--font-colour);
 }
 .search-input::placeholder {
