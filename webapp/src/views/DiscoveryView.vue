@@ -134,9 +134,6 @@ export default {
   display: flex;
   justify-content: center;
 }
-h1 {
-  margin-top: 80px;
-}
 .botones-filtros {
   display: flex;
   align-items: flex-end;
@@ -185,5 +182,8 @@ h1 {
 }
 #tag-text {
   margin: 5px;
+}
+h1 {
+  margin-top: 0;
 }
 </style>

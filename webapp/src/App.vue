@@ -88,6 +88,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   position: fixed;
+  top: 0;
   right: 0;
   z-index: 2;
   a {
@@ -142,6 +143,7 @@ nav {
 }
 .view {
   margin-bottom: 200px;
+  margin-top: 80px;
 }
 footer {
   display: flex;

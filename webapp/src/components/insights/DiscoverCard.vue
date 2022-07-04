@@ -1,5 +1,12 @@
 <template>
   <div class="discover-card">
+    <button
+      id="dowload-button"
+      @click="dowlowadContent"
+      class="download-contents"
+    >
+      <i class="material-symbols-outlined info"> download </i>
+    </button>
     <BarChart
       v-if="item.modelName === 'barchart'"
       :series="item.data"
@@ -20,13 +27,6 @@
       v-else-if="item.modelName === 'wordcloud'"
       :series="item.data"
     ></WordCloud>
-    <button
-      id="dowload-button"
-      @click="dowlowadContent"
-      class="download-contents"
-    >
-      Descargar datos
-    </button>
   </div>
 </template>
 
@@ -71,8 +71,15 @@ export default {
 }
 .download-contents {
   background-color: var(--background-colour);
+  border: solid 1px var(--font-colour);
   color: var(--font-colour);
   border-radius: 30px;
-  width: 50%;
+  padding: 8px 10px;
+}
+
+.download-contents:hover {
+  background-color: #d44a6f;
+  border: solid 1px white;
+  color: white;
 }
 </style>

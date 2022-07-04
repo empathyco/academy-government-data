@@ -41,6 +41,6 @@ export default {
   justify-content: center;
 }
 h1 {
-  margin-top: 80px;
+  margin-top: 0;
 }
 </style>
