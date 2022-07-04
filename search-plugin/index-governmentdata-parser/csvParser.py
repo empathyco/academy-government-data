@@ -5,7 +5,7 @@ import json
 def parseTsv(tsvRoute):
 
     try:
-        reader = csv.DictReader(open(tsvRoute), delimiter="\t")
+        reader = csv.DictReader(open(tsvRoute), delimiter=",")
 
         with open("jsonOutput.json", 'w') as jsonFile:
             jsonFile.write(json.dumps(list(reader)))

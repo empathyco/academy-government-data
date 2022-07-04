@@ -1,30 +1,52 @@
-python3 index-government-parser/csvParser.py
+#!/bin/bash
+
+cd index-governmentdata-parser
+python3 csvParser.py
+cd ..
+
 docker-compose up --build -d
-elasticsearch = "localhost:9200"
+elasticsearch="http://localhost:9200"
 status_code=$(curl -XGET "$elasticsearch/_cluster/health" --write-out %{http_code} --silent --output /dev/null)
 echo " STATUS CODE GET ELASTIC $status_code"
 while [ $status_code -ne "200" ]
 do
   echo "Waiting for $elasticsearch to be ready"
-  sleep 1s
+  sleep 3
   status_code=$(curl -XGET "$elasticsearch/_cluster/health" --write-out %{http_code} --silent --output /dev/null)
   echo " STATUS CODE GET ELASTIC $status_code"
 done
+
 cd index-governmentdata-plugin
-mvn install
+mvn clean package -DskipTests
 docker-compose up --build -d
-echo "Enter the ID of the Mongo database (mongoId):"
-read MID
-curl -X POST localhost:8080/jobs/submit/governmentdata/$MID/catalog -H "Content-Type: application/json" 
-     -d ../parsedJson.json
-status_code = $(curl -XGET "$elasticsearch/_cluster/health" --write-out %{http_code} --silent)
-while [$status_code -ne 200]
+
+status_code=$(curl -XGET "localhost:8080/status/health" --write-out %{http_code} --silent --output /dev/null)
+echo "JETTY SERVER STATUS $status_code"
+
+while [ $status_code -ne "200" ]
 do
-    echo "Waiting for elasticsearch to be ready"
-    status_code=$(curl -XGET "$elasticsearch/_cluster/health" --write-out %{http_code} --silent)
-    echo " STATUS CODE GET ELASTIC $status_code"
+  echo "Waiting for jetty server to be ready"
+  sleep 3
+  status_code=$(curl -XGET "localhost:8080/status/health" --write-out %{http_code} --silent --output /dev/null)
+  echo "JETTY SERVER STATUS $status_code"
 done
-docker volume rm index-governmentdata-plugin
+
+
+jobId=$(curl -d "@../index-governmentdata-parser/jsonOutput.json" -X POST localhost:8080/jobs/submit/governmentdata/62b585cd6fe71f182dc9763e/catalog -H "Content-Type: application/json" | python3 -c "import sys, json; print(json.load(sys.stdin)['indexJobId'])")
+
+state=$(curl -XGET "localhost:8080/jobs/governmentdata/62b585cd6fe71f182dc9763e/job/$jobId" | python3 -c "import sys, json; print(json.load(sys.stdin)['state'])")
+
+while [ $state != "SUCCESS" ]
+do
+    echo "Waiting for indexing to end"
+    sleep 3
+    state=$(curl -XGET "localhost:8080/jobs/governmentdata/62b585cd6fe71f182dc9763e/job/$jobId" | python3 -c "import sys, json; print(json.load(sys.stdin)['state'])")
+    echo " STATUS CODE GET JOB $state"
+done
+
+read -s -n 1 -p "Press any key to continue . . ."
+
+docker-compose down
 cd ../search-governmentdata-plugin
-mvn install
+mvn clean package -DskipTests
 docker-compose up --build -d
