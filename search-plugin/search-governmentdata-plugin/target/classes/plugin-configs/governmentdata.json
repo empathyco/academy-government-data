@@ -23,13 +23,10 @@
                   "config": {
                     "searchableFields": [
                       {
-                        "name": "name"
+                        "name": "titulo_convocatoria"
                       },
                       {
-                        "name": "description"
-                      },
-                      {
-                        "name":"id"
+                        "name": "administracion"
                       }
                     ]
                   }
@@ -54,18 +51,43 @@
                   "config": {
                     "fields": [
                       {
-                        "name": "facet_brand",
-                        "queryParam": "brand",
+                        "name": "facet_administracion",
+                        "queryParam": "administracion",
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_price",
-                        "queryParam": "price",
+                        "name": "facet_departamento",
+                        "queryParam": "departamento",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_organo",
+                        "queryParam": "organo",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_importe",
+                        "queryParam": "importe",
                         "type": "RANGE"
                       },
                       {
-                        "name": "facet_categoriesIds",
-                        "queryParam": "categoryIds",
+                        "name": "facet_tipoBeneficiario",
+                        "queryParam": "tipoBeneficiario",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_sectorBeneficiario",
+                        "queryParam": "sectorBeneficiario",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_regionImpacto",
+                        "queryParam": "regionImpacto",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_finalidad",
+                        "queryParam": "finalidad",
                         "type": "VALUE"
                       }
                     ]
@@ -81,46 +103,79 @@
                     "facetableFields": {
                       "rangeFacets": [
                         {
-                          "field": "facet_price",
-                          "filterField": "price",
+                          "field": "facet_importe",
+                          "filterField": "importe",
                           "ranges": [
                             {
-                              "to": 10,
-                              "gap": 10
+                              "to": 100000,
+                              "gap": 100000
                             },
                             {
-                              "from": 10,
-                              "to": 40,
-                              "gap": 10
+                              "from": 100000,
+                              "to": 200000000,
+                              "gap": 100000
                             },
                             {
-                              "from": 40,
-                              "gap": 10
+                              "from": 200000000,
+                              "gap": 100000000
                             }
                           ]
                         }
                       ],
                       "valueFacets": [
                         {
-                          "field": "facet_brand",
-                          "filterField": "brand",
+                          "field": "facet_administracion",
+                          "filterField": "administracion",
                           "size": 100,
                           "minCount": 1
-                        }
-                      ],
-                      "hierarchicalFacets": [
+                        },
                         {
-                          "field": "facet_categories",
-                          "filterField": "categoryIds",
+                          "field": "facet_departamento",
+                          "filterField": "departamento",
                           "size": 100,
                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_organo",
+                           "filterField": "organo",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_tipoBeneficiario",
+                           "filterField": "tipoBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_sectorBeneficiario",
+                           "filterField": "sectorBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_regionImpacto",
+                           "filterField": "regionImpacto",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_finalidad",
+                           "filterField": "finalidad",
+                           "size": 100,
+                           "minCount": 1
                         }
                       ]
                     },
                     "facets": [
-                      "facet_brand",
-                      "facet_price",
-                      "facet_categories"
+                      "facet_administracion",
+                      "facet_departamento",
+                      "facet_organo",
+                      "facet_importe",
+                      "facet_tipoBeneficiario",
+                      "facet_sectorBeneficiario",
+                      "facet_regionImpacto",
+                      "facet_finalidad"
                     ]
                   }
                 },
@@ -231,17 +286,12 @@
                   "name": "sorting",
                   "config": {
                     "whitelist": [
-                      "boost_category",
-                      "facet_brand"
+                      "boost_category"
                     ],
                     "fields": [
                       {
                         "field": "_score",
                         "order": "DESC"
-                      },
-                      {
-                        "field": "facet_brand",
-                        "order": "ASC"
                       }
                     ],
                     "defaultOrder": "DESC"
@@ -268,19 +318,43 @@
                     "origin": "SOURCE",
                     "returnableFields": [
                       {
-                        "field": "name"
+                        "field": "codigo_bdns"
                       },
                       {
-                        "field": "description"
+                        "field": "mrr"
                       },
                       {
-                        "field": "boost_category"
+                        "field": "administracion"
                       },
                       {
-                        "field": "facet_brand"
+                        "field": "departamento"
                       },
                       {
-                        "field": "facet_price"
+                        "field": "organo"
+                      },
+                      {
+                        "field": "fecha_registro"
+                      },
+                      {
+                        "field": "titulo_convocatoria"
+                      },
+                      {
+                        "field": "url_bases_regul"
+                      },
+                      {
+                        "field": "importe_total"
+                      },
+                      {
+                        "field": "tipo_beneficiario"
+                      },
+                      {
+                        "field": "sector_beneficiario"
+                      },
+                      {
+                        "field": "region_impacto"
+                      },
+                      {
+                        "field": "finalidad"
                       }
                     ]
                   }
@@ -290,20 +364,45 @@
                   "config": {
                     "fields": [
                       {
-                        "name": "facet_brand",
-                        "queryParam": "brand",
-                        "type": "VALUE"
-                      },
-                      {
-                        "name": "facet_price",
-                        "queryParam": "price",
-                        "type": "RANGE"
-                      },
-                      {
-                        "name": "facet_categoriesIds",
-                        "queryParam": "categoryIds",
-                        "type": "VALUE"
-                      }
+                          "name": "facet_administracion",
+                          "queryParam": "administracion",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_departamento",
+                          "queryParam": "departamento",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_organo",
+                          "queryParam": "organo",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_importe",
+                          "queryParam": "importe",
+                          "type": "RANGE"
+                        },
+                        {
+                          "name": "facet_tipoBeneficiario",
+                          "queryParam": "tipoBeneficiario",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_sectorBeneficiario",
+                          "queryParam": "sectorBeneficiario",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_regionImpacto",
+                          "queryParam": "regionImpacto",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_finalidad",
+                          "queryParam": "finalidad",
+                          "type": "VALUE"
+                        }
                     ]
                   }
                 },
@@ -317,46 +416,79 @@
                     "facetableFields": {
                       "rangeFacets": [
                         {
-                          "field": "facet_price",
-                          "filterField": "price",
+                          "field": "facet_importe",
+                          "filterField": "importe",
                           "ranges": [
                             {
-                              "to": 10,
-                              "gap": 10
+                              "to": 100000,
+                              "gap": 100000
                             },
                             {
-                              "from": 10,
-                              "to": 40,
-                              "gap": 10
+                              "from": 100000,
+                              "to": 200000000,
+                              "gap": 100000
                             },
                             {
-                              "from": 40,
-                              "gap": 10
+                              "from": 200000000,
+                              "gap": 100000000
                             }
                           ]
                         }
                       ],
                       "valueFacets": [
                         {
-                          "field": "facet_brand",
-                          "filterField": "brand",
+                          "field": "facet_administracion",
+                          "filterField": "administracion",
                           "size": 100,
                           "minCount": 1
-                        }
-                      ],
-                      "hierarchicalFacets": [
+                        },
                         {
-                          "field": "facet_categories",
-                          "filterField": "categoryIds",
+                          "field": "facet_departamento",
+                          "filterField": "departamento",
                           "size": 100,
                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_organo",
+                           "filterField": "organo",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_tipoBeneficiario",
+                           "filterField": "tipoBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_sectorBeneficiario",
+                           "filterField": "sectorBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_regionImpacto",
+                           "filterField": "regionImpacto",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_finalidad",
+                           "filterField": "finalidad",
+                           "size": 100,
+                           "minCount": 1
                         }
                       ]
                     },
                     "facets": [
-                      "facet_brand",
-                      "facet_price",
-                      "facet_categories"
+                      "facet_administracion",
+                        "facet_departamento",
+                        "facet_organo",
+                        "facet_importe",
+                        "facet_tipoBeneficiario",
+                        "facet_sectorBeneficiario",
+                        "facet_regionImpacto",
+                        "facet_finalidad"
                     ]
                   }
                 },
@@ -414,7 +546,7 @@
                     "defaultOrder": "DESC",
                     "fields": [
                       {
-                        "field": "weight",
+                        "field": "_score",
                         "order": "DESC"
                       }
                     ]
