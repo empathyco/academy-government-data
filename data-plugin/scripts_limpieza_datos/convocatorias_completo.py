@@ -1,9 +1,9 @@
 import pandas as pd
 
 # Cargar datos originales
-convocatorias = pd.read_csv('/Users/enriquecarnerofernandez/Documents/BDNS/raw_data/bdns/convocatoriasHeader.csv',
-                            header = 1).iloc[:,2:10]
-convocatorias_crawler = pd.read_csv('/Users/enriquecarnerofernandez/Documents/BDNS/raw_data/bdns/convocatorias_crawler.tsv',
+convocatorias = pd.read_csv('convocatoriasINDEX.csv',
+                            header = 1)
+convocatorias_crawler = pd.read_csv('convocatorias_crawler.tsv',
                                     sep = '\t',
                                     index_col=False)
 
@@ -25,7 +25,7 @@ convocatorias_completo.NUTS = convocatorias_completo.región_impacto.str.split('
 convocatorias_completo.región_impacto = convocatorias_completo.región_impacto.str.split(' - ').str[1]
 
 # Exportar datos
-convocatorias_completo.to_csv('/Users/enriquecarnerofernandez/Documents/BDNS/cured_data/convocatorias_completo.tsv',
+convocatorias_completo.to_csv('convocatorias_completo.tsv',
                               index = False,
                               sep = '\t')
 
