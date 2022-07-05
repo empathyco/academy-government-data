@@ -1,11 +1,12 @@
 import csv
 import json
+import sys
 
 
-def parseTsv(tsvRoute):
+def parseTsv():
 
     try:
-        reader = csv.DictReader(open(tsvRoute), delimiter=",")
+        reader = csv.DictReader(open('../../data-plugin/datos_limpios/convocatorias_completo.tsv'), delimiter="\t")
 
         with open("jsonOutput.json", 'w') as jsonFile:
             jsonFile.write(json.dumps(list(reader)))
@@ -13,12 +14,8 @@ def parseTsv(tsvRoute):
         print("Error with the route, please try again")
 
 def parserInterface():
-    tsvRoute = ""
 
-    while (tsvRoute == ""):
-        tsvRoute = input("Enter a suitable route for the TSV file:\n")
-
-    parseTsv(tsvRoute)
+    parseTsv()
 
 
 if __name__ == "__main__":

@@ -1,7 +1,10 @@
 #!/bin/bash
 
 cd index-governmentdata-parser
+gzip -dk ../../data-plugin/datos_limpios/convocatorias_completo.tsv.gz
+sleep 4
 python3 csvParser.py
+rm ../../data-plugin/datos_limpios/convocatorias_completo.tsv
 cd ..
 
 docker-compose up --build -d
