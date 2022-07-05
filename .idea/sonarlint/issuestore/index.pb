@@ -3,8 +3,6 @@
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 õ
 ksearch-plugin/search-governmentdata-plugin/src/main/resources/collection-config/collection-name-config.json,b/b/bb2136649e4643269e6e030914f33f8507497005
-d
-4search-plugin/search-governmentdata-plugin/README.md,7/7/779b38b3cbe92bea169ec14286bd204f35be66a5
 y
 Isearch-plugin/search-governmentdata-plugin/testing-environment/Dockerfile,0/c/0caf93b6425323ba27c654e6473b266e9183d1e0
 ´
@@ -15,14 +13,6 @@ Isearch-plugin/search-governmentdata-plugin/testing-environment/Dockerfile,0/c/
 csearch-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/PluginConfig.java,6/9/69cdbe4bc57cecc8cfe4d5141beaead30a63bc3b
 ê
 `search-plugin/search-governmentdata-plugin/src/main/resources/plugin-configs/governmentdata.json,e/a/eab9131f2a200d94b973e3e5ab00ba75957e3709
-u
-Esearch-plugin/index-governmentdata-plugin/mongoData/WiredTiger.turtle,3/2/329e7464c565b8d808df08de2e208767668ec063
-´
-{search-plugin/search-governmentdata-plugin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst,8/7/872a91da1dbe1bf89dc72c27fb7c007d9d10be7b
-
-Osearch-plugin/search-governmentdata-plugin/target/maven-archiver/pom.properties,5/0/50de81c40bb00ba50d42a220fef8a351fcb17b7c
-S
-#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 å
 \search-plugin/search-governmentdata-plugin/target/classes/plugin-configs/governmentdata.json,e/7/e7c4051d8e6c91d264a57b9d9fdedc618b541a5f
 n
