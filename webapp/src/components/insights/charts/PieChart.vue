@@ -32,7 +32,7 @@ export default Vue.extend({
           plotShadow: false,
           type: "pie",
         },
-        title: titleVal("PieChart"),
+        title: "",
         legend: legendVal(false),
         tooltip: {
           pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",

@@ -33,22 +33,7 @@
       </div>
     </template>
     <template #sub-header>
-      <!--<PredictiveLayer></PredictiveLayer>-->
-      <div class="related-tags">
-        <SelectedFiltersList class="filter-list">
-          <template #default="{ filter }">
-            <SimpleFilter class="x-tag" :filter="filter" />
-          </template>
-        </SelectedFiltersList>
-        <RelatedTags>
-          <template #related-tag="{ relatedTag }">
-            <div class="related-tag">
-              <p id="tag-text">{{ relatedTag.tag }}</p>
-              <CrossTinyStyled @click="removeTag(relatedTag.tag)" />
-            </div>
-          </template>
-        </RelatedTags>
-      </div>
+      <PredictiveLayer />
     </template>
     <!--
     <template #toolbar-body>
@@ -89,6 +74,7 @@ import FiltersStyled from "@/components/icons/FiltersStyled";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 import { SelectedFiltersList } from "@empathyco/x-components/facets";
+import { QuerySuggestion, QuerySuggestions } from "@empathyco/x-components/js";
 
 export default {
   name: "DiscoveryView",
@@ -136,6 +122,69 @@ export default {
                 id: "castilla",
                 value: "castilla",
                 facetId: "castilla",
+                totalResults: 1,
+              },
+              {
+                label: "Galicia",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "galicia",
+                value: "galicia",
+                facetId: "galicia",
+                totalResults: 1,
+              },
+              {
+                label: "País Vasco",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "vasco",
+                value: "vasco",
+                facetId: "vasco",
+                totalResults: 1,
+              },
+              {
+                label: "Asturias",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "asturias",
+                value: "asturias",
+                facetId: "asturias",
+                totalResults: 1,
+              },
+              {
+                label: "Andalucía",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "andalucía",
+                value: "andalucía",
+                facetId: "andalucía",
+                totalResults: 1,
+              },
+              {
+                label: "Castilla y León",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "castilla",
+                value: "castilla",
+                facetId: "castilla",
+                totalResults: 1,
+              },
+              {
+                label: "Galicia",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "galicia",
+                value: "galicia",
+                facetId: "galicia",
+                totalResults: 1,
+              },
+              {
+                label: "País Vasco",
+                modelName: "SimpleFilter",
+                selected: false,
+                id: "vasco",
+                value: "vasco",
+                facetId: "vasco",
                 totalResults: 1,
               },
               {
@@ -277,15 +326,12 @@ export default {
     };
   },
   components: {
-    //PredictiveLayer,
+    PredictiveLayer,
     FiltersStyled,
     DisplayCharts,
     FiltersComponent,
     SearchBoxComponent,
     MultiColumnMaxWidthLayout,
-    CrossTinyStyled,
-    RelatedTags,
-    SelectedFiltersList,
   },
   methods: {
     removeTag(tagText) {
@@ -342,23 +388,7 @@ export default {
   color: var(--font-selected-link);
   border-color: var(--font-selected-link);
 }
-.related-tag {
-  background-color: var(--background-colour);
-  color: #243d48;
-  border: solid 3px #243d48;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-.related-tags {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-}
-#tag-text {
-  margin: 5px;
-}
+
 h1 {
   margin-top: 0;
 }

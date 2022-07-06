@@ -39,7 +39,7 @@ export default Vue.extend({
           backgroundColor: "transparent",
           color: "white",
         },
-        title: titleVal("Bubble chart"),
+        title: "",
         legend: legendVal(false),
         tooltip: quickTooltipVal(),
         plotOptions: {

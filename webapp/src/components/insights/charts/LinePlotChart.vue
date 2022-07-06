@@ -39,7 +39,7 @@ export default Vue.extend({
         chart: {
           type: "line",
         },
-        title: titleVal("Monthly Average Temperature"),
+        title: "",
         subtitle: {
           text: "Source: WorldClimate.com",
         },

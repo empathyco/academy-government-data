@@ -36,7 +36,7 @@ export default Vue.extend({
       console.log(data);
       Highcharts.chart("word-cloud", {
         colors: colorList,
-        title: titleVal("Word cloud"),
+        title: "",
         legend: legendVal(false),
         tooltip: quickTooltipVal(),
         plotOptions: {

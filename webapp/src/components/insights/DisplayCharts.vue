@@ -21,17 +21,31 @@ export default {
   data() {
     return {
       listOfGraphics: [
-        { data: severalSeries, modelName: "barchart" },
         {
+          title: "Ejemplo de gráfica de barras",
+          data: severalSeries,
+          modelName: "barchart",
+        },
+        {
+          title: "Ejemplo de gráfico de burbujas",
           data: severalSeries,
           modelName: "bubblechart",
         },
         {
+          title: "Ejemplo de gráfica de línea",
           data: severalSeries,
           modelName: "lineplotchart",
         },
-        { data: singleSerie, modelName: "piechart" },
-        { data: singleSerie, modelName: "wordcloud" },
+        {
+          title: "Ejemplo de gráfica de tarta",
+          data: singleSerie,
+          modelName: "piechart",
+        },
+        {
+          title: "Ejemplo de gráfica de nube de palabras",
+          data: singleSerie,
+          modelName: "wordcloud",
+        },
       ],
     };
   },

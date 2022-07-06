@@ -1,14 +1,20 @@
 <template>
-  <div>
+  <div class="filter-container">
     <div
       class="contenido-filtros"
       v-bind:key="filter.title"
       v-for="filter in filters.content"
     >
-      <h1>{{ filter.title }}</h1>
-      <FiltersList :filters="filter.content" v-slot="{ filter }">
-        <SimpleFilter :filter="filter" />
-      </FiltersList>
+      <div class="filter-wrapper">
+        <h2>{{ filter.title }}</h2>
+        <FiltersList
+          :class="`filters-list color--${getColor()}`"
+          :filters="filter.content"
+          v-slot="{ filter }"
+        >
+          <SimpleFilter class="filter" :filter="filter" />
+        </FiltersList>
+      </div>
     </div>
   </div>
 </template>
@@ -38,11 +44,84 @@ export default {
     FiltersList,
     SimpleFilter,
   },
+  data() {
+    return {
+      colors: ["pink", "blue", "yellow", "purple", "green"],
+      counter: 1,
+    };
+  },
+  methods: {
+    getColor() {
+      if (this.counter === this.colors.length) {
+        this.counter = 0;
+      }
+      return this.colors[this.counter++];
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .contenido-filtros {
-  display: grid;
+  justify-content: flex-start;
+  flex-flow: wrap;
+  align-items: center;
+  width: 40%;
+  min-width: 500px;
+}
+
+.filters-list {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.filter {
+  font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  border: solid 1px white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin: 3px;
+  padding: 5px;
+}
+.filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.filter-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+.color--pink {
+  .filter {
+    background-color: #d44a6f;
+  }
+}
+.color--blue {
+  .filter {
+    background-color: #53b9c9;
+  }
+}
+.color--yellow {
+  .filter {
+    background-color: #fdcb5b;
+  }
+}
+.color--purple {
+  .filter {
+    background-color: #8b6391;
+  }
+}
+.color--green {
+  .filter {
+    background-color: #80c0a1;
+  }
 }
 </style>

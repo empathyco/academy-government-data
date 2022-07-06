@@ -2,19 +2,27 @@
   <Empathize :animation="empathizeAnimation">
     <template #default>
       <BaseKeyboardNavigation>
-        <div
-          v-bind:key="querySuggestion"
-          v-for="querySuggestion in querySuggestions"
-        >
-          <QuerySuggestion :suggestion="querySuggestion"></QuerySuggestion>
-        </div>
+        <QuerySuggestions>
+          <template #suggestion="{ querySuggestion }">
+            <QuerySuggestion
+              :suggestion="querySuggestion"
+              #default="{ queryHTML }"
+            >
+              <span v-html="queryHTML" />
+            </QuerySuggestion>
+          </template>
+        </QuerySuggestions>
       </BaseKeyboardNavigation>
     </template>
   </Empathize>
 </template>
 
 <script>
-import { Empathize, QuerySuggestion } from "@empathyco/x-components/js";
+import {
+  Empathize,
+  QuerySuggestion,
+  QuerySuggestions,
+} from "@empathyco/x-components/js";
 import {
   animateScale,
   BaseKeyboardNavigation,
@@ -27,18 +35,12 @@ export default {
     return {
       empathizeAnimation: animateScale(),
       suggestionsAnimation: StaggeredFadeAndSlide,
-      querySuggestions: [
-        "Albacete",
-        "Asturias",
-        "Alicante",
-        "Almería",
-        "Andalucía",
-      ],
     };
   },
   components: {
     Empathize,
     BaseKeyboardNavigation,
+    QuerySuggestions,
     QuerySuggestion,
   },
 };

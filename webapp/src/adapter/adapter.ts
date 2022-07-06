@@ -8,6 +8,8 @@ import {
   SearchAdapter,
   SearchRequest,
   SearchResponse,
+  SuggestionsRequest,
+  SuggestionsResponse,
 } from "@empathyco/x-adapter";
 import {
   RelatedTagsRequest,
@@ -101,6 +103,37 @@ export const adapter: SearchAdapter = {
         { modelName: "RelatedTag", query: "q", tag: "tag1" },
         { modelName: "RelatedTag", query: "q", tag: "tag2" },
         { modelName: "RelatedTag", query: "q", tag: "tag3" },
+      ],
+    });
+  },
+  getSuggestions(request: SuggestionsRequest): Promise<SuggestionsResponse> {
+    console.log({
+      suggestions: [
+        { modelName: "Suggestion", facets: [], key: "suggestion1", query: "q" },
+        { modelName: "Suggestion", facets: [], key: "suggestion2", query: "q" },
+        { modelName: "Suggestion", facets: [], key: "suggestion3", query: "q" },
+      ],
+    });
+    return Promise.resolve({
+      suggestions: [
+        {
+          modelName: "QuerySuggestion",
+          facets: [],
+          key: "suggestion1",
+          query: "q",
+        },
+        {
+          modelName: "QuerySuggestion",
+          facets: [],
+          key: "suggestion2",
+          query: "q",
+        },
+        {
+          modelName: "QuerySuggestion",
+          facets: [],
+          key: "suggestion3",
+          query: "q",
+        },
       ],
     });
   },

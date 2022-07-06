@@ -46,7 +46,7 @@ export default Vue.extend({
           shared: true,
           useHTML: true,
         },
-        title: titleVal("Bar chart"),
+        title: "",
         legend: legendVal(false),
         plotOptions: {
           column: {

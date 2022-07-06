@@ -1,12 +1,17 @@
 <template>
   <div class="discover-card">
-    <button
-      id="dowload-button"
-      @click="dowlowadContent"
-      class="download-contents"
-    >
-      <i class="material-symbols-outlined info"> download </i>
-    </button>
+    <div class="card-header">
+      <p class="chart-title">
+        {{ item.title }}
+      </p>
+      <button
+        id="dowload-button"
+        @click="dowlowadContent"
+        class="download-contents"
+      >
+        <i class="material-symbols-outlined info"> download </i>
+      </button>
+    </div>
     <BarChart
       v-if="item.modelName === 'barchart'"
       :series="item.data"
@@ -47,7 +52,7 @@ export default {
     WordCloud,
   },
   props: {
-    item: { data: String, modelName: String },
+    item: { data: String, modelName: String, title: String },
   },
   methods: {
     dowlowadContent() {
@@ -63,7 +68,7 @@ export default {
   border-radius: 30px;
   padding: 20px;
   margin: 10px;
-  height: 450px;
+  height: 600px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -74,12 +79,25 @@ export default {
   border: solid 1px var(--font-colour);
   color: var(--font-colour);
   border-radius: 30px;
-  padding: 8px 10px;
+  height: 40px;
+  width: 50px;
+  padding: 6px 8px;
 }
 
 .download-contents:hover {
   background-color: #d44a6f;
   border: solid 1px white;
   color: white;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 80%;
 }
 </style>
