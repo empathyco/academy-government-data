@@ -3,13 +3,13 @@
     <template #default>
       <BaseKeyboardNavigation>
         <QuerySuggestions>
-          <template #suggestion="{ querySuggestion }">
-            <QuerySuggestion
-              :suggestion="querySuggestion"
-              #default="{ queryHTML }"
-            >
+          <template #suggestion="{ suggestion }">
+            <!--<QuerySuggestion :suggestion="suggestion" #default="{ queryHTML }">
               <span v-html="queryHTML" />
-            </QuerySuggestion>
+            </QuerySuggestion> -->
+            <button @click="emitSuggestionClickedEvents($event, suggestion)">
+              {{ suggestion.query }}
+            </button>
           </template>
         </QuerySuggestions>
       </BaseKeyboardNavigation>
@@ -18,11 +18,7 @@
 </template>
 
 <script>
-import {
-  Empathize,
-  QuerySuggestion,
-  QuerySuggestions,
-} from "@empathyco/x-components/js";
+import { Empathize, QuerySuggestions } from "@empathyco/x-components/js";
 import {
   animateScale,
   BaseKeyboardNavigation,
@@ -41,7 +37,20 @@ export default {
     Empathize,
     BaseKeyboardNavigation,
     QuerySuggestions,
-    QuerySuggestion,
+    // QuerySuggestion,
+  },
+  methods: {
+    emitSuggestionClickedEvents(event, suggestion) {
+      this.$x.emit("UserAcceptedAQuery", suggestion.query, {
+        target: event.target,
+      });
+      this.$x.emit("UserSelectedASuggestion", suggestion, {
+        target: event.target,
+      });
+      this.$x.emit("UserSelectedAQuerySuggestion", suggestion, {
+        target: event.target,
+      });
+    },
   },
 };
 </script>

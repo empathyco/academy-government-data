@@ -11,19 +11,8 @@ import {
   SuggestionsRequest,
   SuggestionsResponse,
 } from "@empathyco/x-adapter";
-import {
-  RelatedTagsRequest,
-  RelatedTagsResponse,
-  Result,
-} from "@empathyco/x-types";
-/*import { bannerMapper } from './demo-banner-mapper';
-import { HierarchicalFacetMapper } from './demo-hierarchical-mapper';
-import { promotedMapper } from './demo-promoted-mapper';
-import { RequestFiltersMapper } from './demo-request-filters.mapper';
-import { SearchRequestMapper } from './demo-request-mapper';
-import { resultMapper } from './demo-result.mapper';
-import { priceFilterMapper } from './demo-price-filter-mapper';
-*/ import { EmpathyEndpointsService } from "./empathy-endpoints.service";
+import { RelatedTagsRequest, Result } from "@empathyco/x-types";
+import { EmpathyEndpointsService } from "./empathy-endpoints.service";
 
 export const adapter2 = new EmpathyAdapterBuilder()
   /*  .addMapper(resultMapper, 'results')
@@ -110,8 +99,18 @@ export const adapter: SearchAdapter = {
     console.log({
       suggestions: [
         { modelName: "Suggestion", facets: [], key: "suggestion1", query: "q" },
-        { modelName: "Suggestion", facets: [], key: "suggestion2", query: "q" },
-        { modelName: "Suggestion", facets: [], key: "suggestion3", query: "q" },
+        {
+          modelName: "Suggestion",
+          facets: [],
+          key: "suggestion2",
+          query: "qu",
+        },
+        {
+          modelName: "Suggestion",
+          facets: [],
+          key: "suggestion3",
+          query: "que",
+        },
       ],
     });
     return Promise.resolve({
@@ -126,13 +125,13 @@ export const adapter: SearchAdapter = {
           modelName: "QuerySuggestion",
           facets: [],
           key: "suggestion2",
-          query: "q",
+          query: "qu",
         },
         {
           modelName: "QuerySuggestion",
           facets: [],
           key: "suggestion3",
-          query: "q",
+          query: "que",
         },
       ],
     });

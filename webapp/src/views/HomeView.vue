@@ -68,7 +68,7 @@
 <script lang="ts">
 import Vue from "vue";
 import BubbleChart from "@/components/insights/charts/BubbleChart.vue";
-import { severalSeries } from "@/utils/SampleData";
+import { severalSeries } from "@/utils/data/SampleData";
 import SearchStyled from "@/components/icons/SearchStyled.vue";
 
 export default Vue.extend({

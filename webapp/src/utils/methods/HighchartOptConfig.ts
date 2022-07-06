@@ -1,4 +1,4 @@
-import { empathyBlack } from "@/utils/GlobalVariables";
+import { empathyBlack } from "@/utils/data/GlobalVariables";
 
 /**
  * Given the parameters, returns a title object that will be processed by Highchart.

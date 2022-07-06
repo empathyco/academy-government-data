@@ -8,12 +8,7 @@
 
 <script>
 import { BaseGrid } from "@empathyco/x-components";
-import { singleSerie, severalSeries } from "@/utils/SampleData";
-import BarChart from "@/components/insights/charts/BarChart";
-import BubbleChart from "@/components/insights/charts/BubbleChart";
-import LinePlotChart from "@/components/insights/charts/LinePlotChart";
-import PieChart from "@/components/insights/charts/PieChart";
-import WordCloud from "@/components/insights/charts/WordCloud";
+import { singleSerie, severalSeries } from "@/utils/data/SampleData";
 import DiscoverCard from "@/components/insights/DiscoverCard";
 
 export default {

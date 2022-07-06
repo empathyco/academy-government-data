@@ -9,13 +9,9 @@ import Vue from "vue";
 import Highcharts from "highcharts";
 import loadWordcloud from "highcharts/modules/wordcloud";
 import highchartsMore from "highcharts/highcharts-more";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
-import {
-  legendVal,
-  quickTooltipVal,
-  titleVal,
-} from "@/utils/HighchartOptConfig";
+import { legendVal, quickTooltipVal } from "@/utils/methods/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 loadWordcloud(Highcharts);

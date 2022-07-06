@@ -8,11 +8,16 @@
       <div class="filter-wrapper">
         <h2>{{ filter.title }}</h2>
         <FiltersList
-          :class="`filters-list color--${getColor()}`"
+          :class="`filters-list`"
           :filters="filter.content"
           v-slot="{ filter }"
         >
-          <SimpleFilter class="filter" :filter="filter" />
+          <SimpleFilter
+            class="filter"
+            :filter="filter"
+            :style="`background-color:${getColorMap(filter.type)};`"
+            @click.native="emitFilter(filter)"
+          />
         </FiltersList>
       </div>
     </div>
@@ -21,6 +26,7 @@
 
 <script>
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
+import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
 
 export default {
   name: "FiltersComponent",
@@ -35,9 +41,13 @@ export default {
           id: String,
           value: String,
           facetId: String,
+          type: String,
           totalResults: Number,
         }),
       }),
+    },
+    colorMap: {
+      content: Array({ color: String, type: String }),
     },
   },
   components: {
@@ -56,6 +66,12 @@ export default {
         this.counter = 0;
       }
       return this.colors[this.counter++];
+    },
+    getColorMap(type) {
+      return getColorFromDictionary(this.colorMap.content, type);
+    },
+    emitFilter(filter) {
+      this.$emit("selected-filter", filter);
     },
   },
 };

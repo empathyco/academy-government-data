@@ -9,9 +9,9 @@ import Vue from "vue";
 import Highcharts from "highcharts";
 import loadPie from "highcharts/modules/variable-pie";
 import highchartsMore from "highcharts/highcharts-more";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
-import { legendVal, titleVal } from "@/utils/HighchartOptConfig";
+import { legendVal } from "@/utils/methods/HighchartOptConfig";
 
 loadPie(Highcharts);
 highchartsMore(Highcharts);

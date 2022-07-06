@@ -6,14 +6,13 @@
 <script>
 import Vue from "vue";
 import Highcharts from "highcharts";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
 import {
   legendVal,
-  titleVal,
   xAxisVal,
   yAxisVal,
-} from "@/utils/HighchartOptConfig";
+} from "@/utils/methods/HighchartOptConfig";
 
 export default Vue.extend({
   data() {
