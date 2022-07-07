@@ -51,5 +51,23 @@ read -s -n 1 -p "Press any key to continue . . ."
 
 docker-compose down
 cd ../search-governmentdata-plugin
+
+curl --request PUT \
+  --url http://localhost:9200/governmentdata-links
+
+curl --request PUT \
+  --url http://localhost:9200/governmentdata-links/_mapping \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "properties": {
+        "updated_on": {
+            "type": "date"
+        },
+        "weight": {
+            "type": "float"
+        }
+    }
+}'
+
 mvn clean package -DskipTests
 docker-compose up --build -d

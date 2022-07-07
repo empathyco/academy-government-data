@@ -131,7 +131,7 @@
   "mappings": {
       "properties": {
         "codigo_bdns": {
-          "type": "integer"
+          "type": "text"
         },
         "mrr": {
           "type": "boolean"
