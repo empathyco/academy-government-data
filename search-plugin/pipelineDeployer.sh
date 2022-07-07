@@ -47,8 +47,6 @@ do
     echo " STATUS CODE GET JOB $state"
 done
 
-read -s -n 1 -p "Press any key to continue . . ."
-
 docker-compose down
 cd ../search-governmentdata-plugin
 
