@@ -157,6 +157,14 @@
             }
           }
         },
+        "titulo_cooficial": {
+          "type" : "text",
+          "fields" : {
+            "raw": {
+              "type": "keyword"
+            }
+          }
+        },
         "url_bases_regul": {
           "type": "text"
         },
@@ -178,6 +186,9 @@
           "type": "text"
         },
         "finalidad": {
+          "type": "text"
+        },
+        "NUTS": {
           "type": "text"
         },
         "spellcheck": {
