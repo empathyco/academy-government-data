@@ -1,5 +1,5 @@
 <template>
-  <CrossIcon class="x-icon"></CrossIcon>
+  <CrossIcon class="x-icon" />
 </template>
 
 <script>

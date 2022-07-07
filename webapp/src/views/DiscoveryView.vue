@@ -33,7 +33,7 @@
       </div>
     </template>
     <template #sub-header>
-      <PredictiveLayer />
+      <PredictiveLayer @filterApplied="manageFilter($event)" />
       <div class="filter-container">
         <FiltersList
           :class="`filters-list`"
@@ -44,7 +44,15 @@
             class="filter"
             :filter="filter"
             :style="`background-color:${getColorMap(filter.type)};`"
-          />
+            @click.native="manageFilter(filter)"
+          >
+            <template #label="{ filter }">
+              <div class="discovery-filter">
+                <p id="filter-label">{{ filter.label }}</p>
+                <CrossTinyStyled class="tiny-cross" />
+              </div>
+            </template>
+          </SimpleFilter>
         </FiltersList>
       </div>
     </template>
@@ -64,6 +72,7 @@
       <div v-if="filtersMenuSelected">
         <FiltersComponent
           :filters="filters"
+          :filtersSelected="{ content: filtersSelected }"
           :colorMap="colorMap"
           @selected-filter="manageFilter($event)"
         />
@@ -90,6 +99,8 @@ import FiltersStyled from "@/components/icons/FiltersStyled";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
 import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
+import { filtersSample, relatedTagsSample } from "@/utils/data/SampleData";
+import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 
 export default {
   name: "DiscoveryView",
@@ -119,271 +130,8 @@ export default {
         },
       ],
       colorMap: { content: [] },
-      relatedTags: [
-        { isCurated: false, tag: "tag1" },
-        { isCurated: false, tag: "tag2" },
-        { isCurated: false, tag: "tag3" },
-        { isCurated: false, tag: "tag4" },
-        { isCurated: false, tag: "tag5" },
-        { isCurated: false, tag: "tag6" },
-        { isCurated: false, tag: "tag7" },
-        { isCurated: false, tag: "tag8" },
-        { isCurated: false, tag: "tag9" },
-      ],
-      filters: {
-        content: [
-          {
-            title: "Provincias",
-            content: [
-              {
-                label: "Asturias",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "asturias",
-                value: "asturias",
-                facetId: "asturias",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Andalucía",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "andalucía",
-                value: "andalucía",
-                facetId: "andalucía",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Castilla y León",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "castilla",
-                value: "castilla",
-                facetId: "castilla",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Galicia",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "galicia",
-                value: "galicia",
-                facetId: "galicia",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "País Vasco",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "vasco",
-                value: "vasco",
-                facetId: "vasco",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "La Rioja",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "rioja",
-                value: "rioja",
-                facetId: "rioja",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Santander",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "santander",
-                value: "santander",
-                facetId: "santander",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Extremadura",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "extremadura",
-                value: "extremadura",
-                facetId: "extremadura",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Cataluña",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "cataluña",
-                value: "cataluña",
-                facetId: "cataluña",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Valencia",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "valencia",
-                value: "valencia",
-                facetId: "valencia",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Islas Canarias",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "canarias",
-                value: "canarias",
-                facetId: "canarias",
-                type: "provincia",
-                totalResults: 1,
-              },
-              {
-                label: "Islas Baleares",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "baleares",
-                value: "baleares",
-                facetId: "baleares",
-                type: "provincia",
-                totalResults: 1,
-              },
-            ],
-          },
-          {
-            title: "Sector",
-            content: [
-              {
-                label: "Industria",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "industria",
-                value: "industria",
-                facetId: "industria",
-                type: "sector",
-                totalResults: 1,
-              },
-              {
-                label: "Agricultura",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "agricultura",
-                value: "agricultura",
-                facetId: "agricultura",
-                type: "sector",
-                totalResults: 1,
-              },
-              {
-                label: "Cultura",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "cultura",
-                value: "cultura",
-                facetId: "cultura",
-                type: "sector",
-                totalResults: 1,
-              },
-              {
-                label: "Hostelería",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "hostelería",
-                value: "hostelería",
-                facetId: "hostelería",
-                type: "sector",
-                totalResults: 1,
-              },
-            ],
-          },
-          {
-            title: "Año",
-            content: [
-              {
-                label: "2019",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "2019",
-                value: "2019",
-                facetId: "2019",
-                type: "año",
-                totalResults: 1,
-              },
-              {
-                label: "2020",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "2020",
-                value: "2020",
-                facetId: "2020",
-                type: "año",
-                totalResults: 1,
-              },
-              {
-                label: "2021",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "2021",
-                value: "2021",
-                facetId: "2021",
-                type: "año",
-                totalResults: 1,
-              },
-              {
-                label: "2022",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "2022",
-                value: "2022",
-                facetId: "2022",
-                type: "año",
-                totalResults: 1,
-              },
-            ],
-          },
-          {
-            title: "Periodo",
-            content: [
-              {
-                label: "Primer trimestre",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "primer",
-                value: "primer",
-                facetId: "primer",
-                type: "periodo",
-                totalResults: 1,
-              },
-              {
-                label: "Segundo trimestre",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "segundo",
-                value: "segundo",
-                facetId: "segundo",
-                type: "periodo",
-                totalResults: 1,
-              },
-              {
-                label: "Tercer trimestre",
-                modelName: "SimpleFilter",
-                selected: false,
-                id: "tercer",
-                value: "tercer",
-                facetId: "tercer",
-                type: "periodo",
-                totalResults: 1,
-              },
-            ],
-          },
-        ],
-      },
+      relatedTags: relatedTagsSample,
+      filters: filtersSample,
     };
   },
   components: {
@@ -395,6 +143,7 @@ export default {
     MultiColumnMaxWidthLayout,
     FiltersList,
     SimpleFilter,
+    CrossTinyStyled,
   },
   methods: {
     removeTag(tagText) {
@@ -476,13 +225,23 @@ h1 {
 }
 .filter {
   font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 13px;
   font-weight: bold;
   color: white;
   border: solid 1px white;
   border-radius: 30px;
-  display: flex;
-  align-items: center;
   margin: 3px;
-  padding: 5px;
+}
+.discovery-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: -10px;
+}
+#filter-label {
+  margin: 10px 10px;
+}
+.tiny-cross {
+  stroke: white;
 }
 </style>

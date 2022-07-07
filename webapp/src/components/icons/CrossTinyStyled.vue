@@ -1,5 +1,5 @@
 <template>
-  <CrossTinyIcon class="filter-icon"></CrossTinyIcon>
+  <CrossTinyIcon class="filter-icon" />
 </template>
 
 <script>

@@ -15,9 +15,17 @@
           <SimpleFilter
             class="filter"
             :filter="filter"
-            :style="`background-color:${getColorMap(filter.type)};`"
+            :style="`background-color:${getColorMap(filter)};`"
             @click.native="emitFilter(filter)"
-          />
+          >
+            <template #label="{ filter }">
+              <div class="discovery-filter">
+                <p id="filter-label">{{ filter.label }}</p>
+                <CrossTinyStyled v-if="filter.selected" class="icon-response" />
+                <PlusStyled v-else class="icon-response" />
+              </div>
+            </template>
+          </SimpleFilter>
         </FiltersList>
       </div>
     </div>
@@ -27,6 +35,8 @@
 <script>
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
 import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
+import PlusStyled from "@/components/icons/PlusStyled";
+import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 
 export default {
   name: "FiltersComponent",
@@ -46,11 +56,25 @@ export default {
         }),
       }),
     },
+    filtersSelected: {
+      content: Array({
+        label: String,
+        modelName: String,
+        selected: Boolean,
+        id: String,
+        value: String,
+        facetId: String,
+        type: String,
+        totalResults: Number,
+      }),
+    },
     colorMap: {
       content: Array({ color: String, type: String }),
     },
   },
   components: {
+    PlusStyled,
+    CrossTinyStyled,
     FiltersList,
     SimpleFilter,
   },
@@ -67,8 +91,17 @@ export default {
       }
       return this.colors[this.counter++];
     },
-    getColorMap(type) {
-      return getColorFromDictionary(this.colorMap.content, type);
+    getColorMap(filter) {
+      const filterIsSelected =
+        this.filtersSelected.content.filter(
+          (filterSelected) => filterSelected.label === filter.label
+        ).length > 0;
+
+      filterIsSelected ? (filter.selected = true) : (filter.selected = false);
+
+      return filterIsSelected
+        ? "#b3b3b3"
+        : getColorFromDictionary(this.colorMap.content, filter.type);
     },
     emitFilter(filter) {
       this.$emit("selected-filter", filter);
@@ -93,14 +126,24 @@ export default {
 }
 .filter {
   font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 13px;
   font-weight: bold;
   color: white;
   border: solid 1px white;
   border-radius: 30px;
-  display: flex;
-  align-items: center;
   margin: 3px;
-  padding: 5px;
+}
+.discovery-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: -10px;
+}
+#filter-label {
+  margin: 10px 10px;
+}
+.icon-response {
+  stroke: white;
 }
 .filter-wrapper {
   display: flex;
@@ -113,31 +156,5 @@ export default {
   display: flex;
   flex-flow: wrap;
   justify-content: space-evenly;
-}
-
-.color--pink {
-  .filter {
-    background-color: #d44a6f;
-  }
-}
-.color--blue {
-  .filter {
-    background-color: #53b9c9;
-  }
-}
-.color--yellow {
-  .filter {
-    background-color: #fdcb5b;
-  }
-}
-.color--purple {
-  .filter {
-    background-color: #8b6391;
-  }
-}
-.color--green {
-  .filter {
-    background-color: #80c0a1;
-  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <FiltersIcon class="filter-icon"></FiltersIcon>
+  <FiltersIcon class="filter-icon" />
 </template>
 
 <script>
