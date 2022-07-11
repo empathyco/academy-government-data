@@ -48,7 +48,10 @@ do
 done
 
 docker-compose down
+
+rm ../index-governmentdata-parser/jsonOutput.json
 cd ../search-governmentdata-plugin
+
 
 curl --request PUT \
   --url http://localhost:9200/governmentdata-links
