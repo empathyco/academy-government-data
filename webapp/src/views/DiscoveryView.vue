@@ -78,7 +78,7 @@
         />
       </div>
       <div v-else>
-        <DisplayCharts></DisplayCharts>
+        <DisplayCharts :changedFilters="modifyFilters($event)"></DisplayCharts>
       </div>
     </template>
 
@@ -172,6 +172,9 @@ export default {
     },
     getColorMap(type) {
       return getColorFromDictionary(this.colorMap.content, type);
+    },
+    modifyFilters(newFilters) {
+      this.filtersSelected = newFilters;
     },
   },
 };
