@@ -8,27 +8,26 @@ export default new Vuex.Store({
   state: {
     colorMap: [] as { type: string; color: string }[],
   },
-  getters: {
+  mutations: {
+    addPair(state, payload) {
+      state.colorMap = [...state.colorMap, payload];
+    },
+  },
+  actions: {
     getNextColor(state, size) {
       size = size % colorList.length;
       return colorList[size];
     },
-  },
-  mutations: {
-    addPair(state, payload) {
-      state.colorMap = [...state.colorMap, payload.pair];
-    },
-  },
-  actions: {
-    getColorFromDictionary(context, type) {
+    async getColorFromDictionary(context, type) {
       const dictionarySize = context.state.colorMap.length;
-      if (!this.state.colorMap.some((pair) => pair.type === type)) {
+      if (!context.state.colorMap.some((pair) => pair.type === type)) {
         context.commit("addPair", {
-          color: context.getters.getNextColor(dictionarySize),
+          color: await context.dispatch("getNextColor", dictionarySize),
           type: type,
         });
       }
-      return this.state.colorMap.filter((pair) => pair.type === type)[0].color;
+      return context.state.colorMap.filter((pair) => pair.type === type)[0]
+        .color;
     },
   },
   modules: {},

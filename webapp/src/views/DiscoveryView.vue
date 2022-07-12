@@ -101,9 +101,9 @@ import DisplayCharts from "@/components/insights/DisplayCharts";
 import FiltersStyled from "@/components/icons/FiltersStyled";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
-import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
 import { filtersSample, relatedTagsSample } from "@/utils/data/SampleData";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
+import store from "@/store";
 
 export default {
   name: "DiscoveryView",
@@ -174,7 +174,7 @@ export default {
             this.$refs.filterButton.className.split(" ")[0]);
     },
     getColorMap(type) {
-      return getColorFromDictionary(this.colorMap.content, type);
+      return store.dispatch("getColorFromDictionary", type);
     },
     modifyFilters(newFilters) {
       this.filtersSelected = newFilters;

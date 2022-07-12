@@ -41,7 +41,7 @@
         <SimpleFilter
           class="filter"
           :filter="filter"
-          :style="`background-color:${getColorMap(filter)};`"
+          :ref="`filter${filter.label}`"
           @click.native="manageFilter(filter)"
         >
           <template #label="{ filter }">
@@ -63,10 +63,10 @@ import BubbleChart from "@/components/insights/charts/BubbleChart";
 import LinePlotChart from "@/components/insights/charts/LinePlotChart";
 import PieChart from "@/components/insights/charts/PieChart";
 import WordCloud from "@/components/insights/charts/WordCloud";
-import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 import PlusStyled from "@/components/icons/PlusStyled";
+import store from "@/store";
 
 export default {
   name: "DiscoverCard",
@@ -133,18 +133,24 @@ export default {
         this.$emit("changedFilters", [...this.filtersSelected, filterToManage]);
       }
     },
-    getColorMap(filter) {
+    async getColorMap(filter) {
       const filterIsSelected =
         this.filtersSelected.filter(
           (filterSelected) => filterSelected.label === filter.label
         ).length > 0;
 
       filterIsSelected ? (filter.selected = true) : (filter.selected = false);
-
-      return filterIsSelected
-        ? "#b3b3b3"
-        : getColorFromDictionary(this.colorMap.content, filter.type);
+      const color = await store.dispatch("getColorFromDictionary", filter.type);
+      this.$refs[`filter${filter.label}`].$el.setAttribute(
+        "style",
+        `background-color: ${filterIsSelected ? "#b3b3b3" : color}`
+      );
     },
+  },
+  mounted() {
+    for (let filter of this.item.tags) {
+      this.getColorMap(filter);
+    }
   },
 };
 </script>

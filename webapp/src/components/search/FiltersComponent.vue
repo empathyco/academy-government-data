@@ -2,20 +2,20 @@
   <div class="filter-container">
     <div
       class="contenido-filtros"
-      v-bind:key="filter.title"
-      v-for="filter in filters.content"
+      v-bind:key="filtergroup.title"
+      v-for="filtergroup in filters.content"
     >
       <div class="filter-wrapper">
-        <h2>{{ filter.title }}</h2>
+        <h2>{{ filtergroup.title }}</h2>
         <FiltersList
           :class="`filters-list`"
-          :filters="filter.content"
+          :filters="filtergroup.content"
           v-slot="{ filter }"
         >
           <SimpleFilter
             class="filter"
             :filter="filter"
-            :style="`background-color:${getColorMap(filter)};`"
+            :ref="`filterTag${filter.label}`"
             @click.native="emitFilter(filter)"
           >
             <template #label="{ filter }">
@@ -34,9 +34,9 @@
 
 <script>
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
-import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
 import PlusStyled from "@/components/icons/PlusStyled";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
+import store from "@/store";
 
 export default {
   name: "FiltersComponent",
@@ -91,7 +91,7 @@ export default {
       }
       return this.colors[this.counter++];
     },
-    getColorMap(filter) {
+    async getColorMap(filter) {
       const filterIsSelected =
         this.filtersSelected.content.filter(
           (filterSelected) => filterSelected.label === filter.label
@@ -99,13 +99,20 @@ export default {
 
       filterIsSelected ? (filter.selected = true) : (filter.selected = false);
 
-      return filterIsSelected
-        ? "#b3b3b3"
-        : getColorFromDictionary(this.colorMap.content, filter.type);
+      const color = await store.dispatch("getColorFromDictionary", filter.type);
+      this.$refs[`filterTag${filter.label}`][0].$el.setAttribute(
+        "style",
+        `background-color: ${filterIsSelected ? "#b3b3b3" : color}`
+      );
     },
     emitFilter(filter) {
       this.$emit("selected-filter", filter);
     },
+  },
+  mounted() {
+    for (let filtergroup of this.filters.content) {
+      for (let filter of filtergroup.content) this.getColorMap(filter);
+    }
   },
 };
 </script>
