@@ -129,6 +129,17 @@
     }
   },
   "mappings": {
+    "dynamic_templates": [
+      {
+        "facet": {
+          "match_pattern": "regex",
+          "match": "^^facet(_\\w+)?$",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      }
+      ],
       "properties": {
         "codigo_bdns": {
           "type": "text"
@@ -191,6 +202,28 @@
         "NUTS": {
           "type": "text"
         },
+        "facet_administracion":{
+          "type": "keyword"
+        },
+        "facet_departamento": {
+          "type": "keyword"
+        },
+        "facet_organo": {
+          "type": "keyword"
+        },
+        "facet_tipoBeneficiario": {
+          "type": "keyword"
+        },
+        "facet_sectorBeneficiario": {
+          "type": "keyword"
+        },
+        "facet_regionImpacto": {
+          "type": "keyword"
+        },
+        "facet_finalidad": {
+          "type": "keyword"
+        }
+      },
         "spellcheck": {
           "type": "text",
           "fields": {
@@ -205,4 +238,3 @@
         }
       }
   }
-}

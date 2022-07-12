@@ -66,11 +66,6 @@
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_importe",
-                        "queryParam": "importe",
-                        "type": "RANGE"
-                      },
-                      {
                         "name": "facet_tipoBeneficiario",
                         "queryParam": "tipoBeneficiario",
                         "type": "VALUE"
@@ -101,27 +96,6 @@
                     "mainCollectionId": "governmentdata",
                     "secondaryCollectionId": "governmentdata",
                     "facetableFields": {
-                      "rangeFacets": [
-                        {
-                          "field": "facet_importe",
-                          "filterField": "importe",
-                          "ranges": [
-                            {
-                              "to": 100000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 100000,
-                              "to": 200000000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 200000000,
-                              "gap": 100000000
-                            }
-                          ]
-                        }
-                      ],
                       "valueFacets": [
                         {
                           "field": "facet_administracion",
@@ -171,7 +145,6 @@
                       "facet_administracion",
                       "facet_departamento",
                       "facet_organo",
-                      "facet_importe",
                       "facet_tipoBeneficiario",
                       "facet_sectorBeneficiario",
                       "facet_regionImpacto",
@@ -379,11 +352,6 @@
                           "type": "VALUE"
                         },
                         {
-                          "name": "facet_importe",
-                          "queryParam": "importe",
-                          "type": "RANGE"
-                        },
-                        {
                           "name": "facet_tipoBeneficiario",
                           "queryParam": "tipoBeneficiario",
                           "type": "VALUE"
@@ -414,27 +382,6 @@
                     "mainCollectionId": "governmentdata",
                     "secondaryCollectionId": "governmentdata",
                     "facetableFields": {
-                      "rangeFacets": [
-                        {
-                          "field": "facet_importe",
-                          "filterField": "importe",
-                          "ranges": [
-                            {
-                              "to": 100000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 100000,
-                              "to": 200000000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 200000000,
-                              "gap": 100000000
-                            }
-                          ]
-                        }
-                      ],
                       "valueFacets": [
                         {
                           "field": "facet_administracion",
@@ -484,7 +431,6 @@
                       "facet_administracion",
                         "facet_departamento",
                         "facet_organo",
-                        "facet_importe",
                         "facet_tipoBeneficiario",
                         "facet_sectorBeneficiario",
                         "facet_regionImpacto",
@@ -688,14 +634,9 @@
                   "config": {
                     "allowedFields": [
                       {
-                        "fieldName": "categoryIds",
+                        "fieldName": "tipo_beneficiario",
                         "aggregationSize": 1000,
-                        "aggregationField": "facet_categories"
-                      },
-                      {
-                        "fieldName": "brand",
-                        "aggregationSize": 1000,
-                        "aggregationField": "facet_brand"
+                        "aggregationField": "tipo_beneficiario.raw"
                       }
                     ]
                   }

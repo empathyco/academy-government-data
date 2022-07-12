@@ -47,6 +47,8 @@ do
     echo " STATUS CODE GET JOB $state"
 done
 
+read "Press enter to continue..."
+
 docker-compose down
 
 rm ../index-governmentdata-parser/jsonOutput.json
