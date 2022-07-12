@@ -32,6 +32,28 @@
       v-else-if="item.modelName === 'wordcloud'"
       :series="item.data"
     ></WordCloud>
+    <div class="filter-container">
+      <FiltersList
+        :class="`filters-list`"
+        :filters="item.tags"
+        v-slot="{ filter }"
+      >
+        <SimpleFilter
+          class="filter"
+          :filter="filter"
+          :style="`background-color:${getColorMap(filter)};`"
+          @click.native="manageFilter(filter)"
+        >
+          <template #label="{ filter }">
+            <div class="discovery-filter">
+              <p id="filter-label">{{ filter.label }}</p>
+              <CrossTinyStyled v-if="filter.selected" class="icon-response" />
+              <PlusStyled v-else class="icon-response" />
+            </div>
+          </template>
+        </SimpleFilter>
+      </FiltersList>
+    </div>
   </div>
 </template>
 
@@ -41,6 +63,10 @@ import BubbleChart from "@/components/insights/charts/BubbleChart";
 import LinePlotChart from "@/components/insights/charts/LinePlotChart";
 import PieChart from "@/components/insights/charts/PieChart";
 import WordCloud from "@/components/insights/charts/WordCloud";
+import { getColorFromDictionary } from "@/utils/methods/ColorMapper";
+import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
+import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
+import PlusStyled from "@/components/icons/PlusStyled";
 
 export default {
   name: "DiscoverCard",
@@ -50,13 +76,74 @@ export default {
     LinePlotChart,
     PieChart,
     WordCloud,
+    FiltersList,
+    SimpleFilter,
+    CrossTinyStyled,
+    PlusStyled,
   },
   props: {
-    item: { data: String, modelName: String, title: String },
+    item: {
+      data: String,
+      modelName: String,
+      title: String,
+      tags: Array({
+        label: String,
+        modelName: String,
+        selected: Boolean,
+        id: String,
+        value: String,
+        facetId: String,
+        type: String,
+        totalResults: Number,
+      }),
+    },
+    filtersSelected: {
+      content: Array({
+        label: String,
+        modelName: String,
+        selected: Boolean,
+        id: String,
+        value: String,
+        facetId: String,
+        type: String,
+        totalResults: Number,
+      }),
+    },
+  },
+  data() {
+    return {
+      colorMap: { content: [] },
+    };
   },
   methods: {
     dowlowadContent() {
       console.log(this.item);
+    },
+    manageFilter(filterToManage) {
+      if (
+        this.filtersSelected.some((filter) => filter.id === filterToManage.id)
+      ) {
+        this.$emit(
+          "changedFilters",
+          this.filtersSelected.filter(
+            (filter) => filter.id !== filterToManage.id
+          )
+        );
+      } else {
+        this.$emit("changedFilters", [...this.filtersSelected, filterToManage]);
+      }
+    },
+    getColorMap(filter) {
+      const filterIsSelected =
+        this.filtersSelected.filter(
+          (filterSelected) => filterSelected.label === filter.label
+        ).length > 0;
+
+      filterIsSelected ? (filter.selected = true) : (filter.selected = false);
+
+      return filterIsSelected
+        ? "#b3b3b3"
+        : getColorFromDictionary(this.colorMap.content, filter.type);
     },
   },
 };
