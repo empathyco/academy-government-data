@@ -37,22 +37,10 @@
       <div class="filter-container">
         <FiltersList
           :class="`filters-list`"
-          :filters="filtersSelected"
+          :filters="getFiltersSelected()"
           v-slot="{ filter }"
         >
-          <SimpleFilter
-            class="filter"
-            :filter="filter"
-            :style="`background-color:${getColorMap(filter.type)};`"
-            @click.native="manageFilter(filter)"
-          >
-            <template #label="{ filter }">
-              <div class="discovery-filter">
-                <p id="filter-label">{{ filter.label }}</p>
-                <CrossTinyStyled class="tiny-cross" />
-              </div>
-            </template>
-          </SimpleFilter>
+          <TagFilter :filter="filter" :color="getColorMap(filter.type)" />
         </FiltersList>
       </div>
     </template>
@@ -70,16 +58,11 @@
 
     <template #main-body>
       <div v-if="filtersMenuSelected">
-        <FiltersComponent
-          :filters="filters"
-          :filtersSelected="{ content: filtersSelected }"
-          :colorMap="colorMap"
-          @selected-filter="manageFilter($event)"
-        />
+        <FiltersComponent :filters="filters" />
       </div>
       <div v-else>
         <DisplayCharts
-          :filtersSelected="filtersSelected"
+          :filtersSelected="getFiltersSelected()"
           @changedFilters="modifyFilters($event)"
         ></DisplayCharts>
       </div>
@@ -102,42 +85,20 @@ import FiltersStyled from "@/components/icons/FiltersStyled";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
 import { filtersSample, relatedTagsSample } from "@/utils/data/SampleData";
-import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 import store from "@/store";
+import TagFilter from "@/components/tags/TagFilter";
 
 export default {
   name: "DiscoveryView",
   data() {
     return {
       filtersMenuSelected: false,
-      filtersSelected: [
-        {
-          label: "Asturias",
-          modelName: "SimpleFilter",
-          selected: false,
-          id: "asturias",
-          value: "asturias",
-          facetId: "asturias",
-          type: "provincia",
-          totalResults: 1,
-        },
-        {
-          label: "Industria",
-          modelName: "SimpleFilter",
-          selected: false,
-          id: "industria",
-          value: "industria",
-          facetId: "industria",
-          type: "sector",
-          totalResults: 1,
-        },
-      ],
-      colorMap: { content: [] },
       relatedTags: relatedTagsSample,
       filters: filtersSample,
     };
   },
   components: {
+    TagFilter,
     PredictiveLayer,
     FiltersStyled,
     DisplayCharts,
@@ -145,26 +106,13 @@ export default {
     SearchBoxComponent,
     MultiColumnMaxWidthLayout,
     FiltersList,
-    SimpleFilter,
-    CrossTinyStyled,
   },
   methods: {
-    removeTag(tagText) {
-      console.log("removeTag");
-      this.relatedTags = this.relatedTags.filter(
-        (relatedTag) => relatedTag.tag !== tagText
-      );
+    getFiltersSelected() {
+      return store.state.filtersSelected;
     },
     manageFilter(filterToManage) {
-      if (
-        this.filtersSelected.some((filter) => filter.id === filterToManage.id)
-      ) {
-        this.filtersSelected = this.filtersSelected.filter(
-          (filter) => filter.id !== filterToManage.id
-        );
-      } else {
-        this.filtersSelected = [...this.filtersSelected, filterToManage];
-      }
+      store.dispatch("modifySelectedFilters", filterToManage);
     },
     changeFilterSelected() {
       this.filtersMenuSelected = !this.filtersMenuSelected;
@@ -173,12 +121,15 @@ export default {
         : (this.$refs.filterButton.className =
             this.$refs.filterButton.className.split(" ")[0]);
     },
-    getColorMap(type) {
-      return store.dispatch("getColorFromDictionary", type);
+    async getColorMap(type) {
+      return await store.dispatch("getColor", type);
     },
     modifyFilters(newFilters) {
       this.filtersSelected = newFilters;
     },
+  },
+  async beforeMount() {
+    await store.dispatch("initializeDictionary", this.filters);
   },
 };
 </script>
@@ -223,31 +174,5 @@ export default {
 
 h1 {
   margin-top: 0;
-}
-.filters-list {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-}
-.filter {
-  font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  color: white;
-  border: solid 1px white;
-  border-radius: 30px;
-  margin: 3px;
-}
-.discovery-filter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: -10px;
-}
-#filter-label {
-  margin: 10px 10px;
-}
-.tiny-cross {
-  stroke: white;
 }
 </style>

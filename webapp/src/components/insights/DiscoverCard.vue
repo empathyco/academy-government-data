@@ -38,6 +38,12 @@
         :filters="item.tags"
         v-slot="{ filter }"
       >
+        <TagSelectionFilter
+          :filter="filter"
+          :color="getColor(filter)"
+          :isSelected="isFilterSelected(filter)"
+        />
+        <!--
         <SimpleFilter
           class="filter"
           :filter="filter"
@@ -52,6 +58,7 @@
             </div>
           </template>
         </SimpleFilter>
+        -->
       </FiltersList>
     </div>
   </div>
@@ -67,6 +74,7 @@ import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 import PlusStyled from "@/components/icons/PlusStyled";
 import store from "@/store";
+import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 
 export default {
   name: "DiscoverCard",
@@ -77,39 +85,9 @@ export default {
     PieChart,
     WordCloud,
     FiltersList,
-    SimpleFilter,
-    CrossTinyStyled,
-    PlusStyled,
+    TagSelectionFilter,
   },
-  props: {
-    item: {
-      data: String,
-      modelName: String,
-      title: String,
-      tags: Array({
-        label: String,
-        modelName: String,
-        selected: Boolean,
-        id: String,
-        value: String,
-        facetId: String,
-        type: String,
-        totalResults: Number,
-      }),
-    },
-    filtersSelected: {
-      content: Array({
-        label: String,
-        modelName: String,
-        selected: Boolean,
-        id: String,
-        value: String,
-        facetId: String,
-        type: String,
-        totalResults: Number,
-      }),
-    },
-  },
+  props: ["item", "filtersSelected"],
   data() {
     return {
       colorMap: { content: [] },
@@ -119,38 +97,15 @@ export default {
     dowlowadContent() {
       console.log(this.item);
     },
-    manageFilter(filterToManage) {
-      if (
-        this.filtersSelected.some((filter) => filter.id === filterToManage.id)
-      ) {
-        this.$emit(
-          "changedFilters",
-          this.filtersSelected.filter(
-            (filter) => filter.id !== filterToManage.id
-          )
-        );
-      } else {
-        this.$emit("changedFilters", [...this.filtersSelected, filterToManage]);
-      }
+    getColor(filter) {
+      return store.dispatch("getColor", filter.type);
     },
-    async getColorMap(filter) {
-      const filterIsSelected =
-        this.filtersSelected.filter(
-          (filterSelected) => filterSelected.label === filter.label
-        ).length > 0;
-
-      filterIsSelected ? (filter.selected = true) : (filter.selected = false);
-      const color = await store.dispatch("getColorFromDictionary", filter.type);
-      this.$refs[`filter${filter.label}`].$el.setAttribute(
-        "style",
-        `background-color: ${filterIsSelected ? "#b3b3b3" : color}`
-      );
+    isFilterSelected(filter) {
+      return store.dispatch("isFilterSelected", filter);
     },
   },
   mounted() {
-    for (let filter of this.item.tags) {
-      this.getColorMap(filter);
-    }
+    this.colorMap = this.$store.state.colorMap;
   },
 };
 </script>

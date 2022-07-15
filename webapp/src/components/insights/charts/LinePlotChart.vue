@@ -71,7 +71,6 @@ export default Vue.extend({
         color: this.getColor(),
         data: current.data.map((currentElem) => currentElem.value),
       }));
-      console.log(this.processedseries);
     },
   },
   mounted() {

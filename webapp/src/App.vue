@@ -155,4 +155,27 @@ footer {
   }
   margin-bottom: 20px;
 }
+.filters-list {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.filter {
+  font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border: solid 1px white;
+  border-radius: 30px;
+  margin: 3px;
+}
+.discovery-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: -10px;
+}
+#filter-label {
+  margin: 10px 10px;
+}
 </style>

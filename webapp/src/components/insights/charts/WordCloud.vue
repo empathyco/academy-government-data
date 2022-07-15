@@ -29,7 +29,6 @@ export default Vue.extend({
   methods: {
     createChart() {
       const data = this.preprocess();
-      console.log(data);
       Highcharts.chart("word-cloud", {
         colors: colorList,
         title: "",
