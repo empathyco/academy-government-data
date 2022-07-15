@@ -1,6 +1,6 @@
 import csv
 import json
-import sys
+import pandas as pd
 
 
 def parseTsv():
@@ -10,6 +10,11 @@ def parseTsv():
 
         with open("jsonOutput.json", 'w') as jsonFile:
             jsonFile.write(json.dumps(list(reader)))
+
+        df = pd.read_json(r'jsonOutput.json')
+        df["importe_total"].map(lambda x: float(x))
+        df.to_json(r'jsonOutput.json', orient='records')
+
     except:
         print("Error with the route, please try again")
 

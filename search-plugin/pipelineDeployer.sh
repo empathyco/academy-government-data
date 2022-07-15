@@ -3,6 +3,7 @@
 cd index-governmentdata-parser
 gzip -dk ../../data-plugin/datos_limpios/convocatorias_completo.tsv.gz
 sleep 4
+pip3 install pandas
 python3 csvParser.py
 rm ../../data-plugin/datos_limpios/convocatorias_completo.tsv
 cd ..
