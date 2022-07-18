@@ -57,7 +57,6 @@ export default {
             },
           ],
         },
-
         {
           title: "Ejemplo de gráfica de línea",
           data: severalSeries,

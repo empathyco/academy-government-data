@@ -1,4 +1,4 @@
-import { seriesType } from "@/models/DataType";
+import { filterFamilyType, seriesType } from "@/models/DataType";
 
 export const singleSerie: seriesType = {
   content: [
@@ -156,7 +156,7 @@ export const severalSeries: seriesType = {
   ],
 };
 
-export const filtersSample = [
+export const filtersSample: filterFamilyType[] = [
   {
     title: "Provincia",
     content: [
@@ -419,4 +419,142 @@ export const relatedTagsSample = [
   { isCurated: false, tag: "tag7" },
   { isCurated: false, tag: "tag8" },
   { isCurated: false, tag: "tag9" },
+];
+
+export const bidResultsSample = [
+  {
+    modelName: "grant",
+    id: "1111",
+    name: "grant1",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "1211",
+    name: "Ejemplo de nombre un poco largo par ver cómo queda",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "1231",
+    name: "grant3",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "2234",
+    name: "grant4",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "2222",
+    name: "grant5",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "2224",
+    name: "grant6",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "3234",
+    name: "grant7",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "3334",
+    name: "grant8",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
+  {
+    modelName: "grant",
+    id: "1334",
+    name: "grant9",
+    dateStart: "10/06/2022",
+    dateFinish: "10/06/2022",
+    amount: "1000000€",
+    procurer: "José María Llorián",
+    relatedTags: [
+      { isCurated: false, tag: "tag1" },
+      { isCurated: false, tag: "tag2" },
+      { isCurated: false, tag: "tag3" },
+      { isCurated: false, tag: "tag4" },
+    ],
+  },
 ];

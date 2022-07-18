@@ -43,22 +43,6 @@
           :color="getColor(filter)"
           :isSelected="isFilterSelected(filter)"
         />
-        <!--
-        <SimpleFilter
-          class="filter"
-          :filter="filter"
-          :ref="`filter${filter.label}`"
-          @click.native="manageFilter(filter)"
-        >
-          <template #label="{ filter }">
-            <div class="discovery-filter">
-              <p id="filter-label">{{ filter.label }}</p>
-              <CrossTinyStyled v-if="filter.selected" class="icon-response" />
-              <PlusStyled v-else class="icon-response" />
-            </div>
-          </template>
-        </SimpleFilter>
-        -->
       </FiltersList>
     </div>
   </div>
@@ -70,9 +54,7 @@ import BubbleChart from "@/components/insights/charts/BubbleChart";
 import LinePlotChart from "@/components/insights/charts/LinePlotChart";
 import PieChart from "@/components/insights/charts/PieChart";
 import WordCloud from "@/components/insights/charts/WordCloud";
-import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
-import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
-import PlusStyled from "@/components/icons/PlusStyled";
+import { FiltersList } from "@empathyco/x-components/js";
 import store from "@/store";
 import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 

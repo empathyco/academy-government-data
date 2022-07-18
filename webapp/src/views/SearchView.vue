@@ -49,6 +49,8 @@ import GrantCardGrid from "@/components/search/details/GrantCardGrid";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
 import { RelatedTags } from "@empathyco/x-components/related-tags";
 import { SelectedFiltersList } from "@empathyco/x-components/facets";
+import store from "@/store";
+import { SimpleFilter } from "@empathyco/x-components/js";
 
 export default {
   name: "SearchView",
@@ -59,6 +61,11 @@ export default {
     CrossTinyStyled,
     RelatedTags,
     SelectedFiltersList,
+    SimpleFilter,
+  },
+  methods: {},
+  beforeMount() {
+    store.commit("clearFiltersSelected");
   },
 };
 </script>

@@ -37,6 +37,9 @@ export default new Vuex.Store({
         (filter) => filter.label !== payload.label
       );
     },
+    clearFiltersSelected(state) {
+      state.filtersSelected = [];
+    },
   },
   actions: {
     async modifySelectedFilters(context, filter) {

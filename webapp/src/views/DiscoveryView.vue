@@ -83,7 +83,7 @@ import FiltersComponent from "@/components/search/FiltersComponent";
 import DisplayCharts from "@/components/insights/DisplayCharts";
 import FiltersStyled from "@/components/icons/FiltersStyled";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
-import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
+import { FiltersList } from "@empathyco/x-components/js";
 import { filtersSample, relatedTagsSample } from "@/utils/data/SampleData";
 import store from "@/store";
 import TagFilter from "@/components/tags/TagFilter";
@@ -129,6 +129,7 @@ export default {
     },
   },
   async beforeMount() {
+    store.commit("clearFiltersSelected");
     await store.dispatch("initializeDictionary", this.filters);
   },
 };

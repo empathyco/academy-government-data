@@ -82,9 +82,9 @@ export default {
 .query-suggestion-container {
   border: solid 2px #243d48;
   border-top: none;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0 0 30px 30px;
   margin-top: -7px;
-  padding: 10px 5px 0px;
+  padding: 10px 5px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
