@@ -76,7 +76,7 @@
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_regionImpacto",
+                        "name": "region_impacto.raw",
                         "queryParam": "regionImpacto",
                         "type": "VALUE"
                       },
@@ -128,7 +128,7 @@
                            "minCount": 1
                         },
                         {
-                           "field": "facet_regionImpacto",
+                           "field": "region_impacto.raw",
                            "filterField": "regionImpacto",
                            "size": 100,
                            "minCount": 1
@@ -147,7 +147,7 @@
                       "organo.raw",
                       "tipo_beneficiario.raw",
                       "facet_sectorBeneficiario",
-                      "facet_regionImpacto",
+                      "region_impacto.raw",
                       "facet_finalidad"
                     ]
                   }
@@ -652,6 +652,11 @@
                         "fieldName": "organo",
                         "aggregationSize": 1000,
                         "aggregationField": "organo.raw"
+                      },
+                      {
+                        "fieldName": "region_impacto",
+                        "aggregationSize": 1000,
+                        "aggregationField": "region_impacto.raw"
                       }
                     ]
                   }
