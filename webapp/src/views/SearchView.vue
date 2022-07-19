@@ -6,13 +6,6 @@
         class="x-list x-list--vertical x-list--gap-05 x-list--align-stretch x-list__item--expand"
       >
         <SearchBoxComponent placeholder="Comienza a buscar subvenciones" />
-        <!--
-        <LocationProvider location="predictive_layer">
-          <RelatedTags
-            v-if="!$x.isEmpathizeOpen && $x.relatedTags.length > 0"
-          />
-        </LocationProvider>
-        -->
       </div>
     </template>
     <template #sub-header>

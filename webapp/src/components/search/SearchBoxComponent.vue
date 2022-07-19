@@ -1,7 +1,11 @@
 <template class="search-group">
   <div class="x-input-group">
     <SearchStyled></SearchStyled>
-    <SearchInput :placeholder="placeholder" class="search-input" />
+    <SearchInput
+      :placeholder="placeholder"
+      class="search-input"
+      :instant="false"
+    />
     <ClearSearchInput class="clear-search-button">
       <CrossStyled></CrossStyled>
     </ClearSearchInput>

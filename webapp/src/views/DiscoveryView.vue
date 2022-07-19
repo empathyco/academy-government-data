@@ -1,23 +1,12 @@
 <template>
   <MultiColumnMaxWidthLayout>
-    <!--
-    <template #header-start>
-      <h1>Start</h1>
-    </template>
-    -->
     <template #header-middle>
       <h1>Explora</h1>
       <div
         class="x-list x-list--vertical x-list--gap-05 x-list--align-stretch x-list__item--expand"
       >
+        <!-- Search engine -->
         <SearchBoxComponent placeholder="Busca aquí tus filtros" />
-        <!--
-        <LocationProvider location="predictive_layer">
-          <RelatedTags
-            v-if="!$x.isEmpathizeOpen && $x.relatedTags.length > 0"
-          />
-        </LocationProvider>
-        -->
       </div>
     </template>
     <template #header-start>
@@ -44,17 +33,6 @@
         </FiltersList>
       </div>
     </template>
-    <!--
-    <template #toolbar-body>
-      <p>Aquí irían las tags??</p>
-    </template>
-    <template #toolbar-aside>
-      <p>toolbar-aside</p>
-    </template>
-    <template #main-aside>
-      <p>main aside</p>
-    </template>
-    -->
 
     <template #main-body>
       <div v-if="filtersMenuSelected">
@@ -67,12 +45,6 @@
         ></DisplayCharts>
       </div>
     </template>
-
-    <!--
-    <template #scroll-to-top>
-      <p>scroll to top</p>
-    </template>
-    -->
   </MultiColumnMaxWidthLayout>
 </template>
 
