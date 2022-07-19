@@ -51,27 +51,22 @@
                   "config": {
                     "fields": [
                       {
-                        "name": "facet_administracion",
+                        "name": "administracion.raw",
                         "queryParam": "administracion",
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_departamento",
+                        "name": "departamento.raw",
                         "queryParam": "departamento",
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_organo",
+                        "name": "organo.raw",
                         "queryParam": "organo",
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_importe",
-                        "queryParam": "importe",
-                        "type": "RANGE"
-                      },
-                      {
-                        "name": "facet_tipoBeneficiario",
+                        "name": "tipo_beneficiario.raw",
                         "queryParam": "tipoBeneficiario",
                         "type": "VALUE"
                       },
@@ -81,7 +76,7 @@
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_regionImpacto",
+                        "name": "region_impacto.raw",
                         "queryParam": "regionImpacto",
                         "type": "VALUE"
                       },
@@ -101,48 +96,27 @@
                     "mainCollectionId": "governmentdata",
                     "secondaryCollectionId": "governmentdata",
                     "facetableFields": {
-                      "rangeFacets": [
-                        {
-                          "field": "facet_importe",
-                          "filterField": "importe",
-                          "ranges": [
-                            {
-                              "to": 100000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 100000,
-                              "to": 200000000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 200000000,
-                              "gap": 100000000
-                            }
-                          ]
-                        }
-                      ],
                       "valueFacets": [
                         {
-                          "field": "facet_administracion",
+                          "field": "administracion.raw",
                           "filterField": "administracion",
                           "size": 100,
                           "minCount": 1
                         },
                         {
-                          "field": "facet_departamento",
+                          "field": "departamento.raw",
                           "filterField": "departamento",
                           "size": 100,
                           "minCount": 1
                         },
                         {
-                           "field": "facet_organo",
+                           "field": "organo.raw",
                            "filterField": "organo",
                            "size": 100,
                            "minCount": 1
                         },
                         {
-                           "field": "facet_tipoBeneficiario",
+                           "field": "tipo_beneficiario.raw",
                            "filterField": "tipoBeneficiario",
                            "size": 100,
                            "minCount": 1
@@ -154,7 +128,7 @@
                            "minCount": 1
                         },
                         {
-                           "field": "facet_regionImpacto",
+                           "field": "region_impacto.raw",
                            "filterField": "regionImpacto",
                            "size": 100,
                            "minCount": 1
@@ -168,13 +142,12 @@
                       ]
                     },
                     "facets": [
-                      "facet_administracion",
-                      "facet_departamento",
-                      "facet_organo",
-                      "facet_importe",
-                      "facet_tipoBeneficiario",
+                      "administracion.raw",
+                      "departamento.raw",
+                      "organo.raw",
+                      "tipo_beneficiario.raw",
                       "facet_sectorBeneficiario",
-                      "facet_regionImpacto",
+                      "region_impacto.raw",
                       "facet_finalidad"
                     ]
                   }
@@ -379,11 +352,6 @@
                           "type": "VALUE"
                         },
                         {
-                          "name": "facet_importe",
-                          "queryParam": "importe",
-                          "type": "RANGE"
-                        },
-                        {
                           "name": "facet_tipoBeneficiario",
                           "queryParam": "tipoBeneficiario",
                           "type": "VALUE"
@@ -414,27 +382,6 @@
                     "mainCollectionId": "governmentdata",
                     "secondaryCollectionId": "governmentdata",
                     "facetableFields": {
-                      "rangeFacets": [
-                        {
-                          "field": "facet_importe",
-                          "filterField": "importe",
-                          "ranges": [
-                            {
-                              "to": 100000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 100000,
-                              "to": 200000000,
-                              "gap": 100000
-                            },
-                            {
-                              "from": 200000000,
-                              "gap": 100000000
-                            }
-                          ]
-                        }
-                      ],
                       "valueFacets": [
                         {
                           "field": "facet_administracion",
@@ -484,7 +431,6 @@
                       "facet_administracion",
                         "facet_departamento",
                         "facet_organo",
-                        "facet_importe",
                         "facet_tipoBeneficiario",
                         "facet_sectorBeneficiario",
                         "facet_regionImpacto",
@@ -688,14 +634,29 @@
                   "config": {
                     "allowedFields": [
                       {
-                        "fieldName": "categoryIds",
+                        "fieldName": "administracion",
                         "aggregationSize": 1000,
-                        "aggregationField": "facet_categories"
+                        "aggregationField": "administracion.raw"
                       },
                       {
-                        "fieldName": "brand",
+                        "fieldName": "tipo_beneficiario",
                         "aggregationSize": 1000,
-                        "aggregationField": "facet_brand"
+                        "aggregationField": "tipo_beneficiario.raw"
+                      },
+                      {
+                        "fieldName": "departamento",
+                        "aggregationSize": 1000,
+                        "aggregationField": "departamento.raw"
+                      },
+                      {
+                        "fieldName": "organo",
+                        "aggregationSize": 1000,
+                        "aggregationField": "organo.raw"
+                      },
+                      {
+                        "fieldName": "region_impacto",
+                        "aggregationSize": 1000,
+                        "aggregationField": "region_impacto.raw"
                       }
                     ]
                   }
