@@ -51,7 +51,7 @@
                   "config": {
                     "fields": [
                       {
-                        "name": "facet_administracion",
+                        "name": "administracion.raw",
                         "queryParam": "administracion",
                         "type": "VALUE"
                       },
@@ -98,7 +98,7 @@
                     "facetableFields": {
                       "valueFacets": [
                         {
-                          "field": "facet_administracion",
+                          "field": "administracion.raw",
                           "filterField": "administracion",
                           "size": 100,
                           "minCount": 1
@@ -142,7 +142,7 @@
                       ]
                     },
                     "facets": [
-                      "facet_administracion",
+                      "administracion.raw",
                       "facet_departamento",
                       "facet_organo",
                       "tipo_beneficiario.raw",
