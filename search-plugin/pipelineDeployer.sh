@@ -1,11 +1,11 @@
 #!/bin/bash
 
 cd index-governmentdata-parser
-gzip -dk ../../data-plugin/datos_limpios/convocatorias_completo.tsv.gz
+unzip concesiones_completo_compressed.zip && mv concesiones_completo_compressed concesiones_completo
 sleep 4
 pip3 install pandas
 python3 csvParser.py
-rm ../../data-plugin/datos_limpios/convocatorias_completo.tsv
+rm ../../data-plugin/datos_limpios/concesiones_completo.tsv
 cd ..
 
 docker-compose up --build -d

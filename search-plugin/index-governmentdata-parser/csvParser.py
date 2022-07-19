@@ -6,7 +6,7 @@ import pandas as pd
 def parseTsv():
 
     try:
-        reader = csv.DictReader(open('../../data-plugin/datos_limpios/convocatorias_completo.tsv'), delimiter="\t")
+        reader = csv.DictReader(open('../../data-plugin/datos_limpios/concesiones_completo.tsv'), delimiter="\t")
 
         with open("jsonOutput.json", 'w') as jsonFile:
             jsonFile.write(json.dumps(list(reader)))
