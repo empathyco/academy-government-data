@@ -48,13 +48,10 @@ do
     echo " STATUS CODE GET JOB $state"
 done
 
-read "Press enter to continue..."
+read -s -n 1 -p "Press any key to continue . . ."
 
 docker-compose down
-
-rm ../index-governmentdata-parser/jsonOutput.json
 cd ../search-governmentdata-plugin
-
 
 curl --request PUT \
   --url http://localhost:9200/governmentdata-links

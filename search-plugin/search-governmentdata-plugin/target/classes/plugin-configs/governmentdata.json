@@ -66,7 +66,7 @@
                         "type": "VALUE"
                       },
                       {
-                        "name": "facet_tipoBeneficiario",
+                        "name": "tipo_beneficiario.raw",
                         "queryParam": "tipoBeneficiario",
                         "type": "VALUE"
                       },
@@ -116,7 +116,7 @@
                            "minCount": 1
                         },
                         {
-                           "field": "facet_tipoBeneficiario",
+                           "field": "tipo_beneficiario.raw",
                            "filterField": "tipoBeneficiario",
                            "size": 100,
                            "minCount": 1
@@ -145,7 +145,7 @@
                       "facet_administracion",
                       "facet_departamento",
                       "facet_organo",
-                      "facet_tipoBeneficiario",
+                      "tipo_beneficiario.raw",
                       "facet_sectorBeneficiario",
                       "facet_regionImpacto",
                       "facet_finalidad"
@@ -633,6 +633,11 @@
                   "name": "fieldValues",
                   "config": {
                     "allowedFields": [
+                      {
+                        "fieldName": "administracion",
+                        "aggregationSize": 1000,
+                        "aggregationField": "administracion.raw"
+                      },
                       {
                         "fieldName": "tipo_beneficiario",
                         "aggregationSize": 1000,

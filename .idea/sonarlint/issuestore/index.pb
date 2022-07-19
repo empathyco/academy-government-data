@@ -1,20 +1,8 @@
 
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 õ
 ksearch-plugin/search-governmentdata-plugin/src/main/resources/collection-config/collection-name-config.json,b/b/bb2136649e4643269e6e030914f33f8507497005
 y
 Isearch-plugin/search-governmentdata-plugin/testing-environment/Dockerfile,0/c/0caf93b6425323ba27c654e6473b266e9183d1e0
-´
-{search-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/configuration/EndpointsConfiguration.java,6/7/6773de02cb98e2d0a6eb8ba40496b4692b211ec1
-≤
-Åsearch-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/configuration/QueryRequestorsConfiguration.java,d/5/d5b4984a300b9ea12a4052a5999021fa7d68860d
-ì
-csearch-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/PluginConfig.java,6/9/69cdbe4bc57cecc8cfe4d5141beaead30a63bc3b
-ê
-`search-plugin/search-governmentdata-plugin/src/main/resources/plugin-configs/governmentdata.json,e/a/eab9131f2a200d94b973e3e5ab00ba75957e3709
-å
-\search-plugin/search-governmentdata-plugin/target/classes/plugin-configs/governmentdata.json,e/7/e7c4051d8e6c91d264a57b9d9fdedc618b541a5f
 n
 >search-plugin/search-governmentdata-plugin/docker-compose.yaml,d/c/dc963a1957482b0926e9a6e66e8c9a6ceff4d36d
 ë
@@ -23,5 +11,35 @@ b
 2search-plugin/search-governmentdata-plugin/pom.xml,5/c/5ca399e98c83fb5f4a859a2ef779508fb9de1d63
 e
 5search-plugin/search-governmentdata-plugin/Dockerfile,e/c/ecb515603d1e6dd1b92473fe1a50f8876a7eef61
+p
+@search-plugin/index-governmentdata-parser/convocatorias_demo.csv,c/a/ca8ff947431e8c632607659dcf461c836ce4862a
+f
+6search-plugin/index-governmentdata-parser/tsvParser.py,3/8/387f37d7390df42c343a1f7b12ab97bea5b56c85
+|
+Lsearch-plugin/search-governmentdata-plugin/src/main/config/plugin.properties,6/a/6ae3e624ada19bea04db10885eb5b60a520569e2
+ì
+csearch-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/PluginConfig.java,6/9/69cdbe4bc57cecc8cfe4d5141beaead30a63bc3b
+≤
+Åsearch-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/configuration/QueryRequestorsConfiguration.java,d/5/d5b4984a300b9ea12a4052a5999021fa7d68860d
+´
+{search-plugin/search-governmentdata-plugin/src/main/java/co/empathy/search/plugin/configuration/EndpointsConfiguration.java,6/7/6773de02cb98e2d0a6eb8ba40496b4692b211ec1
 j
 :search-plugin/search-governmentdata-plugin/deploySearch.sh,9/f/9f4ae17f83c753eff9bb311d4f32d0210beb1fd3
+c
+3search-plugin/index-governmentdata-plugin/README.md,0/8/08423b7c2cfb297ff289355e442720a813b9ea0b
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+ü
+osearch-plugin/index-governmentdata-plugin/src/main/java/co/empathy/index/plugin/feeds/CatalogPartialConfig.java,0/c/0caed780fc79d256d990f2ac7ec2ac0c0cd447dd
+ß
+wsearch-plugin/index-governmentdata-plugin/src/main/java/co/empathy/index/plugin/processor/catalog/CatalogProcessor.java,d/c/dc2bea12265d0ca5cf1a17eac61c2263321e728a
+¨
+|search-plugin/index-governmentdata-plugin/src/main/resources/index-model/elastic_7/indexType/catalog/elasticconfig_test.json,6/4/64df9d39be28fad88f894c36fd4e8fe9c62ffe2b
+ò
+hsearch-plugin/index-governmentdata-plugin/src/main/java/co/empathy/index/plugin/feeds/CatalogConfig.java,0/f/0fdea9db4350096d2e94514fbf27f676fc75a710
+d
+4search-plugin/search-governmentdata-plugin/README.md,7/7/779b38b3cbe92bea169ec14286bd204f35be66a5
+f
+6search-plugin/index-governmentdata-parser/csvParser.py,c/8/c8c303798db8ea4c6818d259d7effb44725ab859
+Q
+!search-plugin/pipelineDeployer.sh,2/c/2cf67b8bca86e71e8110db567df532cf6f9baee2
