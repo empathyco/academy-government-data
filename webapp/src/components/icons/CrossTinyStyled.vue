@@ -1,5 +1,5 @@
 <template>
-  <CrossTinyIcon class="filter-icon"></CrossTinyIcon>
+  <CrossTinyIcon class="filter-icon" />
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 .filter-icon {
   height: 24px;
   width: 24px;
-  stroke: #243d48;
+  stroke: var(--font-colour);
   margin-left: -3px;
 }
 </style>

@@ -1,23 +1,12 @@
 <template>
   <MultiColumnMaxWidthLayout>
-    <!--
-    <template #header-start>
-      <h1>Start</h1>
-    </template>
-    -->
     <template #header-middle>
       <h1>Explora</h1>
       <div
         class="x-list x-list--vertical x-list--gap-05 x-list--align-stretch x-list__item--expand"
       >
-        <SearchBoxComponent />
-        <!--
-        <LocationProvider location="predictive_layer">
-          <RelatedTags
-            v-if="!$x.isEmpathizeOpen && $x.relatedTags.length > 0"
-          />
-        </LocationProvider>
-        -->
+        <!-- Search engine -->
+        <SearchBoxComponent placeholder="Busca aquí tus filtros" />
       </div>
     </template>
     <template #header-start>
@@ -33,99 +22,87 @@
       </div>
     </template>
     <template #sub-header>
-      <div class="related-tags">
-        <div
-          v-bind:key="relatedTag.tag"
-          v-for="relatedTag in relatedTags"
-          @click="removeTag(relatedTag.tag)"
+      <PredictiveLayer @filterApplied="manageFilter($event)" />
+      <div class="filter-container">
+        <FiltersList
+          :class="`filters-list`"
+          :filters="getFiltersSelected()"
+          v-slot="{ filter }"
         >
-          <RelatedTag class="related-tag" :relatedTag="relatedTag">
-            <p id="tag-text">{{ relatedTag.tag }}</p>
-            <CrossTinyStyled />
-          </RelatedTag>
-        </div>
+          <TagFilter :filter="filter" :color="getColorMap(filter.type)" />
+        </FiltersList>
       </div>
     </template>
-    <!--
-    <template #toolbar-body>
-      <p>Aquí irían las tags??</p>
-    </template>
-    <template #toolbar-aside>
-      <p>toolbar-aside</p>
-    </template>
-    <template #main-aside>
-      <p>main aside</p>
-    </template>
-    -->
 
     <template #main-body>
-      <div v-if="filtersSelected">
-        <FiltersComponent></FiltersComponent>
+      <div v-if="filtersMenuSelected">
+        <FiltersComponent :filters="filters" />
       </div>
       <div v-else>
-        <DisplayCharts></DisplayCharts>
+        <DisplayCharts
+          :filtersSelected="getFiltersSelected()"
+          @changedFilters="modifyFilters($event)"
+        ></DisplayCharts>
       </div>
     </template>
-
-    <!--
-    <template #scroll-to-top>
-      <p>scroll to top</p>
-    </template>
-    -->
   </MultiColumnMaxWidthLayout>
 </template>
 
 <script>
-import { severalSeries, singleSerie } from "@/utils/SampleData";
 import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import FiltersComponent from "@/components/search/FiltersComponent";
 import DisplayCharts from "@/components/insights/DisplayCharts";
-import { RelatedTag } from "@empathyco/x-components/related-tags";
 import FiltersStyled from "@/components/icons/FiltersStyled";
-import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
+import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
+import { FiltersList } from "@empathyco/x-components/js";
+import { filtersSample, relatedTagsSample } from "@/utils/data/SampleData";
+import store from "@/store";
+import TagFilter from "@/components/tags/TagFilter";
 
 export default {
   name: "DiscoveryView",
   data() {
     return {
-      filtersSelected: false,
-      relatedTags: [
-        { isCurated: false, tag: "tag1" },
-        { isCurated: false, tag: "tag2" },
-        { isCurated: false, tag: "tag3" },
-        { isCurated: false, tag: "tag4" },
-        { isCurated: false, tag: "tag5" },
-        { isCurated: false, tag: "tag6" },
-        { isCurated: false, tag: "tag7" },
-        { isCurated: false, tag: "tag8" },
-        { isCurated: false, tag: "tag9" },
-      ],
+      filtersMenuSelected: false,
+      relatedTags: relatedTagsSample,
+      filters: filtersSample,
     };
   },
   components: {
+    TagFilter,
+    PredictiveLayer,
     FiltersStyled,
     DisplayCharts,
     FiltersComponent,
     SearchBoxComponent,
     MultiColumnMaxWidthLayout,
-    RelatedTag,
-    CrossTinyStyled,
+    FiltersList,
   },
   methods: {
-    removeTag(tagText) {
-      console.log("removeTag");
-      this.relatedTags = this.relatedTags.filter(
-        (relatedTag) => relatedTag.tag !== tagText
-      );
+    getFiltersSelected() {
+      return store.state.filtersSelected;
+    },
+    manageFilter(filterToManage) {
+      store.dispatch("modifySelectedFilters", filterToManage);
     },
     changeFilterSelected() {
-      this.filtersSelected = !this.filtersSelected;
-      this.filtersSelected
+      this.filtersMenuSelected = !this.filtersMenuSelected;
+      this.filtersMenuSelected
         ? (this.$refs.filterButton.className += " boton-selected")
         : (this.$refs.filterButton.className =
             this.$refs.filterButton.className.split(" ")[0]);
     },
+    async getColorMap(type) {
+      return await store.dispatch("getColor", type);
+    },
+    modifyFilters(newFilters) {
+      this.filtersSelected = newFilters;
+    },
+  },
+  async beforeMount() {
+    store.commit("clearFiltersSelected");
+    await store.dispatch("initializeDictionary", this.filters);
   },
 };
 </script>
@@ -134,9 +111,6 @@ export default {
 .x-list__item--expand {
   display: flex;
   justify-content: center;
-}
-h1 {
-  margin-top: 80px;
 }
 .botones-filtros {
   display: flex;
@@ -150,7 +124,7 @@ h1 {
   stroke: #243d48;
 }
 .boton-filtro {
-  background-color: white;
+  background-color: var(--background-colour);
   color: #243d48;
   border: solid 3px #243d48;
   border-radius: 35px;
@@ -170,21 +144,8 @@ h1 {
   color: var(--font-selected-link);
   border-color: var(--font-selected-link);
 }
-.related-tag {
-  background-color: white;
-  color: #243d48;
-  border: solid 3px #243d48;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-.related-tags {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-}
-#tag-text {
-  margin: 5px;
+
+h1 {
+  margin-top: 0;
 }
 </style>

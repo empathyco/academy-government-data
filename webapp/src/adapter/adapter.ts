@@ -8,20 +8,11 @@ import {
   SearchAdapter,
   SearchRequest,
   SearchResponse,
+  SuggestionsRequest,
+  SuggestionsResponse,
 } from "@empathyco/x-adapter";
-import {
-  RelatedTagsRequest,
-  RelatedTagsResponse,
-  Result,
-} from "@empathyco/x-types";
-/*import { bannerMapper } from './demo-banner-mapper';
-import { HierarchicalFacetMapper } from './demo-hierarchical-mapper';
-import { promotedMapper } from './demo-promoted-mapper';
-import { RequestFiltersMapper } from './demo-request-filters.mapper';
-import { SearchRequestMapper } from './demo-request-mapper';
-import { resultMapper } from './demo-result.mapper';
-import { priceFilterMapper } from './demo-price-filter-mapper';
-*/ import { EmpathyEndpointsService } from "./empathy-endpoints.service";
+import { RelatedTagsRequest, Result } from "@empathyco/x-types";
+import { EmpathyEndpointsService } from "./empathy-endpoints.service";
 
 export const adapter2 = new EmpathyAdapterBuilder()
   /*  .addMapper(resultMapper, 'results')
@@ -82,23 +73,70 @@ export const adapter: SearchAdapter = {
         ),
       })) as any;
   },
-  /*
-      getRelatedTags(request: RelatedTagsRequest): RelatedTagsResponse {
-        console.log({
-          relatedTags: [
-            { modelName: "RelatedTag", query: "q", tag: "tag1" },
-            { modelName: "RelatedTag", query: "q", tag: "tag2" },
-            { modelName: "RelatedTag", query: "q", tag: "tag3" },
-          ],
-        });
-        return {
-          relatedTags: [
-            { modelName: "RelatedTag", query: "q", tag: "tag1" },
-            { modelName: "RelatedTag", query: "q", tag: "tag2" },
-            { modelName: "RelatedTag", query: "q", tag: "tag3" },
-          ],
-        };
-      },
-
-   */
+  getRelatedTags(request: RelatedTagsRequest): Promise<{
+    relatedTags: (
+      | { modelName: string; query: string; tag: string }
+      | { modelName: string; query: string; tag: string }
+      | { modelName: string; query: string; tag: string }
+    )[];
+  }> {
+    console.log({
+      relatedTags: [
+        { modelName: "RelatedTag", query: "q", tag: "tageñe" },
+        { modelName: "RelatedTag", query: "q", tag: "tag2" },
+        { modelName: "RelatedTag", query: "q", tag: "tag3" },
+      ],
+    });
+    return Promise.resolve({
+      relatedTags: [
+        { modelName: "RelatedTag", query: "q", tag: "tag1" },
+        { modelName: "RelatedTag", query: "q", tag: "tag2" },
+        { modelName: "RelatedTag", query: "q", tag: "tag3" },
+      ],
+    });
+  },
+  getSuggestions(request: SuggestionsRequest): Promise<SuggestionsResponse> {
+    console.log({
+      suggestions: [
+        { modelName: "Suggestion", facets: [], key: "suggestion1", query: "q" },
+        {
+          modelName: "Suggestion",
+          facets: [],
+          key: "suggestion2",
+          query: "qu",
+        },
+        {
+          modelName: "Suggestion",
+          facets: [],
+          key: "suggestion3",
+          query: "que",
+        },
+      ],
+    });
+    return Promise.resolve({
+      suggestions: [
+        {
+          modelName: "QuerySuggestion",
+          facets: [],
+          key: "asturias",
+          query: "Asturias",
+          type: "provincia",
+        },
+        {
+          modelName: "QuerySuggestion",
+          facets: [],
+          key: "industria",
+          query: "Industria",
+          type: "sector",
+        },
+        {
+          modelName: "QuerySuggestion",
+          facets: [],
+          key: "2019",
+          query: "2019",
+          type: "año",
+        },
+      ],
+    });
+  },
 } as any; //TODO Implement rest of methods;

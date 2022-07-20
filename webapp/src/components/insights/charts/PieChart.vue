@@ -9,9 +9,9 @@ import Vue from "vue";
 import Highcharts from "highcharts";
 import loadPie from "highcharts/modules/variable-pie";
 import highchartsMore from "highcharts/highcharts-more";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
-import { legendVal, titleVal } from "@/utils/HighchartOptConfig";
+import { legendVal } from "@/utils/methods/HighchartOptConfig";
 
 loadPie(Highcharts);
 highchartsMore(Highcharts);
@@ -32,7 +32,7 @@ export default Vue.extend({
           plotShadow: false,
           type: "pie",
         },
-        title: titleVal("PieChart"),
+        title: "",
         legend: legendVal(false),
         tooltip: {
           pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
@@ -80,4 +80,8 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.highcharts-figure {
+  width: 100%;
+}
+</style>
