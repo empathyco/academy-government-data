@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import { nextIndex } from "@/utils/methods/NextIndex";
 import { colorList } from "@/utils/data/GlobalVariables";
+import { newColor } from "@/utils/methods/ColorGenerator";
 
 Vue.use(Vuex);
 
@@ -62,8 +63,8 @@ export default new Vuex.Store({
         return colorList[0];
       }
     },
-    getNextColor(context) {
-      return context.state.generator.next().value;
+    getNextColor(context, dictionarySize) {
+      return newColor(dictionarySize);
     },
     async initializeDictionary(context, filters) {
       for (const familyFilter of filters) {

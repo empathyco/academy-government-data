@@ -70,11 +70,6 @@ export default {
     TagSelectionFilter,
   },
   props: ["item", "filtersSelected"],
-  data() {
-    return {
-      colorMap: { content: [] },
-    };
-  },
   methods: {
     dowlowadContent() {
       console.log(this.item);
@@ -86,9 +81,6 @@ export default {
       return store.dispatch("isFilterSelected", filter);
     },
   },
-  mounted() {
-    this.colorMap = this.$store.state.colorMap;
-  },
 };
 </script>
 
@@ -98,7 +90,7 @@ export default {
   border-radius: 30px;
   padding: 20px;
   margin: 10px;
-  height: 600px;
+  min-height: 600px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -129,5 +121,9 @@ export default {
   font-size: 24px;
   font-weight: bold;
   max-width: 80%;
+}
+
+.filters-list {
+  margin: 10px;
 }
 </style>

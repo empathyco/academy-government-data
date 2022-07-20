@@ -9,7 +9,17 @@
       </div>
     </template>
     <template #sub-header>
-      <!--<PredictiveLayer></PredictiveLayer>-->
+      <PredictiveLayer @filterApplied="manageFilter($event)" />
+      <div class="filter-container">
+        <FiltersList
+          :class="`filters-list`"
+          :filters="getFiltersSelected()"
+          v-slot="{ filter }"
+        >
+          <TagFilter :filter="filter" :color="getColorMap(filter.type)" />
+        </FiltersList>
+      </div>
+      <!--
       <div class="related-tags">
         <SelectedFiltersList class="filter-list">
           <template #default="{ filter }">
@@ -25,6 +35,7 @@
           </template>
         </RelatedTags>
       </div>
+      <PredictiveLayer></PredictiveLayer>-->
     </template>
     <template #main-body>
       <div>
@@ -39,11 +50,11 @@ import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import GrantCardGrid from "@/components/search/details/GrantCardGrid";
-import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
-import { RelatedTags } from "@empathyco/x-components/related-tags";
-import { SelectedFiltersList } from "@empathyco/x-components/facets";
+
 import store from "@/store";
-import { SimpleFilter } from "@empathyco/x-components/js";
+import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
+import TagFilter from "@/components/tags/TagFilter";
+import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 
 export default {
   name: "SearchView",
@@ -51,12 +62,21 @@ export default {
     MultiColumnMaxWidthLayout,
     SearchBoxComponent,
     GrantCardGrid,
-    CrossTinyStyled,
-    RelatedTags,
-    SelectedFiltersList,
-    SimpleFilter,
+    FiltersList,
+    TagFilter,
+    PredictiveLayer,
   },
-  methods: {},
+  methods: {
+    getFiltersSelected() {
+      return store.state.filtersSelected;
+    },
+    async getColorMap(type) {
+      return await store.dispatch("getColor", type);
+    },
+    manageFilter(filterToManage) {
+      store.dispatch("modifySelectedFilters", filterToManage);
+    },
+  },
   beforeMount() {
     store.commit("clearFiltersSelected");
   },

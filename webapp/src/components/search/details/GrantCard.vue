@@ -1,12 +1,17 @@
 <template>
   <div class="discover-card">
-    <div class="related-tags">
-      <div v-bind:key="relatedTag.tag" v-for="relatedTag in item.relatedTags">
-        <RelatedTag class="related-tag" :relatedTag="relatedTag">
-          <p id="tag-text">{{ relatedTag.tag }}</p>
-          <CrossTinyIcon class="cross-icon" />
-        </RelatedTag>
-      </div>
+    <div class="filter-container">
+      <FiltersList
+        :class="`filters-list`"
+        :filters="item.tags"
+        v-slot="{ filter }"
+      >
+        <TagSelectionFilter
+          :filter="filter"
+          :color="getColor(filter)"
+          :isSelected="isFilterSelected(filter)"
+        />
+      </FiltersList>
     </div>
     <p class="grant-id">{{ item.id }}</p>
     <p class="grant-name">{{ item.name }}</p>
@@ -32,12 +37,13 @@
 </template>
 
 <script>
-import { RelatedTag } from "@empathyco/x-components/js";
-import { CrossTinyIcon } from "@empathyco/x-components";
+import { FiltersList } from "@empathyco/x-components/js";
+import store from "@/store";
+import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 
 export default {
   name: "GrantCard",
-  components: { RelatedTag, CrossTinyIcon },
+  components: { FiltersList, TagSelectionFilter },
   props: {
     item: {
       modelName: String,
@@ -49,6 +55,17 @@ export default {
       relatedTags: Array(String),
     },
   },
+  methods: {
+    getColor(filter) {
+      return store.dispatch("getColor", filter.type);
+    },
+    isFilterSelected(filter) {
+      return store.dispatch("isFilterSelected", filter);
+    },
+  },
+  mounted() {
+    this.colorMap = this.$store.state.colorMap;
+  },
 };
 </script>
 
@@ -59,7 +76,7 @@ export default {
   padding: 10px;
   margin: 10px;
 }
-.related-tag {
+.filter-container {
   background-color: #d44a6f;
   color: white;
   border: solid 1px white;
