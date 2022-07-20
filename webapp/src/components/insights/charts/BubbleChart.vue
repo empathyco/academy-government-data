@@ -8,13 +8,9 @@
 import Vue from "vue";
 import Highcharts from "highcharts";
 import highchartsMore from "highcharts/highcharts-more";
-import { colorList, empathyBlack } from "@/utils/GlobalVariables";
+import { colorList, empathyBlack } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
-import {
-  legendVal,
-  quickTooltipVal,
-  titleVal,
-} from "@/utils/HighchartOptConfig";
+import { legendVal, quickTooltipVal } from "@/utils/methods/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 
@@ -39,7 +35,7 @@ export default Vue.extend({
           backgroundColor: "transparent",
           color: "white",
         },
-        title: titleVal("Bubble chart"),
+        title: "",
         legend: legendVal(false),
         tooltip: quickTooltipVal(),
         plotOptions: {
@@ -94,5 +90,6 @@ export default Vue.extend({
 <style scoped>
 .highcharts-figure {
   min-width: 320px;
+  width: 100%;
 }
 </style>

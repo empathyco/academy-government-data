@@ -8,14 +8,13 @@
 import Vue from "vue";
 import Highcharts from "highcharts";
 import highchartsMore from "highcharts/highcharts-more";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
 import {
   legendVal,
-  titleVal,
   xAxisVal,
   yAxisVal,
-} from "@/utils/HighchartOptConfig";
+} from "@/utils/methods/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 
@@ -39,7 +38,7 @@ export default Vue.extend({
         chart: {
           type: "line",
         },
-        title: titleVal("Monthly Average Temperature"),
+        title: "",
         subtitle: {
           text: "Source: WorldClimate.com",
         },
@@ -72,7 +71,6 @@ export default Vue.extend({
         color: this.getColor(),
         data: current.data.map((currentElem) => currentElem.value),
       }));
-      console.log(this.processedseries);
     },
   },
   mounted() {
@@ -82,4 +80,8 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.highcharts-figure {
+  width: 100%;
+}
+</style>

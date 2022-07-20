@@ -6,14 +6,13 @@
 <script>
 import Vue from "vue";
 import Highcharts from "highcharts";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
 import {
   legendVal,
-  titleVal,
   xAxisVal,
   yAxisVal,
-} from "@/utils/HighchartOptConfig";
+} from "@/utils/methods/HighchartOptConfig";
 
 export default Vue.extend({
   data() {
@@ -46,7 +45,7 @@ export default Vue.extend({
           shared: true,
           useHTML: true,
         },
-        title: titleVal("Bar chart"),
+        title: "",
         legend: legendVal(false),
         plotOptions: {
           column: {
@@ -83,5 +82,6 @@ export default Vue.extend({
 <style scoped>
 .highcharts-figure {
   margin: 1em auto;
+  width: 100%;
 }
 </style>

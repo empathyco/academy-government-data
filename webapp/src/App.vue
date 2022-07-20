@@ -27,8 +27,14 @@
   //Colours that will be used in the web
   --background-colour: rgb(255, 255, 255);
   --font-colour: #243d48;
+  --empathy-black: --font-colour;
+  --empathy-red: #d44a6f;
+  --empathy-gray: #f5f6f7;
   --font-selected-link: #53b9c9;
   --font-unselected-link: #243d48;
+  --homeview-explore-button: #d44a6f;
+  --font-dark-background-color: rgb(255, 255, 255);
+  --border-color: #243d48;
 }
 #app {
   font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
@@ -82,6 +88,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   position: fixed;
+  top: 0;
   right: 0;
   z-index: 2;
   a {
@@ -99,7 +106,7 @@ nav {
   }
 
   i:hover {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   i:hover:after {
@@ -136,6 +143,7 @@ nav {
 }
 .view {
   margin-bottom: 200px;
+  margin-top: 80px;
 }
 footer {
   display: flex;
@@ -146,5 +154,28 @@ footer {
     align-self: center;
   }
   margin-bottom: 20px;
+}
+.filters-list {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.filter {
+  font-family: Montserrat, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border: solid 1px white;
+  border-radius: 30px;
+  margin: 3px;
+}
+.discovery-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: -10px;
+}
+#filter-label {
+  margin: 10px 10px;
 }
 </style>

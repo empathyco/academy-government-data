@@ -9,13 +9,9 @@ import Vue from "vue";
 import Highcharts from "highcharts";
 import loadWordcloud from "highcharts/modules/wordcloud";
 import highchartsMore from "highcharts/highcharts-more";
-import { colorList } from "@/utils/GlobalVariables";
+import { colorList } from "@/utils/data/GlobalVariables";
 import { seriesConstructor } from "@/utils/DataConstructor";
-import {
-  legendVal,
-  quickTooltipVal,
-  titleVal,
-} from "@/utils/HighchartOptConfig";
+import { legendVal, quickTooltipVal } from "@/utils/methods/HighchartOptConfig";
 
 highchartsMore(Highcharts);
 loadWordcloud(Highcharts);
@@ -33,10 +29,9 @@ export default Vue.extend({
   methods: {
     createChart() {
       const data = this.preprocess();
-      console.log(data);
       Highcharts.chart("word-cloud", {
         colors: colorList,
-        title: titleVal("Word cloud"),
+        title: "",
         legend: legendVal(false),
         tooltip: quickTooltipVal(),
         plotOptions: {
@@ -81,5 +76,6 @@ export default Vue.extend({
   min-width: 320px;
   max-width: 1000px;
   margin: 1em auto;
+  width: 100%;
 }
 </style>

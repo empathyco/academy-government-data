@@ -1,13 +1,14 @@
 <template>
-  <TrendingIcon class="filter-icon"></TrendingIcon>
+  <PlusIcon class="filter-icon" />
 </template>
+
 <script>
-import { TrendingIcon } from "@empathyco/x-components";
+import { PlusIcon } from "@empathyco/x-components";
 
 export default {
-  name: "FiltersStyled",
+  name: "PlusStyled",
   components: {
-    TrendingIcon,
+    PlusIcon,
   },
 };
 </script>
@@ -16,7 +17,7 @@ export default {
 .filter-icon {
   height: 24px;
   width: 24px;
-  stroke: #243d48;
+  stroke: var(--font-colour);
   padding-top: 5px;
 }
 </style>
