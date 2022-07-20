@@ -3,6 +3,7 @@
 cd index-governmentdata-parser
 gzip -dk ../../data-plugin/datos_limpios/convocatorias_completo.tsv.gz
 sleep 4
+pip3 install pandas
 python3 csvParser.py
 rm ../../data-plugin/datos_limpios/convocatorias_completo.tsv
 cd ..
@@ -46,6 +47,8 @@ do
     state=$(curl -XGET "localhost:8080/jobs/governmentdata/62b585cd6fe71f182dc9763e/job/$jobId" | python3 -c "import sys, json; print(json.load(sys.stdin)['state'])")
     echo " STATUS CODE GET JOB $state"
 done
+
+read -s -n 1 -p "Press any key to continue . . ."
 
 docker-compose down
 cd ../search-governmentdata-plugin
