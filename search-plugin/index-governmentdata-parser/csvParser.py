@@ -7,7 +7,7 @@ def parseTsv():
 
     try:
         print("Parsing TSV to JSON")
-        reader = csv.DictReader(open('../../data-plugin/datos_limpios/concesiones_completo.tsv'), delimiter="\t")
+        reader = csv.DictReader(open('../../data-plugin/datos_limpios/concesiones_completo1.tsv'), delimiter="\t")
 
         with open("jsonOutput.json", 'w') as jsonFile:
             jsonFile.write(json.dumps(list(reader)))

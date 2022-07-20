@@ -2,13 +2,13 @@
 
 cd index-governmentdata-parser
 echo "Extracting data..."
-gzip -dk ../../data-plugin/datos_limpios/concesiones_completo.tsv.gz
+gzip -dk ../../data-plugin/datos_limpios/concesiones_completo1.tsv.gz
 echo "Data extracted"
 sleep 4
 pip3 install pandas
 python3 csvParser.py
 echo "Doing mad stuff over the data"
-rm ../../data-plugin/datos_limpios/concesiones_completo.tsv
+rm ../../data-plugin/datos_limpios/concesiones_completo1.tsv
 echo "Mad stuff done"
 cd ..
 
