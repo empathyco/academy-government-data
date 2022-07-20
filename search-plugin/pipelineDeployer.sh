@@ -1,11 +1,15 @@
 #!/bin/bash
 
 cd index-governmentdata-parser
-unzip concesiones_completo_compressed.zip && mv concesiones_completo_compressed concesiones_completo
+echo "Extracting data..."
+gzip -dk ../../data-plugin/datos_limpios/concesiones_completo.tsv.gz
+echo "Data extracted"
 sleep 4
 pip3 install pandas
 python3 csvParser.py
+echo "Doing mad stuff over the data"
 rm ../../data-plugin/datos_limpios/concesiones_completo.tsv
+echo "Mad stuff done"
 cd ..
 
 docker-compose up --build -d

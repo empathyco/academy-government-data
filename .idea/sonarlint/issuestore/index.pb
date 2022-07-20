@@ -13,8 +13,6 @@ e
 5search-plugin/search-governmentdata-plugin/Dockerfile,e/c/ecb515603d1e6dd1b92473fe1a50f8876a7eef61
 p
 @search-plugin/index-governmentdata-parser/convocatorias_demo.csv,c/a/ca8ff947431e8c632607659dcf461c836ce4862a
-f
-6search-plugin/index-governmentdata-parser/tsvParser.py,3/8/387f37d7390df42c343a1f7b12ab97bea5b56c85
 |
 Lsearch-plugin/search-governmentdata-plugin/src/main/config/plugin.properties,6/a/6ae3e624ada19bea04db10885eb5b60a520569e2
 “
@@ -39,7 +37,3 @@ wsearch-plugin/index-governmentdata-plugin/src/main/java/co/empathy/index/plugin
 hsearch-plugin/index-governmentdata-plugin/src/main/java/co/empathy/index/plugin/feeds/CatalogConfig.java,0/f/0fdea9db4350096d2e94514fbf27f676fc75a710
 d
 4search-plugin/search-governmentdata-plugin/README.md,7/7/779b38b3cbe92bea169ec14286bd204f35be66a5
-f
-6search-plugin/index-governmentdata-parser/csvParser.py,c/8/c8c303798db8ea4c6818d259d7effb44725ab859
-Q
-!search-plugin/pipelineDeployer.sh,2/c/2cf67b8bca86e71e8110db567df532cf6f9baee2
