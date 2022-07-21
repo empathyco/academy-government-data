@@ -1,6 +1,6 @@
 <template>
   <ResultsList>
-    <!-- The Result list will have the #default="{ items, animation }"
+    <!-- TODO: The Result list will have the #default="{ items, animation }"
     prop when the API is called. Until then, this is applied -->
     <BaseGrid :items="grants" :columns="3">
       <template #result="{ grant }">

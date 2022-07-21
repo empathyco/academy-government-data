@@ -1,4 +1,11 @@
 <template>
+  <!--
+  To be honest, I find this a little bit complex
+   As far as I understand, this component takes care of the search experience of recommendations,
+   giving the user results whenever a search is being made and the result of the search will also
+   be affected by it.
+   For more information search in https://docs.empathy.co/develop-empathy-platform/ui-reference/components/empathize/x-components.empathize.html?utm_term=empat
+   -->
   <Empathize :animation="empathizeAnimation" class="empathize-container">
     <template #default>
       <BaseKeyboardNavigation class="keyboard-navigation">
@@ -41,7 +48,6 @@ export default {
     Empathize,
     BaseKeyboardNavigation,
     QuerySuggestions,
-    // QuerySuggestion,
   },
   methods: {
     emitSuggestionClickedEvents(event, suggestion) {

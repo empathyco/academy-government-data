@@ -1,4 +1,9 @@
-import { filterFamilyType, seriesType } from "@/models/DataType";
+import {
+  bidType,
+  filterFamilyType,
+  filterType,
+  seriesType,
+} from "@/models/DataType";
 
 export const singleSerie: seriesType = {
   content: [
@@ -479,19 +484,40 @@ export const filtersSample: filterFamilyType[] = [
   },
 ];
 
-export const relatedTagsSample = [
-  { isCurated: false, tag: "tag1" },
-  { isCurated: false, tag: "tag2" },
-  { isCurated: false, tag: "tag3" },
-  { isCurated: false, tag: "tag4" },
-  { isCurated: false, tag: "tag5" },
-  { isCurated: false, tag: "tag6" },
-  { isCurated: false, tag: "tag7" },
-  { isCurated: false, tag: "tag8" },
-  { isCurated: false, tag: "tag9" },
+export const relatedTagsSample: filterType[] = [
+  {
+    label: "Asturias",
+    modelName: "SimpleFilter",
+    selected: false,
+    id: "asturias",
+    value: "asturias",
+    facetId: "asturias",
+    type: "provincia",
+    totalResults: 1,
+  },
+  {
+    label: "Industria",
+    modelName: "SimpleFilter",
+    selected: false,
+    id: "industria",
+    value: "industria",
+    facetId: "industria",
+    type: "sector",
+    totalResults: 1,
+  },
+  {
+    label: "2019",
+    modelName: "SimpleFilter",
+    selected: false,
+    id: "2019",
+    value: "2019",
+    facetId: "2019",
+    type: "año",
+    totalResults: 1,
+  },
 ];
 
-export const bidResultsSample = [
+export const bidResultsSample: bidType[] = [
   {
     modelName: "grant",
     id: "1111",
@@ -500,12 +526,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -515,12 +536,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -530,12 +546,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -545,12 +556,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -560,12 +566,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -575,12 +576,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -590,12 +586,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -605,12 +596,7 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
   {
     modelName: "grant",
@@ -620,11 +606,6 @@ export const bidResultsSample = [
     dateFinish: "10/06/2022",
     amount: "1000000€",
     procurer: "José María Llorián",
-    relatedTags: [
-      { isCurated: false, tag: "tag1" },
-      { isCurated: false, tag: "tag2" },
-      { isCurated: false, tag: "tag3" },
-      { isCurated: false, tag: "tag4" },
-    ],
+    relatedTags: relatedTagsSample,
   },
 ];

@@ -1,0 +1,27 @@
+All the charts components that are in this folder are made under the Highcharts library.
+All them have their own properties, some of them are common, others are specific of each chart.
+
+One important point is that the data received by those charts varies (despite all charts receiving the same object,
+which you can find the constructor with the format of the object in src/utils/DataConstructor, some will only receive
+one serie of data while others are able to receive multiple series).
+
+In order to make a difference between those two, this is the classification:
+
+Word cloud and pie chart will only be able to receive a single set* of data (receiving more than one set will result in
+overlapping graphics).
+
+Bar chart, bubble chart and line plot will all be able to receive one or many sets* of data, dividing them and treating them
+differently).
+
+*When we are referring to sets of data, we are saying that all sets will have the type:
+{
+  content: {
+    name: string,
+    data: {
+      name: string,
+      value: number,
+    }[],
+  }[],
+}
+
+where each content object is a set of data.

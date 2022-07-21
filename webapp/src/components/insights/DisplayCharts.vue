@@ -1,10 +1,10 @@
 <template>
+  <!-- TODO: when the API is working properly, use a Result component to envelop this -->
   <BaseGrid :items="listOfGraphics" :columns="3">
     <template #default="{ item }">
       <DiscoverCard
         :item="item"
         :filtersSelected="filtersSelected"
-        @changedFilters="sendChangedFilters($event)"
       ></DiscoverCard>
     </template>
   </BaseGrid>
@@ -19,6 +19,9 @@ export default {
   name: "DisplayCharts",
   data() {
     return {
+      /*
+       * List of graphics to be processed
+       */
       listOfGraphics: [
         {
           title: "Ejemplo de gráfica de barras",
@@ -188,11 +191,6 @@ export default {
   components: {
     DiscoverCard,
     BaseGrid,
-  },
-  methods: {
-    sendChangedFilters(newFilters) {
-      this.$emit("changedFilters", newFilters);
-    },
   },
 };
 </script>

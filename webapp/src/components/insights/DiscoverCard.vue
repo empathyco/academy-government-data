@@ -32,6 +32,7 @@
       v-else-if="item.modelName === 'wordcloud'"
       :series="item.data"
     ></WordCloud>
+    <!-- TODO: substitute this by a new component extracted from here and grant card -->
     <div class="filter-container">
       <FiltersList
         :class="`filters-list`"
@@ -71,12 +72,25 @@ export default {
   },
   props: ["item", "filtersSelected"],
   methods: {
+    /**
+     * Will call the API to download the document in .xml with the information
+     */
     dowlowadContent() {
       console.log(this.item);
     },
+    /**
+     * Returns the color corresponding to a given filter
+     * @param filter
+     * @returns {Promise<any>}
+     */
     getColor(filter) {
       return store.dispatch("getColor", filter.type);
     },
+    /**
+     * Returns if the filter given is selected
+     * @param filter
+     * @returns {Promise<any>}
+     */
     isFilterSelected(filter) {
       return store.dispatch("isFilterSelected", filter);
     },

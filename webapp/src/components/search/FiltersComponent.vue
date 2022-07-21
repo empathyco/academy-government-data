@@ -29,16 +29,15 @@ import store from "@/store";
 import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 
 export default {
+  /**
+   * Component used to represent a filter family, passing the filters a promise of color and if it is selected
+   * that will be resolved in each individual TagSelectionFilter component
+   */
   name: "FiltersComponent",
   props: ["filters"],
   components: {
     TagSelectionFilter,
     FiltersList,
-  },
-  data() {
-    return {
-      counter: 1,
-    };
   },
   methods: {
     getColor(filter) {

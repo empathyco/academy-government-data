@@ -52,7 +52,7 @@ import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import GrantCardGrid from "@/components/search/details/GrantCardGrid";
 
 import store from "@/store";
-import { FiltersList, SimpleFilter } from "@empathyco/x-components/js";
+import { FiltersList } from "@empathyco/x-components/js";
 import TagFilter from "@/components/tags/TagFilter";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 
@@ -90,22 +90,5 @@ export default {
 }
 h1 {
   margin-top: 0;
-}
-.related-tag {
-  background-color: var(--background-colour);
-  color: #243d48;
-  border: solid 3px #243d48;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-.related-tags {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-}
-#tag-text {
-  margin: 5px;
 }
 </style>

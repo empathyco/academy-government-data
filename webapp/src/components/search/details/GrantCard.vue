@@ -1,9 +1,10 @@
 <template>
   <div class="discover-card">
     <div class="filter-container">
+      <!-- TODO: substitute this by a new component extracted from here and discovery card -->
       <FiltersList
         :class="`filters-list`"
-        :filters="item.tags"
+        :filters="item.relatedTags"
         v-slot="{ filter }"
       >
         <TagSelectionFilter
@@ -42,29 +43,36 @@ import store from "@/store";
 import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 
 export default {
+  // Basic component that represent the essential content of a grant given
   name: "GrantCard",
   components: { FiltersList, TagSelectionFilter },
-  props: {
-    item: {
+  props: ["item"],
+  /* item: {
       modelName: String,
       name: String,
       dateStart: String,
       dateFinish: String,
       amount: Number,
       procurer: String,
-      relatedTags: Array(String),
-    },
-  },
+      relatedTags: Array(filterType()),
+    },*/
   methods: {
+    /**
+     * Given a filter returns a promise from the store with the color of the corresponding tag depending its type
+     * @param filter
+     * @returns {Promise<any>}
+     */
     getColor(filter) {
       return store.dispatch("getColor", filter.type);
     },
+    /**
+     * Given a filter returns a promise from the store with the state of its selection
+     * @param filter
+     * @returns {Promise<any>}
+     */
     isFilterSelected(filter) {
       return store.dispatch("isFilterSelected", filter);
     },
-  },
-  mounted() {
-    this.colorMap = this.$store.state.colorMap;
   },
 };
 </script>
@@ -75,23 +83,6 @@ export default {
   border-radius: 30px;
   padding: 10px;
   margin: 10px;
-}
-.filter-container {
-  background-color: #d44a6f;
-  color: white;
-  border: solid 1px white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  margin: 3px;
-}
-.related-tags {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap;
-}
-#tag-text {
-  margin: 5px;
 }
 p {
   font-size: 16px;
@@ -121,11 +112,5 @@ p {
 }
 .highlighted-value {
   font-weight: bold;
-}
-.cross-icon {
-  height: 24px;
-  width: 24px;
-  stroke: white;
-  margin-left: -3px;
 }
 </style>

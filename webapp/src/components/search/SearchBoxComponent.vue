@@ -33,6 +33,9 @@ import CrossStyled from "@/components/icons/CrossStyled.vue";
   },
   props: ["placeholder"],
 })
+/* Almost copy-pasted from the architecture example done in the architecture example.
+  It makes use of the x components involved in search engine so after the style not much configuration is needed.
+ */
 export default class SearchBox extends Vue {}
 </script>
 <style>

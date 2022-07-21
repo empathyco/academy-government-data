@@ -37,6 +37,7 @@ export default {
     },
   },
   async mounted() {
+    // Same to TagSelectionFilter, it is a workaround for the asynchronous problem (check mounted on that class)
     this.colorData = await this.color;
   },
 };

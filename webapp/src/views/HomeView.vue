@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>* Nombre de la página *</h1>
+    <h1>AGD</h1>
     <div class="content-landing-page">
       <p class="intro-text">
         ¿Alguna vez has querido buscar subvenciones en la página oficial del
