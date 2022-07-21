@@ -1,6 +1,7 @@
 <template>
   <MultiColumnMaxWidthLayout>
     <template #header-middle>
+      <!-- Search header with the title and the search box -->
       <h1>Busca</h1>
       <div
         class="x-list x-list--vertical x-list--gap-05 x-list--align-stretch x-list__item--expand"
@@ -9,6 +10,7 @@
       </div>
     </template>
     <template #sub-header>
+      <!-- Predictive layer for the suggestions and the filters selected TODO: extract component for the same as in discovery view -->
       <PredictiveLayer @filterApplied="manageFilter($event)" />
       <div class="filter-container">
         <FiltersList
@@ -38,6 +40,7 @@
       <PredictiveLayer></PredictiveLayer>-->
     </template>
     <template #main-body>
+      <!-- Main body where the grant cards are displayed -->
       <div>
         <GrantCardGrid />
       </div>

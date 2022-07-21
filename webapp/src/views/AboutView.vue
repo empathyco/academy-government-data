@@ -1,13 +1,13 @@
 <template>
   <div class="about">
-    <h1>Conoce *Nombre de la página*</h1>
+    <h1>Conoce AGD</h1>
     <article>
-      <h2>¿Qué es *Nombre de la página*?</h2>
+      <h2>¿Qué es AGD?</h2>
       <p class="about-text">
-        Mediante *Nombre de la página* todos los usuarios podrán realizar su
-        investigación y búsquedas, viendo la forma en la que se invierten
-        diversas subvenciones del estado (obteniendo los datos actualizados a
-        través de datos oficiales de la web del gobierno).
+        Mediante AGD (o Academy Government Data) todos los usuarios podrán
+        realizar su investigación y búsquedas, viendo la forma en la que se
+        invierten diversas subvenciones del estado (obteniendo los datos
+        actualizados a través de datos oficiales de la web del gobierno).
       </p>
       <p class="about-text">
         Mantenido por nuestros desarrolladores, cualquiera puede contribuir al
@@ -18,10 +18,10 @@
       </p>
     </article>
     <article>
-      <h2>¿Por qué *Nombre de la página*?</h2>
+      <h2>¿Por qué AGD?</h2>
       <p class="about-text">
-        Para poder hablar de *nombre de la página* tenemos que remontarnos a su
-        origen, en la empresa Empathy.CO.
+        Para poder hablar de AGD tenemos que remontarnos a su origen, en la
+        empresa Empathy.CO.
       </p>
       <p class="about-text">
         Desde la empresa de Empathy.CO buscamos el mejor servicio para nuestros
@@ -35,9 +35,9 @@
         formación protagonizado por la empresa y la universidad de Oviedo,
         Academy Project, y con la idea de Ángel Maldonado, CEO y cofundador de
         la empresa, surge el concepto de hacer una aplicación transparente,
-        accesible y útil para todos. Así nace *Nombre de la página*, como un
-        artefacto para alcanzar con mayor facilidad ese acceso acceso a la
-        información que debería estar en manos de todos.
+        accesible y útil para todos. Así nace AGD, como un artefacto para
+        alcanzar con mayor facilidad ese acceso acceso a la información que
+        debería estar en manos de todos.
       </p>
     </article>
     <article>

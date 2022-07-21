@@ -1,3 +1,4 @@
+// List of colors from empathy.co
 export const colorList = [
   "#D44A6F",
   "#53B9C9",
@@ -8,4 +9,5 @@ export const colorList = [
   "#0086B2",
 ];
 
+// Black color from empathy
 export const empathyBlack = "#243D48";

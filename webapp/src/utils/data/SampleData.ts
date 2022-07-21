@@ -5,6 +5,9 @@ import {
   seriesType,
 } from "@/models/DataType";
 
+// Data samples from all the application
+
+// Data sample for a series given with one set of information (for word cloud and pie chart)
 export const singleSerie: seriesType = {
   content: [
     {
@@ -87,6 +90,7 @@ export const singleSerie: seriesType = {
   ],
 };
 
+// Data sample for a series given several sets of information
 export const severalSeries: seriesType = {
   content: [
     {
@@ -161,6 +165,7 @@ export const severalSeries: seriesType = {
   ],
 };
 
+// Several family filters
 export const filtersSample: filterFamilyType[] = [
   {
     title: "Provincia",
@@ -484,6 +489,7 @@ export const filtersSample: filterFamilyType[] = [
   },
 ];
 
+// Several tags for example
 export const relatedTagsSample: filterType[] = [
   {
     label: "Asturias",
@@ -517,6 +523,7 @@ export const relatedTagsSample: filterType[] = [
   },
 ];
 
+// Several bids for example
 export const bidResultsSample: bidType[] = [
   {
     modelName: "grant",

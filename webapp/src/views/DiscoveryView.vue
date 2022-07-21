@@ -10,6 +10,7 @@
       </div>
     </template>
     <template #header-start>
+      <!-- Button for switching from discovery view to filters selection -->
       <div class="botones-filtros">
         <button
           title="Filtros"
@@ -22,6 +23,7 @@
       </div>
     </template>
     <template #sub-header>
+      <!-- Place for the suggestions and related tags/filters TODO: extract component for the same as in search view -->
       <PredictiveLayer @filterApplied="manageFilter($event)" />
       <div class="filter-container">
         <FiltersList
@@ -35,13 +37,13 @@
     </template>
 
     <template #main-body>
+      <!-- Place for the discover cards or the available filters -->
       <div v-if="filtersMenuSelected">
         <FiltersComponent :filters="filters" />
       </div>
       <div v-else>
         <DisplayCharts
           :filtersSelected="getFiltersSelected()"
-          @changedFilters="modifyFilters($event)"
         ></DisplayCharts>
       </div>
     </template>
@@ -80,12 +82,23 @@ export default {
     FiltersList,
   },
   methods: {
+    /**
+     * Filters selected from the store
+     * @returns {*}
+     */
     getFiltersSelected() {
-      return store.state.filtersSelected;
+      return store.getters.filtersSelected();
     },
+    /**
+     * Modifies the filtersSelected list in the store given a filter
+     * @param filterToManage
+     */
     manageFilter(filterToManage) {
       store.dispatch("modifySelectedFilters", filterToManage);
     },
+    /**
+     * Changes the style of the button to switch between views of discovery cards and filters
+     */
     changeFilterSelected() {
       this.filtersMenuSelected = !this.filtersMenuSelected;
       this.filtersMenuSelected
@@ -93,14 +106,17 @@ export default {
         : (this.$refs.filterButton.className =
             this.$refs.filterButton.className.split(" ")[0]);
     },
+    /**
+     * Given a type returns a promise with the color assinged in the color map of the store
+     * @param type
+     * @returns {Promise<any>}
+     */
     async getColorMap(type) {
       return await store.dispatch("getColor", type);
     },
-    modifyFilters(newFilters) {
-      this.filtersSelected = newFilters;
-    },
   },
   async beforeMount() {
+    // In order to not collide with the search store, it cleans it up everytime the view is loaded (is improvable)
     store.commit("clearFiltersSelected");
     await store.dispatch("initializeDictionary", this.filters);
   },

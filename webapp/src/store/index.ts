@@ -21,6 +21,15 @@ export default new Vuex.Store({
       totalResults: number;
     }[],
   },
+  getters: {
+    /**
+     * Returns filters selected
+     * @param state
+     */
+    filtersSelected(state) {
+      return state.filtersSelected;
+    },
+  },
   mutations: {
     /**
      * Adds a type-color pair to the colorMap array
