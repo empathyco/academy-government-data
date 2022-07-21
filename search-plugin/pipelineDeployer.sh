@@ -3,12 +3,20 @@
 cd index-governmentdata-parser
 echo "Extracting data..."
 gzip -dk ../../data-plugin/datos_limpios/concesiones_completo1.tsv.gz
+gzip -dk ../../data-plugin/datos_limpios/concesiones_completo2.tsv.gz
+gzip -dk ../../data-plugin/datos_limpios/concesiones_completo3.tsv.gz
+gzip -dk ../../data-plugin/datos_limpios/concesiones_completo4.tsv.gz
+gzip -dk ../../data-plugin/datos_limpios/concesiones_completo5.tsv.gz
 echo "Data extracted"
 sleep 4
 pip3 install pandas
-python3 csvParser.py
+python3 csvParser.py concesiones_completo1.tsv concesiones_completo2.tsv concesiones_completo3.tsv concesiones_completo4.tsv concesiones_completo5.tsv
 echo "Doing mad stuff over the data"
 rm ../../data-plugin/datos_limpios/concesiones_completo1.tsv
+rm ../../data-plugin/datos_limpios/concesiones_completo2.tsv
+rm ../../data-plugin/datos_limpios/concesiones_completo3.tsv
+rm ../../data-plugin/datos_limpios/concesiones_completo4.tsv
+rm ../../data-plugin/datos_limpios/concesiones_completo5.tsv
 echo "Mad stuff done"
 cd ..
 
@@ -39,8 +47,9 @@ do
   echo "JETTY SERVER STATUS $status_code"
 done
 
-
-jobId=$(curl -d "@../index-governmentdata-parser/jsonOutput.json" -X POST localhost:8080/jobs/submit/governmentdata/62b585cd6fe71f182dc9763e/catalog -H "Content-Type: application/json" | python3 -c "import sys, json; print(json.load(sys.stdin)['indexJobId'])")
+for FILE in $(ls ../index-governmentdata-parser | grep ".json")
+do
+jobId=$(curl -d "@../index-governmentdata-parser/$FILE" -X POST localhost:8080/jobs/submit/governmentdata/62b585cd6fe71f182dc9763e/catalog -H "Content-Type: application/json" | python3 -c "import sys, json; print(json.load(sys.stdin)['indexJobId'])")
 
 state=$(curl -XGET "localhost:8080/jobs/governmentdata/62b585cd6fe71f182dc9763e/job/$jobId" | python3 -c "import sys, json; print(json.load(sys.stdin)['state'])")
 
@@ -52,9 +61,12 @@ do
     echo " STATUS CODE GET JOB $state"
 done
 
+done
+
 read -s -n 1 -p "Press any key to continue . . ."
 
 docker-compose down
+
 cd ../search-governmentdata-plugin
 
 curl --request PUT \
