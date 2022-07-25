@@ -51,6 +51,12 @@ export default {
           modelName: "wordcloud",
           tags: relatedTagsSample,
         },
+        {
+          title: "Ejemplo de gráfica de nube de palabras",
+          data: severalSeries,
+          modelName: "bubblechart",
+          tags: relatedTagsSample,
+        },
       ],
     };
   },

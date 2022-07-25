@@ -1,51 +1,56 @@
 <template>
   <div class="discover-card">
-    <div class="filter-container">
-      <!-- TODO: substitute this by a new component extracted from here and discovery card -->
-      <FiltersList
-        :class="`filters-list`"
-        :filters="item.relatedTags"
-        v-slot="{ filter }"
-      >
-        <TagSelectionFilter
-          :filter="filter"
-          :color="getColor(filter)"
-          :isSelected="isFilterSelected(filter)"
-        />
-      </FiltersList>
-    </div>
+    <CardRelatedTags :relatedTags="itemFilters" />
     <p class="grant-id">{{ item.id }}</p>
-    <p class="grant-name">{{ item.name }}</p>
+    <p class="grant-name">{{ item.titulo_convocatoria }}</p>
     <div class="parallel-attributes">
       <div class="titled-attribute">
-        <p>Fecha inicio</p>
-        <p class="date">{{ item.dateStart }}</p>
+        <p>Fecha concesión</p>
+        <p class="date">{{ item.fecha_concesion }}</p>
+      </div>
+    </div>
+    <div class="parallel-attributes">
+      <div class="titled-attribute">
+        <p>Cantidad total</p>
+        <p class="highlighted-value">{{ item.ayuda_equivalente }} €</p>
       </div>
       <div class="titled-attribute">
-        <p>Fecha fin</p>
-        <p class="date">{{ item.dateFinish }}</p>
+        <p>Enlace Concesión</p>
+        <a
+          class="highlighted-value"
+          :href="item.url_bases_regul"
+          target="”_blank”"
+          >Link</a
+        >
       </div>
     </div>
     <div class="titled-attribute">
-      <p>Cantidad total</p>
-      <p class="highlighted-value">{{ item.amount }}</p>
+      <p>Adjudicador</p>
+      <p class="highlighted-value">{{ item.departamento }}</p>
     </div>
-    <div class="titled-attribute">
-      <p>Procurador</p>
-      <p class="highlighted-value">{{ item.procurer }}</p>
+    <div class="bottom-corner">
+      <router-link to="/busca/1"
+        ><p>See more <PlusStyled class="plus-symbol" /></p
+      ></router-link>
     </div>
   </div>
 </template>
 
 <script>
-import { FiltersList } from "@empathyco/x-components/js";
 import store from "@/store";
-import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
+import CardRelatedTags from "@/components/tags/CardRelatedTags";
+import PlusStyled from "@/components/icons/PlusStyled";
+import { fromItemToFilters } from "@/utils/methods/BidItemToFilter";
 
 export default {
   // Basic component that represent the essential content of a grant given
   name: "GrantCard",
-  components: { FiltersList, TagSelectionFilter },
+  components: { PlusStyled, CardRelatedTags },
+  data() {
+    return {
+      itemFilters: [],
+    };
+  },
   props: ["item"],
   /* item: {
       modelName: String,
@@ -74,6 +79,11 @@ export default {
       return store.dispatch("isFilterSelected", filter);
     },
   },
+  beforeMount() {
+    this.itemFilters = fromItemToFilters(this.item).filter(
+      (item) => item !== null
+    );
+  },
 };
 </script>
 
@@ -97,9 +107,8 @@ p {
   font-weight: bold;
 }
 .parallel-attributes {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .titled-attribute {
   margin-top: 15px;
@@ -112,5 +121,14 @@ p {
 }
 .highlighted-value {
   font-weight: bold;
+}
+.bottom-corner {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+}
+.plus-symbol {
+  position: relative;
+  top: 7px;
 }
 </style>

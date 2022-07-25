@@ -42,9 +42,7 @@
         <FiltersComponent :filters="filters" />
       </div>
       <div v-else>
-        <DisplayCharts
-          :filtersSelected="getFiltersSelected()"
-        ></DisplayCharts>
+        <DisplayCharts></DisplayCharts>
       </div>
     </template>
   </MultiColumnMaxWidthLayout>
@@ -87,7 +85,7 @@ export default {
      * @returns {*}
      */
     getFiltersSelected() {
-      return store.getters.filtersSelected();
+      return store.getters.filtersSelected;
     },
     /**
      * Modifies the filtersSelected list in the store given a filter

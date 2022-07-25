@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 Vue.use(VueRouter);
 
@@ -37,6 +36,15 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "info" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/busca/:id",
+    name: "busca_grant",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "busca_grant" */ "../views/BidView.vue"),
   },
 ];
 

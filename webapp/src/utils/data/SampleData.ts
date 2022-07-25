@@ -18,7 +18,7 @@ export const singleSerie: seriesType = {
           name: "News",
         },
         {
-          value: 1338,
+          value: 133,
           name: "Drama",
         },
         {
@@ -89,7 +89,7 @@ export const singleSerie: seriesType = {
     },
   ],
 };
-
+/*
 // Data sample for a series given several sets of information
 export const severalSeries: seriesType = {
   content: [
@@ -159,6 +159,80 @@ export const severalSeries: seriesType = {
         {
           value: 217,
           name: "Short",
+        },
+      ],
+    },
+  ],
+};
+*/
+export const severalSeries: seriesType = {
+  content: [
+    {
+      name: "Inditex",
+      data: [
+        {
+          // name property is used for the datalabel
+          // value property is used for the volume of the bubble
+          value: 812,
+          name: "2010",
+        },
+        {
+          value: 951,
+          name: "2011",
+        },
+        {
+          value: 117,
+          name: "2012",
+        },
+        {
+          value: 17,
+          name: "2013",
+        },
+      ],
+    },
+    {
+      name: "El Corte Inglés",
+      data: [
+        {
+          // name property is used for the datalabel
+          // value property is used for the volume of the bubble
+          value: 612,
+          name: "2023",
+        },
+        {
+          value: 251,
+          name: "2024",
+        },
+        {
+          value: 17,
+          name: "2025",
+        },
+        {
+          value: 317,
+          name: "2026",
+        },
+      ],
+    },
+    {
+      name: "Game",
+      data: [
+        {
+          // name property is used for the datalabel
+          // value property is used for the volume of the bubble
+          value: 312,
+          name: "2010",
+        },
+        {
+          value: 351,
+          name: "2011",
+        },
+        {
+          value: 217,
+          name: "2012",
+        },
+        {
+          value: 217,
+          name: "2013",
         },
       ],
     },

@@ -1,13 +1,13 @@
 <template>
-  <ResultsList>
+  <ResultsList #default="{ items }">
     <!-- TODO: The Result list will have the #default="{ items, animation }"
     prop when the API is called. Until then, this is applied -->
-    <BaseGrid :items="grants" :columns="3">
-      <template #result="{ grant }">
-        <span>Result: {{ grant.name }}</span>
+    <BaseGrid :items="items" :columns="3">
+      <template #result="{ item }">
+        <GrantCard :item="item" />
       </template>
       <template #default="{ item }">
-        <GrantCard :item="item"></GrantCard>
+        <p>{{ item.id }}</p>
       </template>
     </BaseGrid>
   </ResultsList>

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <p>Hellooooo</p>
+    <p>Here will go some details over the bids</p>
   </div>
 </template>
 
