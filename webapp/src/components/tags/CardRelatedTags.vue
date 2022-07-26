@@ -9,6 +9,7 @@
         :filter="filter"
         :color="getColor(filter)"
         :isSelected="isFilterSelected(filter)"
+        @click_filter="clickOnFilter(filter)"
       />
     </FiltersList>
   </div>
@@ -39,6 +40,9 @@ export default {
      */
     isFilterSelected(filter) {
       return store.dispatch("isFilterSelected", filter);
+    },
+    clickOnFilter(filter) {
+      this.$emit("click_filter", filter);
     },
   },
 };

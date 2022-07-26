@@ -5,17 +5,51 @@ import {
   SuggestionsRequest,
   SuggestionsResponse,
 } from "@empathyco/x-adapter";
-import { RelatedTagsRequest, Result } from "@empathyco/x-types";
+import { Filter, RelatedTagsRequest, Result } from "@empathyco/x-types";
 import { EmpathyEndpointsService } from "./empathy-endpoints.service";
 import { APIResponseType } from "@/models/APIResponseType";
+import { addFilter } from "@/utils/connection/APIConnection";
+import { filterType } from "@/models/DataType";
+
+let filters = [] as filterType[];
+
+const addFilterToList = (request: SearchRequest, field: string) => {
+  if (request.filters?.[field] === undefined) {
+    filters = [...filters];
+  } else {
+    request.filters[field].filter((filter: any) => {
+      filters = [...filters, filter];
+    });
+  }
+};
 
 // This adapter is what communicates between the x-components and the API
 export const adapter: SearchAdapter = {
   // The search will be called and return the response each time a search petition is made by a Search component
   search(request: SearchRequest): SearchResponse {
     // This is more or less the way the search works (I don't really understand, but it is what it is)
+    filters = [];
+    addFilterToList(request, "departamento");
+    addFilterToList(request, "administracion");
+    addFilterToList(request, "tipo_beneficiario");
+    addFilterToList(request, "organo");
+    console.log(filters);
+
+    console.log(
+      `http://localhost:8080/query/governmentdata/search?query=${
+        request.query
+      }&lang=en${filters.reduce((acc, filter) => {
+        console.log("el valor del filtro es " + filter.value);
+        console.log(filter.type);
+        return acc + addFilter(filter);
+      }, "")}`
+    );
     return fetch(
-      `http://localhost:8080/query/governmentdata/search?query=${request.query}&lang=en`
+      `http://localhost:8080/query/governmentdata/search?query=${
+        request.query
+      }&lang=en${filters.reduce((acc, filter) => {
+        return acc + addFilter(filter);
+      }, "")}`
     )
       .then((response): any => (response.ok ? response.json() : {}))
       .then((responseData) => ({

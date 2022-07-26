@@ -23,6 +23,9 @@ export default new Vuex.Store({
     filtersSelected(state) {
       return state.filtersSelected;
     },
+    getColorMap(state) {
+      return state.colorMap;
+    },
   },
   mutations: {
     /**

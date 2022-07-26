@@ -13,13 +13,9 @@
       <!-- Predictive layer for the suggestions and the filters selected TODO: extract component for the same as in discovery view -->
       <PredictiveLayer @filterApplied="manageFilter($event)" />
       <div class="filter-container">
-        <FiltersList
-          :class="`filters-list`"
-          :filters="getFiltersSelected()"
-          v-slot="{ filter }"
-        >
+        <SelectedFiltersList :class="`filters-list`" v-slot="{ filter }">
           <TagFilter :filter="filter" :color="getColorMap(filter.type)" />
-        </FiltersList>
+        </SelectedFiltersList>
       </div>
       <!--
       <div class="related-tags">
@@ -55,7 +51,7 @@ import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import GrantCardGrid from "@/components/search/details/GrantCardGrid";
 
 import store from "@/store";
-import { FiltersList } from "@empathyco/x-components/js";
+import { SelectedFiltersList } from "@empathyco/x-components/facets";
 import TagFilter from "@/components/tags/TagFilter";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
 
@@ -65,7 +61,7 @@ export default {
     MultiColumnMaxWidthLayout,
     SearchBoxComponent,
     GrantCardGrid,
-    FiltersList,
+    SelectedFiltersList,
     TagFilter,
     PredictiveLayer,
   },

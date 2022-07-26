@@ -3,12 +3,11 @@
     class="filter"
     :filter="filter"
     :style="`background-color:${getColorComputed()};`"
-    @click.native="clickOnFilter()"
   >
     <template #label="{ filter }">
       <div class="discovery-filter">
         <p id="filter-label">{{ filter.label }}</p>
-        <CrossTinyStyled v-if="selected" class="icon-response" />
+        <CrossTinyStyled v-if="filter.selected" class="icon-response" />
         <PlusStyled v-else class="icon-response" />
       </div>
     </template>
@@ -27,8 +26,6 @@ export default {
     return {
       // Color of the filter
       colorData: "",
-      // Selection state (will change on mounted)
-      selected: this.filter.selected,
     };
   },
   components: {
@@ -36,15 +33,8 @@ export default {
     CrossTinyStyled,
     SimpleFilter,
   },
-  props: ["filter", "color", "isSelected"],
+  props: ["filter", "color"],
   methods: {
-    /**
-     * Alters the selection property filter in the store and in the filter component
-     */
-    clickOnFilter() {
-      store.dispatch("modifySelectedFilters", this.filter);
-      this.selected = !this.selected;
-    },
     /**
      * Returns the corresponding color depending on if it's selected or not
      * @returns {string}
@@ -59,12 +49,6 @@ export default {
     components are loaded, then assigning it to the data and fixing the asynchronous problem
      */
     this.colorData = await this.color;
-    this.selected = await this.isSelected;
-  },
-  watch: {
-    async isSelected(newValue) {
-      this.selected = await newValue;
-    },
   },
 };
 </script>

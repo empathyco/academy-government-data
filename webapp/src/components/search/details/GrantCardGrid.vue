@@ -17,7 +17,7 @@
 import GrantCard from "@/components/search/details/GrantCard";
 import { BaseGrid } from "@empathyco/x-components";
 import { bidResultsSample } from "@/utils/data/SampleData";
-import { ResultsList } from "@empathyco/x-components/js";
+import { ResultsList } from "@empathyco/x-components/search";
 
 export default {
   name: "GrantCardGrid",

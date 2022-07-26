@@ -3,7 +3,6 @@
     class="filter"
     :filter="filter"
     :style="`background-color:${colorData};`"
-    @click.native="manageFilter(filter)"
   >
     <template #label="{ filter }">
       <div class="discovery-filter">
