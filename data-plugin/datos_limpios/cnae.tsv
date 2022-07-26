@@ -1,0 +1,630 @@
+codigo	grupo	subgrupo	nivel	subnivel
+A0111	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Cultivo de cereales (excepto arroz), leguminosas y semillas oleaginosas
+A0112	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Cultivo de arroz
+A0113	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Cultivo de hortalizas, raíces y tubérculos
+A0114	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Cultivo de caña de azúcar
+A0115	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Cultivo de tabaco
+A0116	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Cultivo de plantas para fibras textiles
+A0119	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos no perennes	Otros cultivos no perennes
+A0121	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de la vid
+A0122	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de frutos tropicales y subtropicales
+A0123	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de cítricos
+A0124	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de frutos con hueso y pepitas
+A0125	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de otros árboles y arbustos frutales y frutos secos
+A0126	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de frutos oleaginosos
+A0127	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de plantas para bebidas
+A0128	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Cultivo de especias, plantas aromáticas, medicinales y farmacéuticas
+A0129	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Cultivos perennes	Otros cultivos perennes
+A0130	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Propagación de plantas	Propagación de plantas
+A0141	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Explotación de ganado bovino para la producción de leche
+A0142	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Explotación de otro ganado bovino y búfalos
+A0143	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Explotación de caballos y otros equinos
+A0144	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Explotación de camellos y otros camélidos
+A0145	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Explotación de ganado ovino y caprino
+A0146	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Explotación de ganado porcino
+A0147	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Avicultura
+A0149	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción ganadera	Otras explotaciones de ganado
+A0150	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Producción agrícola combinada con la producción ganadera	Producción agrícola combinada con la producción ganadera
+A0161	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Actividades de apoyo a la agricultura, a la ganadería y de preparación posterior a la cosecha	Actividades de apoyo a la agricultura
+A0162	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Actividades de apoyo a la agricultura, a la ganadería y de preparación posterior a la cosecha	Actividades de apoyo a la ganadería
+A0163	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Actividades de apoyo a la agricultura, a la ganadería y de preparación posterior a la cosecha	Actividades de preparación posterior a la cosecha
+A0164	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Actividades de apoyo a la agricultura, a la ganadería y de preparación posterior a la cosecha	Tratamiento de semillas para reproducción
+A0170	Agricultura, ganadería, silvicultura y pesca	Agricultura, ganadería, caza y servicios relacionados con las mismas	Caza, captura de animales y servicios relacionados con las mismas	Caza, captura de animales y servicios relacionados con las mismas
+A0210	Agricultura, ganadería, silvicultura y pesca	Silvicultura y explotación forestal	Silvicultura y otras actividades forestales	Silvicultura y otras actividades forestales
+A0220	Agricultura, ganadería, silvicultura y pesca	Silvicultura y explotación forestal	Explotación de la madera	Explotación de la madera
+A0230	Agricultura, ganadería, silvicultura y pesca	Silvicultura y explotación forestal	Recolección de productos silvestres, excepto madera	Recolección de productos silvestres, excepto madera
+A0240	Agricultura, ganadería, silvicultura y pesca	Silvicultura y explotación forestal	Servicios de apoyo a la silvicultura	Servicios de apoyo a la silvicultura
+A0311	Agricultura, ganadería, silvicultura y pesca	Pesca y acuicultura	Pesca	Pesca marina
+A0312	Agricultura, ganadería, silvicultura y pesca	Pesca y acuicultura	Pesca	Pesca en agua dulce
+A0321	Agricultura, ganadería, silvicultura y pesca	Pesca y acuicultura	Acuicultura	Acuicultura marina
+A0322	Agricultura, ganadería, silvicultura y pesca	Pesca y acuicultura	Acuicultura	Acuicultura en agua dulce
+B0510	Industrias extractivas	Extracción de antracita, hulla y lignito	Extracción de antracita y hulla	Extracción de antracita y hulla
+B0520	Industrias extractivas	Extracción de antracita, hulla y lignito	Extracción de lignito	Extracción de lignito
+B0610	Industrias extractivas	Extracción de crudo de petróleo y gas natural	Extracción de crudo de petróleo	Extracción de crudo de petróleo
+B0620	Industrias extractivas	Extracción de crudo de petróleo y gas natural	Extracción de gas natural	Extracción de gas natural
+B0710	Industrias extractivas	Extracción de minerales metálicos	Extracción de minerales de hierro	Extracción de minerales de hierro
+B0721	Industrias extractivas	Extracción de minerales metálicos	Extracción de minerales metálicos no férreos	Extracción de minerales de uranio y torio
+B0729	Industrias extractivas	Extracción de minerales metálicos	Extracción de minerales metálicos no férreos	Extracción de otros minerales metálicos no férreos
+B0811	Industrias extractivas	Otras industrias extractivas	Extracción de piedra, arena y arcilla	Extracción de piedra ornamental y para la construcción, piedra caliza, yeso, creta y pizarra
+B0812	Industrias extractivas	Otras industrias extractivas	Extracción de piedra, arena y arcilla	Extracción de gravas y arenas; extracción de arcilla y caolín
+B0891	Industrias extractivas	Otras industrias extractivas	Industrias extractivas n.c.o.p.	Extracción de minerales para productos químicos y fertilizantes
+B0892	Industrias extractivas	Otras industrias extractivas	Industrias extractivas n.c.o.p.	Extracción de turba
+B0893	Industrias extractivas	Otras industrias extractivas	Industrias extractivas n.c.o.p.	Extracción de sal
+B0899	Industrias extractivas	Otras industrias extractivas	Industrias extractivas n.c.o.p.	Otras industrias extractivas n.c.o.p.
+B0910	Industrias extractivas	Actividades de apoyo a las industrias extractivas	Actividades de apoyo a la extracción de petróleo y gas natural	Actividades de apoyo a la extracción de petróleo y gas natural
+B0990	Industrias extractivas	Actividades de apoyo a las industrias extractivas	Actividades de apoyo a otras industrias extractivas	Actividades de apoyo a otras industrias extractivas
+C1011	Industria manufacturera	Industria de la alimentación	Procesado y conservación de carne y elaboración de productos cárnicos	Procesado y conservación de carne
+C1012	Industria manufacturera	Industria de la alimentación	Procesado y conservación de carne y elaboración de productos cárnicos	Procesado y conservación de volatería
+C1013	Industria manufacturera	Industria de la alimentación	Procesado y conservación de carne y elaboración de productos cárnicos	Elaboración de productos cárnicos y de volatería
+C1021	Industria manufacturera	Industria de la alimentación	Procesado y conservación de pescados, crustáceos y moluscos	Procesado de pescados, crustáceos y moluscos
+C1022	Industria manufacturera	Industria de la alimentación	Procesado y conservación de pescados, crustáceos y moluscos	Fabricación de conservas de pescado
+C1031	Industria manufacturera	Industria de la alimentación	Procesado y conservación de frutas y hortalizas	Procesado y conservación de patatas
+C1032	Industria manufacturera	Industria de la alimentación	Procesado y conservación de frutas y hortalizas	Elaboración de zumos de frutas y hortalizas
+C1039	Industria manufacturera	Industria de la alimentación	Procesado y conservación de frutas y hortalizas	Otro procesado y conservación de frutas y hortalizas
+C1042	Industria manufacturera	Industria de la alimentación	Fabricación de aceites y grasas vegetales y animales	Fabricación de margarina y grasas comestibles similares
+C1043	Industria manufacturera	Industria de la alimentación	Fabricación de aceites y grasas vegetales y animales	Fabricación de aceite de oliva
+C1044	Industria manufacturera	Industria de la alimentación	Fabricación de aceites y grasas vegetales y animales	Fabricación de otros aceites y grasas
+C1052	Industria manufacturera	Industria de la alimentación	Fabricación de productos lácteos	Elaboración de helados
+C1053	Industria manufacturera	Industria de la alimentación	Fabricación de productos lácteos	Fabricación de quesos
+C1054	Industria manufacturera	Industria de la alimentación	Fabricación de productos lácteos	Preparación de leche y otros productos lácteos
+C1061	Industria manufacturera	Industria de la alimentación	Fabricación de productos de molinería, almidones y productos amiláceos	Fabricación de productos de molinería
+C1062	Industria manufacturera	Industria de la alimentación	Fabricación de productos de molinería, almidones y productos amiláceos	Fabricación de almidones y productos amiláceos
+C1071	Industria manufacturera	Industria de la alimentación	Fabricación de productos de panadería y pastas alimenticias	Fabricación de pan y de productos frescos de panadería y pastelería
+C1072	Industria manufacturera	Industria de la alimentación	Fabricación de productos de panadería y pastas alimenticias	Fabricación de galletas y productos de panadería y pastelería de larga duración
+C1073	Industria manufacturera	Industria de la alimentación	Fabricación de productos de panadería y pastas alimenticias	Fabricación de pastas alimenticias, cuscús y productos similares
+C1081	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Fabricación de azúcar
+C1082	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Fabricación de cacao, chocolate y productos de confitería
+C1083	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Elaboración de café, té e infusiones
+C1084	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Elaboración de especias, salsas y condimentos
+C1085	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Elaboración de platos y comidas preparados
+C1086	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Elaboración de preparados alimenticios homogeneizados y alimentos dietéticos
+C1089	Industria manufacturera	Industria de la alimentación	Fabricación de otros productos alimenticios	Elaboración de otros productos alimenticios n.c.o.p.
+C1091	Industria manufacturera	Industria de la alimentación	Fabricación de productos para la alimentación animal	Fabricación de productos para la alimentación de animales de granja
+C1092	Industria manufacturera	Industria de la alimentación	Fabricación de productos para la alimentación animal	Fabricación de productos para la alimentación de animales de compañía
+C1101	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Destilación, rectificación y mezcla de bebidas alcohólicas
+C1102	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Elaboración de vinos
+C1103	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Elaboración de sidra y otras bebidas fermentadas a partir de frutas
+C1104	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Elaboración de otras bebidas no destiladas, procedentes de la fermentación
+C1105	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Fabricación de cerveza
+C1106	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Fabricación de malta
+C1107	Industria manufacturera	Fabricación de bebidas	Fabricación de bebidas	Fabricación de bebidas no alcohólicas; producción de aguas minerales y otras aguas embotelladas
+C1200	Industria manufacturera	Industria del tabaco	Industria del tabaco	Industria del tabaco
+C1310	Industria manufacturera	Industria textil	Preparación e hilado de fibras textiles	Preparación e hilado de fibras textiles
+C1320	Industria manufacturera	Industria textil	Fabricación de tejidos textiles	Fabricación de tejidos textiles
+C1330	Industria manufacturera	Industria textil	Acabado de textiles	Acabado de textiles
+C1391	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de tejidos de punto
+C1392	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de artículos confeccionados con textiles, excepto prendas de vestir
+C1393	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de alfombras y moquetas
+C1394	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de cuerdas, cordeles, bramantes y redes
+C1395	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de telas no tejidas y artículos confeccionados con ellas, excepto prendas de vestir
+C1396	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de otros productos textiles de uso técnico e industrial
+C1399	Industria manufacturera	Industria textil	Fabricación de otros productos textiles	Fabricación de otros productos textiles n.c.o.p.
+C1411	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir, excepto de peletería	Confección de prendas de vestir de cuero
+C1412	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir, excepto de peletería	Confección de ropa de trabajo
+C1413	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir, excepto de peletería	Confección de otras prendas de vestir exteriores
+C1414	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir, excepto de peletería	Confección de ropa interior
+C1419	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir, excepto de peletería	Confección de otras prendas de vestir y accesorios
+C1420	Industria manufacturera	Confección de prendas de vestir	Fabricación de artículos de peletería	Fabricación de artículos de peletería
+C1431	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir de punto	Confección de calcetería
+C1439	Industria manufacturera	Confección de prendas de vestir	Confección de prendas de vestir de punto	Confección de otras prendas de vestir de punto
+C1511	Industria manufacturera	Industria del cuero y del calzado	Preparación, curtido y acabado del cuero; fabricación de artículos de marroquinería, viaje y de guarnicionería y talabartería; preparación y teñido de pieles	Preparación, curtido y acabado del cuero; preparación y teñido de pieles
+C1512	Industria manufacturera	Industria del cuero y del calzado	Preparación, curtido y acabado del cuero; fabricación de artículos de marroquinería, viaje y de guarnicionería y talabartería; preparación y teñido de pieles	Fabricación de artículos de marroquinería, viaje y de guarnicionería y talabartería
+C1520	Industria manufacturera	Industria del cuero y del calzado	Fabricación de calzado	Fabricación de calzado
+C1610	Industria manufacturera	Industria de la madera y del corcho, excepto muebles; cestería y espartería	Aserrado y cepillado de la madera	Aserrado y cepillado de la madera
+C1621	Industria manufacturera	Industria de la madera y del corcho, excepto muebles; cestería y espartería	Fabricación de productos de madera, corcho, cestería y espartería	Fabricación de chapas y tableros de madera
+C1622	Industria manufacturera	Industria de la madera y del corcho, excepto muebles; cestería y espartería	Fabricación de productos de madera, corcho, cestería y espartería	Fabricación de suelos de madera ensamblados
+C1623	Industria manufacturera	Industria de la madera y del corcho, excepto muebles; cestería y espartería	Fabricación de productos de madera, corcho, cestería y espartería	Fabricación de otras estructuras de madera y piezas de carpintería y ebanistería para la construcción
+C1624	Industria manufacturera	Industria de la madera y del corcho, excepto muebles; cestería y espartería	Fabricación de productos de madera, corcho, cestería y espartería	Fabricación de envases y embalajes de madera
+C1629	Industria manufacturera	Industria de la madera y del corcho, excepto muebles; cestería y espartería	Fabricación de productos de madera, corcho, cestería y espartería	Fabricación de otros productos de madera; artículos de corcho, cestería y espartería
+C1711	Industria manufacturera	Industria del papel	Fabricación de pasta papelera, papel y cartón	Fabricación de pasta papelera
+C1712	Industria manufacturera	Industria del papel	Fabricación de pasta papelera, papel y cartón	Fabricación de papel y cartón
+C1721	Industria manufacturera	Industria del papel	Fabricación de artículos de papel y de cartón	Fabricación de papel y cartón ondulados; fabricación de envases y embalajes de papel y cartón
+C1722	Industria manufacturera	Industria del papel	Fabricación de artículos de papel y de cartón	Fabricación de artículos de papel y cartón para uso doméstico, sanitario e higiénico
+C1723	Industria manufacturera	Industria del papel	Fabricación de artículos de papel y de cartón	Fabricación de artículos de papelería
+C1724	Industria manufacturera	Industria del papel	Fabricación de artículos de papel y de cartón	Fabricación de papeles pintados
+C1729	Industria manufacturera	Industria del papel	Fabricación de artículos de papel y de cartón	Fabricación de otros artículos de papel y cartón
+C1811	Industria manufacturera	Artes gráficas y reproducción de soportes grabados	Artes gráficas y servicios relacionados con las mismas	Artes gráficas y servicios relacionados con las mismas
+C1812	Industria manufacturera	Artes gráficas y reproducción de soportes grabados	Artes gráficas y servicios relacionados con las mismas	Otras actividades de impresión y artes gráficas
+C1813	Industria manufacturera	Artes gráficas y reproducción de soportes grabados	Artes gráficas y servicios relacionados con las mismas	Servicios de preimpresión y preparación de soportes
+C1814	Industria manufacturera	Artes gráficas y reproducción de soportes grabados	Artes gráficas y servicios relacionados con las mismas	Encuadernación y servicios relacionados con la misma
+C1820	Industria manufacturera	Artes gráficas y reproducción de soportes grabados	Reproducción de soportes grabados	Reproducción de soportes grabados
+C1910	Industria manufacturera	Coquerías y refino de petróleo	Coquerías	Coquerías
+C1920	Industria manufacturera	Coquerías y refino de petróleo	Refino de petróleo	Refino de petróleo
+C2011	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de gases industriales
+C2012	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de colorantes y pigmentos
+C2013	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de otros productos básicos de química inorgánica
+C2014	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de otros productos básicos de química orgánica
+C2015	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de fertilizantes y compuestos nitrogenados
+C2016	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de plásticos en formas primarias
+C2017	Industria manufacturera	Industria química	Fabricación de productos químicos básicos, compuestos nitrogenados, fertilizantes, plásticos y caucho sintético en formas primarias	Fabricación de caucho sintético en formas primarias
+C2020	Industria manufacturera	Industria química	Fabricación de pesticidas y otros productos agroquímicos	Fabricación de pesticidas y otros productos agroquímicos
+C2030	Industria manufacturera	Industria química	Fabricación de pinturas, barnices y revestimientos similares; tintas de imprenta y masillas	Fabricación de pinturas, barnices y revestimientos similares; tintas de imprenta y masillas
+C2041	Industria manufacturera	Industria química	Fabricación de jabones, detergentes y otros artículos de limpieza y abrillantamiento; fabricación de perfumes y cosméticos	Fabricación de jabones, detergentes y otros artículos de limpieza y abrillantamiento
+C2042	Industria manufacturera	Industria química	Fabricación de jabones, detergentes y otros artículos de limpieza y abrillantamiento; fabricación de perfumes y cosméticos	Fabricación de perfumes y cosméticos
+C2051	Industria manufacturera	Industria química	Fabricación de otros productos químicos	Fabricación de explosivos
+C2052	Industria manufacturera	Industria química	Fabricación de otros productos químicos	Fabricación de colas
+C2053	Industria manufacturera	Industria química	Fabricación de otros productos químicos	Fabricación de aceites esenciales
+C2059	Industria manufacturera	Industria química	Fabricación de otros productos químicos	Fabricación de otros productos químicos n.c.o.p.
+C2060	Industria manufacturera	Industria química	Fabricación de fibras artificiales y sintéticas	Fabricación de fibras artificiales y sintéticas
+C2110	Industria manufacturera	Fabricación de productos farmacéuticos	Fabricación de productos farmacéuticos de base	Fabricación de productos farmacéuticos de base
+C2120	Industria manufacturera	Fabricación de productos farmacéuticos	Fabricación de especialidades farmacéuticas	Fabricación de especialidades farmacéuticas
+C2211	Industria manufacturera	Fabricación de productos de caucho y plásticos	Fabricación de productos de caucho	Fabricación de neumáticos y cámaras de caucho; reconstrucción y recauchutado de neumáticos
+C2219	Industria manufacturera	Fabricación de productos de caucho y plásticos	Fabricación de productos de caucho	Fabricación de otros productos de caucho
+C2221	Industria manufacturera	Fabricación de productos de caucho y plásticos	Fabricación de productos de plástico	Fabricación de placas, hojas, tubos y perfiles de plástico
+C2222	Industria manufacturera	Fabricación de productos de caucho y plásticos	Fabricación de productos de plástico	Fabricación de envases y embalajes de plástico
+C2223	Industria manufacturera	Fabricación de productos de caucho y plásticos	Fabricación de productos de plástico	Fabricación de productos de plástico para la construcción
+C2229	Industria manufacturera	Fabricación de productos de caucho y plásticos	Fabricación de productos de plástico	Fabricación de otros productos de plástico
+C2311	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de vidrio y productos de vidrio	Fabricación de vidrio plano
+C2312	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de vidrio y productos de vidrio	Manipulado y transformación de vidrio plano
+C2313	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de vidrio y productos de vidrio	Fabricación de vidrio hueco
+C2314	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de vidrio y productos de vidrio	Fabricación de fibra de vidrio
+C2319	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de vidrio y productos de vidrio	Fabricación y manipulado de otro vidrio, incluido el vidrio técnico
+C2320	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de productos cerámicos refractarios	Fabricación de productos cerámicos refractarios
+C2331	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de productos cerámicos para la construcción	Fabricación de azulejos y baldosas de cerámica
+C2332	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de productos cerámicos para la construcción	Fabricación de ladrillos, tejas y productos de tierras cocidas para la construcción
+C2341	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de otros productos cerámicos	Fabricación de artículos cerámicos de uso doméstico y ornamental
+C2342	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de otros productos cerámicos	Fabricación de aparatos sanitarios cerámicos
+C2343	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de otros productos cerámicos	Fabricación de aisladores y piezas aislantes de material cerámico
+C2344	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de otros productos cerámicos	Fabricación de otros productos cerámicos de uso técnico
+C2349	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de otros productos cerámicos	Fabricación de otros productos cerámicos
+C2351	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de cemento, cal y yeso	Fabricación de cemento
+C2352	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de cemento, cal y yeso	Fabricación de cal y yeso
+C2361	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de elementos de hormigón, cemento y yeso	Fabricación de elementos de hormigón para la construcción
+C2362	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de elementos de hormigón, cemento y yeso	Fabricación de elementos de yeso para la construcción
+C2363	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de elementos de hormigón, cemento y yeso	Fabricación de hormigón fresco
+C2364	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de elementos de hormigón, cemento y yeso	Fabricación de mortero
+C2365	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de elementos de hormigón, cemento y yeso	Fabricación de fibrocemento
+C2369	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de elementos de hormigón, cemento y yeso	Fabricación de otros productos de hormigón, yeso y cemento
+C2370	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Corte, tallado y acabado de la piedra	Corte, tallado y acabado de la piedra
+C2391	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de productos abrasivos y productos minerales no metálicos n.c.o.p.	Fabricación de productos abrasivos
+C2399	Industria manufacturera	Fabricación de otros productos minerales no metálicos	Fabricación de productos abrasivos y productos minerales no metálicos n.c.o.p.	Fabricación de otros productos minerales no metálicos n.c.o.p.
+C2410	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fabricación de productos básicos de hierro, acero y ferroaleaciones	Fabricación de productos básicos de hierro, acero y ferroaleaciones
+C2420	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fabricación de tubos, tuberías, perfiles huecos y sus accesorios, de acero	Fabricación de tubos, tuberías, perfiles huecos y sus accesorios, de acero
+C2431	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fabricación de otros productos de primera transformación del acero	Estirado en frío
+C2432	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fabricación de otros productos de primera transformación del acero	Laminación en frío
+C2433	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fabricación de otros productos de primera transformación del acero	Producción de perfiles en frío por conformación con plegado
+C2434	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fabricación de otros productos de primera transformación del acero	Trefilado en frío
+C2441	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Producción de metales preciosos y de otros metales no férreos	Producción de metales preciosos
+C2442	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Producción de metales preciosos y de otros metales no férreos	Producción de aluminio
+C2443	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Producción de metales preciosos y de otros metales no férreos	Producción de plomo, zinc y estaño
+C2444	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Producción de metales preciosos y de otros metales no férreos	Producción de cobre
+C2445	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Producción de metales preciosos y de otros metales no férreos	Producción de otros metales no férreos
+C2446	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Producción de metales preciosos y de otros metales no férreos	Procesamiento de combustibles nucleares
+C2451	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fundición de metales	Fundición de hierro
+C2452	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fundición de metales	Fundición de acero
+C2453	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fundición de metales	Fundición de metales ligeros
+C2454	Industria manufacturera	Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones	Fundición de metales	Fundición de otros metales no férreos
+C2511	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de elementos metálicos para la construcción	Fabricación de estructuras metálicas y sus componentes
+C2512	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de elementos metálicos para la construcción	Fabricación de carpintería metálica
+C2521	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de cisternas, grandes depósitos y contenedores de metal	Fabricación de radiadores y calderas para calefacción central
+C2529	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de cisternas, grandes depósitos y contenedores de metal	Fabricación de otras cisternas, grandes depósitos y contenedores de metal
+C2530	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de generadores de vapor, excepto calderas de calefacción central	Fabricación de generadores de vapor, excepto calderas de calefacción central
+C2540	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de armas y municiones	Fabricación de armas y municiones
+C2550	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Forja, estampación y embutición de metales; metalurgia de polvos	Forja, estampación y embutición de metales; metalurgia de polvos
+C2561	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Tratamiento y revestimiento de metales; ingeniería mecánica por cuenta de terceros	Tratamiento y revestimiento de metales
+C2562	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Tratamiento y revestimiento de metales; ingeniería mecánica por cuenta de terceros	Ingeniería mecánica por cuenta de terceros
+C2571	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de artículos de cuchillería y cubertería, herramientas y ferretería	Fabricación de artículos de cuchillería y cubertería
+C2572	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de artículos de cuchillería y cubertería, herramientas y ferretería	Fabricación de cerraduras y herrajes
+C2573	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de artículos de cuchillería y cubertería, herramientas y ferretería	Fabricación de herramientas
+C2591	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de otros productos metálicos	Fabricación de bidones y toneles de hierro o acero
+C2592	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de otros productos metálicos	Fabricación de envases y embalajes metálicos ligeros
+C2593	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de otros productos metálicos	Fabricación de productos de alambre, cadenas y muelles
+C2594	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de otros productos metálicos	Fabricación de pernos y productos de tornillería
+C2599	Industria manufacturera	Fabricación de productos metálicos, excepto maquinaria y equipo	Fabricación de otros productos metálicos	Fabricación de otros productos metálicos n.c.o.p.
+C2611	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de componentes electrónicos y circuitos impresos ensamblados	Fabricación de componentes electrónicos
+C2612	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de componentes electrónicos y circuitos impresos ensamblados	Fabricación de circuitos impresos ensamblados
+C2620	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de ordenadores y equipos periféricos	Fabricación de ordenadores y equipos periféricos
+C2630	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de equipos de telecomunicaciones	Fabricación de equipos de telecomunicaciones
+C2640	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de productos electrónicos de consumo	Fabricación de productos electrónicos de consumo
+C2651	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de instrumentos y aparatos de medida, verificación y navegación; fabricación de relojes	Fabricación de instrumentos y aparatos de medida, verificación y navegación
+C2652	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de instrumentos y aparatos de medida, verificación y navegación; fabricación de relojes	Fabricación de relojes
+C2660	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de equipos de radiación, electromédicos y electroterapéuticos	Fabricación de equipos de radiación, electromédicos y electroterapéuticos
+C2670	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de instrumentos de óptica y equipo fotográfico	Fabricación de instrumentos de óptica y equipo fotográfico
+C2680	Industria manufacturera	Fabricación de productos informáticos, electrónicos y ópticos	Fabricación de soportes magnéticos y ópticos	Fabricación de soportes magnéticos y ópticos
+C2711	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de motores, generadores y transformadores eléctricos, y de aparatos de distribución y control eléctrico	Fabricación de motores, generadores y transformadores eléctricos
+C2712	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de motores, generadores y transformadores eléctricos, y de aparatos de distribución y control eléctrico	Fabricación de aparatos de distribución y control eléctrico
+C2720	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de pilas y acumuladores eléctricos	Fabricación de pilas y acumuladores eléctricos
+C2731	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de cables y dispositivos de cableado	Fabricación de cables de fibra óptica
+C2732	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de cables y dispositivos de cableado	Fabricación de otros hilos y cables electrónicos y eléctricos
+C2733	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de cables y dispositivos de cableado	Fabricación de dispositivos de cableado
+C2740	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de lámparas y aparatos eléctricos de iluminación	Fabricación de lámparas y aparatos eléctricos de iluminación
+C2751	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de aparatos domésticos	Fabricación de electrodomésticos
+C2752	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de aparatos domésticos	Fabricación de aparatos domésticos no eléctricos
+C2790	Industria manufacturera	Fabricación de material y equipo eléctrico	Fabricación de otro material y equipo eléctrico	Fabricación de otro material y equipo eléctrico
+C2811	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de maquinaria de uso general	Fabricación de motores y turbinas, excepto los destinados a aeronaves, vehículos automóviles y ciclomotores
+C2812	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de maquinaria de uso general	Fabricación de equipos de transmisión hidráulica y neumática
+C2813	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de maquinaria de uso general	Fabricación de otras bombas y compresores
+C2814	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de maquinaria de uso general	Fabricación de otra grifería y válvulas
+C2815	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de maquinaria de uso general	Fabricación de cojinetes, engranajes y órganos mecánicos de transmisión
+C2821	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria de uso general	Fabricación de hornos y quemadores
+C2822	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria de uso general	Fabricación de maquinaria de elevación y manipulación
+C2823	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria de uso general	Fabricación de máquinas y equipos de oficina, excepto equipos informáticos
+C2824	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria de uso general	Fabricación de herramientas eléctricas manuales
+C2825	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria de uso general	Fabricación de maquinaria de ventilación y refrigeración no doméstica
+C2829	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria de uso general	Fabricación de otra maquinaria de uso general n.c.o.p.
+C2830	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de maquinaria agraria y forestal	Fabricación de maquinaria agraria y forestal
+C2841	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de máquinas herramienta para trabajar el metal y otras máquinas herramienta	Fabricación de máquinas herramienta para trabajar el metal
+C2849	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de máquinas herramienta para trabajar el metal y otras máquinas herramienta	Fabricación de otras máquinas herramienta
+C2891	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de maquinaria para la industria metalúrgica
+C2892	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de maquinaria para las industrias extractivas y de la construcción
+C2893	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de maquinaria para la industria de la alimentación, bebidas y tabaco
+C2894	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de maquinaria para las industrias textil, de la confección y del cuero
+C2895	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de maquinaria para la industria del papel y del cartón
+C2896	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de maquinaria para la industria del plástico y el caucho
+C2899	Industria manufacturera	Fabricación de maquinaria y equipo n.c.o.p.	Fabricación de otra maquinaria para usos específicos	Fabricación de otra maquinaria para usos específicos n.c.o.p.
+C2910	Industria manufacturera	Fabricación de vehículos de motor, remolques y semirremolques	Fabricación de vehículos de motor	Fabricación de vehículos de motor
+C2920	Industria manufacturera	Fabricación de vehículos de motor, remolques y semirremolques	Fabricación de carrocerías para vehículos de motor; fabricación de remolques y semirremolques	Fabricación de carrocerías para vehículos de motor; fabricación de remolques y semirremolques
+C2931	Industria manufacturera	Fabricación de vehículos de motor, remolques y semirremolques	Fabricación de componentes, piezas y accesorios para vehículos de motor	Fabricación de equipos eléctricos y electrónicos para vehículos de motor
+C2932	Industria manufacturera	Fabricación de vehículos de motor, remolques y semirremolques	Fabricación de componentes, piezas y accesorios para vehículos de motor	Fabricación de otros componentes, piezas y accesorios para vehículos de motor
+C3011	Industria manufacturera	Fabricación de otro material de transporte	Construcción naval	Construcción de barcos y estructuras flotantes
+C3012	Industria manufacturera	Fabricación de otro material de transporte	Construcción naval	Construcción de embarcaciones de recreo y deporte
+C3020	Industria manufacturera	Fabricación de otro material de transporte	Fabricación de locomotoras y material ferroviario	Fabricación de locomotoras y material ferroviario
+C3030	Industria manufacturera	Fabricación de otro material de transporte	Construcción aeronáutica y espacial y su maquinaria	Construcción aeronáutica y espacial y su maquinaria
+C3040	Industria manufacturera	Fabricación de otro material de transporte	Fabricación de vehículos militares de combate	Fabricación de vehículos militares de combate
+C3091	Industria manufacturera	Fabricación de otro material de transporte	Fabricación de otro material de transporte n.c.o.p.	Fabricación de motocicletas
+C3092	Industria manufacturera	Fabricación de otro material de transporte	Fabricación de otro material de transporte n.c.o.p.	Fabricación de bicicletas y de vehículos para personas con discapacidad
+C3099	Industria manufacturera	Fabricación de otro material de transporte	Fabricación de otro material de transporte n.c.o.p.	Fabricación de otro material de transporte n.c.o.p.
+C3101	Industria manufacturera	Fabricación de muebles	Fabricación de muebles	Fabricación de muebles de oficina y de establecimientos comerciales
+C3102	Industria manufacturera	Fabricación de muebles	Fabricación de muebles	Fabricación de muebles de cocina
+C3103	Industria manufacturera	Fabricación de muebles	Fabricación de muebles	Fabricación de colchones
+C3109	Industria manufacturera	Fabricación de muebles	Fabricación de muebles	Fabricación de otros muebles
+C3211	Industria manufacturera	Otras industrias manufactureras	Fabricación de artículos de joyería, bisutería y similares	Fabricación de monedas
+C3212	Industria manufacturera	Otras industrias manufactureras	Fabricación de artículos de joyería, bisutería y similares	Fabricación de artículos de joyería y artículos similares
+C3213	Industria manufacturera	Otras industrias manufactureras	Fabricación de artículos de joyería, bisutería y similares	Fabricación de artículos de bisutería y artículos similares
+C3220	Industria manufacturera	Otras industrias manufactureras	Fabricación de instrumentos musicales	Fabricación de instrumentos musicales
+C3230	Industria manufacturera	Otras industrias manufactureras	Fabricación de artículos de deporte	Fabricación de artículos de deporte
+C3240	Industria manufacturera	Otras industrias manufactureras	Fabricación de juegos y juguetes	Fabricación de juegos y juguetes
+C3250	Industria manufacturera	Otras industrias manufactureras	Fabricación de instrumentos y suministros médicos y odontológicos	Fabricación de instrumentos y suministros médicos y odontológicos
+C3291	Industria manufacturera	Otras industrias manufactureras	Industrias manufactureras n.c.o.p.	Fabricación de escobas, brochas y cepillos
+C3299	Industria manufacturera	Otras industrias manufactureras	Industrias manufactureras n.c.o.p.	Otras industrias manufactureras n.c.o.p.
+C3311	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación de productos metálicos
+C3312	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación de maquinaria
+C3313	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación de equipos electrónicos y ópticos
+C3314	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación de equipos eléctricos
+C3315	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación y mantenimiento naval
+C3316	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación y mantenimiento aeronáutico y espacial
+C3317	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación y mantenimiento de otro material de transporte
+C3319	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Reparación de productos metálicos, maquinaria y equipo	Reparación de otros equipos
+C3320	Industria manufacturera	Reparación e instalación de maquinaria y equipo	Instalación de máquinas y equipos industriales	Instalación de máquinas y equipos industriales
+D3512	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Transporte de energía eléctrica
+D3513	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Distribución de energía eléctrica
+D3514	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Comercio de energía eléctrica
+D3515	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Producción de energía hidroeléctrica
+D3516	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Producción de energía eléctrica de origen térmico convencional
+D3517	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Producción de energía eléctrica de origen nuclear
+D3518	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Producción de energía eléctrica de origen eólico
+D3519	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción, transporte y distribución de energía eléctrica	Producción de energía eléctrica de otros tipos
+D3521	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción de gas; distribución por tubería de combustibles gaseosos	Producción de gas
+D3522	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción de gas; distribución por tubería de combustibles gaseosos	Distribución por tubería de combustibles gaseosos
+D3523	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Producción de gas; distribución por tubería de combustibles gaseosos	Comercio de gas por tubería
+D3530	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de energía eléctrica, gas, vapor y aire acondicionado	Suministro de vapor y aire acondicionado	Suministro de vapor y aire acondicionado
+E3600	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Captación, depuración y distribución de agua	Captación, depuración y distribución de agua	Captación, depuración y distribución de agua
+E3700	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida y tratamiento de aguas residuales	Recogida y tratamiento de aguas residuales	Recogida y tratamiento de aguas residuales
+E3811	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida, tratamiento y eliminación de residuos; valorización	Recogida de residuos	Recogida de residuos no peligrosos
+E3812	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida, tratamiento y eliminación de residuos; valorización	Recogida de residuos	Recogida de residuos peligrosos
+E3821	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida, tratamiento y eliminación de residuos; valorización	Tratamiento y eliminación de residuos	Tratamiento y eliminación de residuos no peligrosos
+E3822	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida, tratamiento y eliminación de residuos; valorización	Tratamiento y eliminación de residuos	Tratamiento y eliminación de residuos peligrosos
+E3831	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida, tratamiento y eliminación de residuos; valorización	Valorización	Separación y clasificación de materiales
+E3832	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Recogida, tratamiento y eliminación de residuos; valorización	Valorización	Valorización de materiales ya clasificados
+E3900	Suministro de agua, actividades de saneamiento, gestión de residuos y descontaminación	Actividades de descontaminación y otros servicios de gestión de residuos	Actividades de descontaminación y otros servicios de gestión de residuos	Actividades de descontaminación y otros servicios de gestión de residuos
+F4110	Construcción	Construcción de edificios	Promoción inmobiliaria	Promoción inmobiliaria
+F4121	Construcción	Construcción de edificios	Construcción de edificios	Construcción de edificios residenciales
+F4122	Construcción	Construcción de edificios	Construcción de edificios	Construcción de edificios no residenciales
+F4211	Construcción	Ingeniería civil	Construcción de carreteras y vías férreas, puentes y túneles	Construcción de carreteras y autopistas
+F4212	Construcción	Ingeniería civil	Construcción de carreteras y vías férreas, puentes y túneles	Construcción de vías férreas de superficie y subterráneas
+F4213	Construcción	Ingeniería civil	Construcción de carreteras y vías férreas, puentes y túneles	Construcción de puentes y túneles
+F4221	Construcción	Ingeniería civil	Construcción de redes	Construcción de redes para fluidos
+F4222	Construcción	Ingeniería civil	Construcción de redes	Construcción de redes eléctricas y de telecomunicaciones
+F4291	Construcción	Ingeniería civil	Construcción de otros proyectos de ingeniería civil	Obras hidráulicas
+F4299	Construcción	Ingeniería civil	Construcción de otros proyectos de ingeniería civil	Construcción de otros proyectos de ingeniería civil n.c.o.p.
+F4311	Construcción	Actividades de construcción especializada	Demolición y preparación de terrenos	Demolición
+F4312	Construcción	Actividades de construcción especializada	Demolición y preparación de terrenos	Preparación de terrenos
+F4313	Construcción	Actividades de construcción especializada	Demolición y preparación de terrenos	Perforaciones y sondeos
+F4321	Construcción	Actividades de construcción especializada	Instalaciones eléctricas, de fontanería y otras instalaciones en obras de construcción	Instalaciones eléctricas
+F4322	Construcción	Actividades de construcción especializada	Instalaciones eléctricas, de fontanería y otras instalaciones en obras de construcción	Fontanería, instalaciones de sistemas de calefacción y aire acondicionado
+F4329	Construcción	Actividades de construcción especializada	Instalaciones eléctricas, de fontanería y otras instalaciones en obras de construcción	Otras instalaciones en obras de construcción
+F4331	Construcción	Actividades de construcción especializada	Acabado de edificios	Revocamiento
+F4332	Construcción	Actividades de construcción especializada	Acabado de edificios	Instalación de carpintería
+F4333	Construcción	Actividades de construcción especializada	Acabado de edificios	Revestimiento de suelos y paredes
+F4334	Construcción	Actividades de construcción especializada	Acabado de edificios	Pintura y acristalamiento
+F4339	Construcción	Actividades de construcción especializada	Acabado de edificios	Otro acabado de edificios
+F4391	Construcción	Actividades de construcción especializada	Otras actividades de construcción especializada	Construcción de cubiertas
+F4399	Construcción	Actividades de construcción especializada	Otras actividades de construcción especializada	Otras actividades de construcción especializada n.c.o.p.
+G4511	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Venta y reparación de vehículos de motor y motocicletas	Venta de vehículos de motor	Venta de automóviles y vehículos de motor ligeros
+G4519	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Venta y reparación de vehículos de motor y motocicletas	Venta de vehículos de motor	Venta de otros vehículos de motor
+G4520	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Venta y reparación de vehículos de motor y motocicletas	Mantenimiento y reparación de vehículos de motor	Mantenimiento y reparación de vehículos de motor
+G4531	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Venta y reparación de vehículos de motor y motocicletas	Comercio de repuestos y accesorios de vehículos de motor	Comercio al por mayor de repuestos y accesorios de vehículos de motor
+G4532	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Venta y reparación de vehículos de motor y motocicletas	Comercio de repuestos y accesorios de vehículos de motor	Comercio al por menor de repuestos y accesorios de vehículos de motor
+G4540	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Venta y reparación de vehículos de motor y motocicletas	Venta, mantenimiento y reparación de motocicletas y de sus repuestos y accesorios	Venta, mantenimiento y reparación de motocicletas y de sus repuestos y accesorios
+G4611	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de materias primas agrarias, animales vivos, materias primas textiles y productos semielaborados
+G4612	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de combustibles, minerales, metales y productos químicos industriales
+G4613	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de la madera y materiales de construcción
+G4614	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de maquinaria, equipo industrial, embarcaciones y aeronaves
+G4615	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de muebles, artículos para el hogar y ferretería
+G4616	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de textiles, prendas de vestir, peletería, calzado y artículos de cuero
+G4617	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de productos alimenticios, bebidas y tabaco
+G4618	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio especializados en la venta de otros productos específicos
+G4619	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Intermediarios del comercio	Intermediarios del comercio de productos diversos
+G4621	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de materias primas agrarias y de animales vivos	Comercio al por mayor de cereales, tabaco en rama, simientes y alimentos para animales
+G4622	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de materias primas agrarias y de animales vivos	Comercio al por mayor de flores y plantas
+G4623	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de materias primas agrarias y de animales vivos	Comercio al por mayor de animales vivos
+G4624	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de materias primas agrarias y de animales vivos	Comercio al por mayor de cueros y pieles
+G4631	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de frutas y hortalizas
+G4632	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de carne y productos cárnicos
+G4633	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de productos lácteos, huevos, aceites y grasas comestibles
+G4634	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de bebidas
+G4635	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de productos del tabaco
+G4636	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de azúcar, chocolate y confitería
+G4637	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de café, té, cacao y especias
+G4638	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor de pescados y mariscos y otros productos alimenticios
+G4639	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de productos alimenticios, bebidas y tabaco	Comercio al por mayor, no especializado, de productos alimenticios, bebidas y tabaco
+G4641	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de textiles
+G4642	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de prendas de vestir y calzado
+G4643	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de aparatos electrodomésticos
+G4644	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de porcelana, cristalería y artículos de limpieza
+G4645	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de productos perfumería y cosmética
+G4646	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de productos farmacéuticos
+G4647	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de muebles, alfombras y aparatos de iluminación
+G4648	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de artículos de relojería y joyería
+G4649	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de artículos de uso doméstico	Comercio al por mayor de otros artículos de uso doméstico
+G4651	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones	Comercio al por mayor de ordenadores, equipos periféricos y programas informáticos
+G4652	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones	Comercio al por mayor de equipos electrónicos y de telecomunicaciones y sus componentes
+G4661	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de maquinaria, equipos y suministros agrícolas
+G4662	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de máquinas herramienta
+G4663	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de maquinaria para la minería, la construcción y la ingeniería civil
+G4664	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de maquinaria para la industria textil y de máquinas de coser y tricotar
+G4665	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de muebles de oficina
+G4666	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de otra maquinaria y equipo de oficina
+G4669	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor de otra maquinaria, equipos y suministros	Comercio al por mayor de otra maquinaria y equipo
+G4671	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de combustibles sólidos, líquidos y gaseosos, y productos similares
+G4672	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de metales y minerales metálicos
+G4673	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de madera, materiales de construcción y aparatos sanitarios
+G4674	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de ferretería, fontanería y calefacción
+G4675	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de productos químicos
+G4676	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de otros productos semielaborados
+G4677	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Otro comercio al por mayor especializado	Comercio al por mayor de chatarra y productos de desecho
+G4690	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas	Comercio al por mayor no especializado	Comercio al por mayor no especializado
+G4711	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor en establecimientos no especializados	Comercio al por menor en establecimientos no especializados, con predominio en productos alimenticios, bebidas y tabaco
+G4719	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor en establecimientos no especializados	Otro comercio al por menor en establecimientos no especializados
+G4721	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Comercio al por menor de frutas y hortalizas en establecimientos especializados
+G4722	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Comercio al por menor de carne y productos cárnicos en establecimientos especializados
+G4723	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Comercio al por menor de pescados y mariscos en establecimientos especializados
+G4724	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Comercio al por menor de pan y productos de panadería, confitería y pastelería en establecimientos especializados
+G4725	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Comercio al por menor de bebidas en establecimientos especializados
+G4726	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Comercio al por menor de productos de tabaco en establecimientos especializados
+G4729	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de productos alimenticios, bebidas y tabaco en establecimientos especializados	Otro comercio al por menor de productos alimenticios en establecimientos especializados
+G4730	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de combustible para la automoción en establecimientos especializados	Comercio al por menor de combustible para la automoción en establecimientos especializados
+G4741	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de equipos para las tecnologías de la información y las comunicaciones en establecimientos especializados	Comercio al por menor de ordenadores, equipos periféricos y programas informáticos en establecimientos especializados
+G4742	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de equipos para las tecnologías de la información y las comunicaciones en establecimientos especializados	Comercio al por menor de equipos de telecomunicaciones en establecimientos especializados
+G4743	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de equipos para las tecnologías de la información y las comunicaciones en establecimientos especializados	Comercio al por menor de equipos de audio y vídeo en establecimientos especializados
+G4751	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos de uso doméstico en establecimientos especializados	Comercio al por menor de textiles en establecimientos especializados
+G4752	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos de uso doméstico en establecimientos especializados	Comercio al por menor de ferretería, pintura y vidrio en establecimientos especializados
+G4753	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos de uso doméstico en establecimientos especializados	Comercio al por menor de alfombras, moquetas y revestimientos de paredes y suelos en establecimientos especializados
+G4754	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos de uso doméstico en establecimientos especializados	Comercio al por menor de aparatos electrodomésticos en establecimientos especializados
+G4759	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos de uso doméstico en establecimientos especializados	Comercio al por menor de muebles, aparatos de iluminación y otros artículos de uso doméstico en establecimientos especializados
+G4761	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de artículos culturales y recreativos en establecimientos especializados	Comercio al por menor de libros en establecimientos especializados
+G4762	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de artículos culturales y recreativos en establecimientos especializados	Comercio al por menor de periódicos y artículos de papelería en establecimientos especializados
+G4763	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de artículos culturales y recreativos en establecimientos especializados	Comercio al por menor de grabaciones de música y vídeo en establecimientos especializados
+G4764	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de artículos culturales y recreativos en establecimientos especializados	Comercio al por menor de artículos deportivos en establecimientos especializados
+G4765	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de artículos culturales y recreativos en establecimientos especializados	Comercio al por menor de juegos y juguetes en establecimientos especializados
+G4771	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de prendas de vestir en establecimientos especializados
+G4772	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de calzado y artículos de cuero en establecimientos especializados
+G4773	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de productos farmacéuticos en establecimientos especializados
+G4774	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de artículos médicos y ortopédicos en establecimientos especializados
+G4775	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de productos cosméticos e higiénicos en establecimientos especializados
+G4776	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de flores, plantas, semillas, fertilizantes, animales de compañía y alimentos para los mismos en establecimientos especializados
+G4777	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de artículos de relojería y joyería en establecimientos especializados
+G4778	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Otro comercio al por menor de artículos nuevos en establecimientos especializados
+G4779	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor de otros artículos en establecimientos especializados	Comercio al por menor de artículos de segunda mano en establecimientos
+G4781	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor en puestos de venta y en mercadillos	Comercio al por menor de productos alimenticios, bebidas y tabaco en puestos de venta y en mercadillos
+G4782	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor en puestos de venta y en mercadillos	Comercio al por menor de productos textiles, prendas de vestir y calzado en puestos de venta y en mercadillos
+G4789	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor en puestos de venta y en mercadillos	Comercio al por menor de otros productos en puestos de venta y en mercadillos
+G4791	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor no realizado ni en establecimientos, ni en puestos de venta ni en mercadillos	Comercio al por menor por correspondencia o Internet
+G4799	Comercio al por mayor y al por menor; reparación de vehículos de motor y motocicletas	Comercio al por menor, excepto de vehículos de motor y motocicletas	Comercio al por menor no realizado ni en establecimientos, ni en puestos de venta ni en mercadillos	Otro comercio al por menor no realizado ni en establecimientos, ni en puestos de venta ni en mercadillos
+H4910	Transporte y almacenamiento	Transporte terrestre y por tubería	Transporte interurbano de pasajeros por ferrocarril	Transporte interurbano de pasajeros por ferrocarril
+H4920	Transporte y almacenamiento	Transporte terrestre y por tubería	Transporte de mercancías por ferrocarril	Transporte de mercancías por ferrocarril
+H4931	Transporte y almacenamiento	Transporte terrestre y por tubería	Otro transporte terrestre de pasajeros	Transporte terrestre urbano y suburbano de pasajeros
+H4932	Transporte y almacenamiento	Transporte terrestre y por tubería	Otro transporte terrestre de pasajeros	Transporte por taxi
+H4939	Transporte y almacenamiento	Transporte terrestre y por tubería	Otro transporte terrestre de pasajeros	tipos de transporte terrestre de pasajeros n.c.o.p.
+H4941	Transporte y almacenamiento	Transporte terrestre y por tubería	Transporte de mercancías por carretera y servicios de mudanza	Transporte de mercancías por carretera
+H4942	Transporte y almacenamiento	Transporte terrestre y por tubería	Transporte de mercancías por carretera y servicios de mudanza	Servicios de mudanza
+H4950	Transporte y almacenamiento	Transporte terrestre y por tubería	Transporte por tubería	Transporte por tubería
+H5010	Transporte y almacenamiento	Transporte marítimo y por vías navegables interiores	Transporte marítimo de pasajeros	Transporte marítimo de pasajeros
+H5020	Transporte y almacenamiento	Transporte marítimo y por vías navegables interiores	Transporte marítimo de mercancías	Transporte marítimo de mercancías
+H5030	Transporte y almacenamiento	Transporte marítimo y por vías navegables interiores	Transporte de pasajeros por vías navegables interiores	Transporte de pasajeros por vías navegables interiores
+H5040	Transporte y almacenamiento	Transporte marítimo y por vías navegables interiores	Transporte de mercancías por vías navegables interiores	Transporte de mercancías por vías navegables interiores
+H5110	Transporte y almacenamiento	Transporte aéreo	Transporte aéreo de pasajeros	Transporte aéreo de pasajeros
+H5121	Transporte y almacenamiento	Transporte aéreo	Transporte aéreo de mercancías y transporte espacial	Transporte aéreo de mercancías
+H5122	Transporte y almacenamiento	Transporte aéreo	Transporte aéreo de mercancías y transporte espacial	Transporte espacial
+H5210	Transporte y almacenamiento	Almacenamiento y actividades anexas al transporte	Depósito y almacenamiento	Depósito y almacenamiento
+H5221	Transporte y almacenamiento	Almacenamiento y actividades anexas al transporte	Actividades anexas al transporte	Actividades anexas al transporte terrestre
+H5222	Transporte y almacenamiento	Almacenamiento y actividades anexas al transporte	Actividades anexas al transporte	Actividades anexas al transporte marítimo y por vías navegables interiores
+H5223	Transporte y almacenamiento	Almacenamiento y actividades anexas al transporte	Actividades anexas al transporte	Actividades anexas al transporte aéreo
+H5224	Transporte y almacenamiento	Almacenamiento y actividades anexas al transporte	Actividades anexas al transporte	Manipulación de mercancías
+H5229	Transporte y almacenamiento	Almacenamiento y actividades anexas al transporte	Actividades anexas al transporte	Otras actividades anexas al transporte
+H5310	Transporte y almacenamiento	Actividades postales y de correos	Actividades postales sometidas a la obligación del servicio universal	Actividades postales sometidas a la obligación del servicio universal
+H5320	Transporte y almacenamiento	Actividades postales y de correos	Otras actividades postales y de correos	Otras actividades postales y de correos
+I5510	Hostelería	Servicios de alojamiento	Hoteles y alojamientos similares	Hoteles y alojamientos similares
+I5520	Hostelería	Servicios de alojamiento	Alojamientos turísticos y otros alojamientos de corta estancia	Alojamientos turísticos y otros alojamientos de corta estancia
+I5530	Hostelería	Servicios de alojamiento	Campings y aparcamientos para caravanas	Campings y aparcamientos para caravanas
+I5590	Hostelería	Servicios de alojamiento	Otros alojamientos	Otros alojamientos
+I5610	Hostelería	Servicios de comidas y bebidas	Restaurantes y puestos de comidas	Restaurantes y puestos de comidas
+I5621	Hostelería	Servicios de comidas y bebidas	Provisión de comidas preparadas para eventos y otros servicios de comidas	Provisión de comidas preparadas para eventos
+I5629	Hostelería	Servicios de comidas y bebidas	Provisión de comidas preparadas para eventos y otros servicios de comidas	Otros servicios de comidas
+I5630	Hostelería	Servicios de comidas y bebidas	Establecimientos de bebidas	Establecimientos de bebidas
+J5811	Información y comunicaciones	Edición	Edición de libros, periódicos y otras actividades editoriales	Edición de libros
+J5812	Información y comunicaciones	Edición	Edición de libros, periódicos y otras actividades editoriales	Edición de directorios y guías de direcciones postales
+J5813	Información y comunicaciones	Edición	Edición de libros, periódicos y otras actividades editoriales	Edición de periódicos
+J5814	Información y comunicaciones	Edición	Edición de libros, periódicos y otras actividades editoriales	Edición de revistas
+J5819	Información y comunicaciones	Edición	Edición de libros, periódicos y otras actividades editoriales	Otras actividades editoriales
+J5821	Información y comunicaciones	Edición	Edición de programas informáticos	Edición de videojuegos
+J5829	Información y comunicaciones	Edición	Edición de programas informáticos	Edición de otros programas informáticos
+J5912	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades cinematográficas, de vídeo y de programas de televisión	Actividades de postproducción cinematográfica, de vídeo y de programas de televisión
+J5914	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades cinematográficas, de vídeo y de programas de televisión	Actividades de exhibición cinematográfica
+J5915	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades cinematográficas, de vídeo y de programas de televisión	Actividades de producción cinematográfica y de vídeo
+J5916	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades cinematográficas, de vídeo y de programas de televisión	Actividades de producciones de programas de televisión
+J5917	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades cinematográficas, de vídeo y de programas de televisión	Actividades de distribución cinematográfica y de vídeo
+J5918	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades cinematográficas, de vídeo y de programas de televisión	Actividades de distribución de programas de televisión
+J5920	Información y comunicaciones	Actividades cinematográficas, de vídeo y de programas de televisión, grabación de sonido y edición musical	Actividades de grabación de sonido y edición musical	Actividades de grabación de sonido y edición musical
+J6010	Información y comunicaciones	Actividades de programación y emisión de radio y televisión	Actividades de radiodifusión	Actividades de radiodifusión
+J6020	Información y comunicaciones	Actividades de programación y emisión de radio y televisión	Actividades de programación y emisión de televisión	Actividades de programación y emisión de televisión
+J6110	Información y comunicaciones	Telecomunicaciones	Telecomunicaciones por cable	Telecomunicaciones por cable
+J6120	Información y comunicaciones	Telecomunicaciones	Telecomunicaciones inalámbricas	Telecomunicaciones inalámbricas
+J6130	Información y comunicaciones	Telecomunicaciones	Telecomunicaciones por satélite	Telecomunicaciones por satélite
+J6190	Información y comunicaciones	Telecomunicaciones	Otras actividades de telecomunicaciones	Otras actividades de telecomunicaciones
+J6201	Información y comunicaciones	Programación, consultoría y otras actividades relacionadas con la informática	Programación, consultoría y otras actividades relacionadas con la informática	Actividades de programación informática
+J6202	Información y comunicaciones	Programación, consultoría y otras actividades relacionadas con la informática	Programación, consultoría y otras actividades relacionadas con la informática	Actividades de consultoría informática
+J6203	Información y comunicaciones	Programación, consultoría y otras actividades relacionadas con la informática	Programación, consultoría y otras actividades relacionadas con la informática	Gestión de recursos informáticos
+J6209	Información y comunicaciones	Programación, consultoría y otras actividades relacionadas con la informática	Programación, consultoría y otras actividades relacionadas con la informática	Otros servicios relacionados con las tecnologías de la información y la informática
+J6311	Información y comunicaciones	Servicios de información	Proceso de datos, hosting y actividades relacionadas; portales web	Proceso de datos, hosting y actividades relacionadas
+J6312	Información y comunicaciones	Servicios de información	Proceso de datos, hosting y actividades relacionadas; portales web	Portales web
+J6391	Información y comunicaciones	Servicios de información	Otros servicios de información	Actividades de las agencias de noticias
+J6399	Información y comunicaciones	Servicios de información	Otros servicios de información	Otros servicios de información n.c.o.p.
+K6411	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Intermediación monetaria	Banco central
+K6419	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Intermediación monetaria	Otra intermediación monetaria
+K6420	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Actividades de las sociedades holding	Actividades de las sociedades holding
+K6430	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Inversión colectiva, fondos y entidades financieras similares	Inversión colectiva, fondos y entidades financieras similares
+K6491	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Otros servicios financieros, excepto seguros y fondos de pensiones	Arrendamiento financiero
+K6492	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Otros servicios financieros, excepto seguros y fondos de pensiones	Otras actividades crediticias
+K6499	Actividades financieras y de seguros	Servicios financieros, excepto seguros y fondos de pensiones	Otros servicios financieros, excepto seguros y fondos de pensiones	Otros servicios financieros, excepto seguros y fondos de pensiones n.c.o.p.
+K6511	Actividades financieras y de seguros	Seguros, reaseguros y fondos de pensiones, excepto Seguridad Social obligatoria	Seguros	Seguros de vida
+K6512	Actividades financieras y de seguros	Seguros, reaseguros y fondos de pensiones, excepto Seguridad Social obligatoria	Seguros	Seguros distintos de los seguros de vida
+K6520	Actividades financieras y de seguros	Seguros, reaseguros y fondos de pensiones, excepto Seguridad Social obligatoria	Reaseguros	Reaseguros
+K6530	Actividades financieras y de seguros	Seguros, reaseguros y fondos de pensiones, excepto Seguridad Social obligatoria	Fondos de pensiones	Fondos de pensiones
+K6611	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades auxiliares a los servicios financieros, excepto seguros y fondos de pensiones	Administración de mercados financieros
+K6612	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades auxiliares a los servicios financieros, excepto seguros y fondos de pensiones	Actividades de intermediación en operaciones con valores y otros activos
+K6619	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades auxiliares a los servicios financieros, excepto seguros y fondos de pensiones	Otras actividades auxiliares a los servicios financieros, excepto seguros y fondos de pensiones
+K6621	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades auxiliares a seguros y fondos de pensiones	Evaluación de riesgos y daños
+K6622	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades auxiliares a seguros y fondos de pensiones	Actividades de agentes y corredores de seguros
+K6629	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades auxiliares a seguros y fondos de pensiones	Otras actividades auxiliares a seguros y fondos de pensiones
+K6630	Actividades financieras y de seguros	Actividades auxiliares a los servicios financieros y a los seguros	Actividades de gestión de fondos	Actividades de gestión de fondos
+L6810	Actividades inmobiliarias	Actividades inmobiliarias	Compraventa de bienes inmobiliarios por cuenta propia	Compraventa de bienes inmobiliarios por cuenta propia
+L6820	Actividades inmobiliarias	Actividades inmobiliarias	Alquiler de bienes inmobiliarios por cuenta propia	Alquiler de bienes inmobiliarios por cuenta propia
+L6831	Actividades inmobiliarias	Actividades inmobiliarias	Actividades inmobiliarias por cuenta de terceros	Agentes de la propiedad inmobiliaria
+L6832	Actividades inmobiliarias	Actividades inmobiliarias	Actividades inmobiliarias por cuenta de terceros	Gestión y administración de la propiedad inmobiliaria
+M6910	Actividades profesionales, científicas y técnicas	Actividades jurídicas y de contabilidad	Actividades jurídicas	Actividades jurídicas
+M6920	Actividades profesionales, científicas y técnicas	Actividades jurídicas y de contabilidad	Actividades de contabilidad, teneduría de libros, auditoría y asesoría fiscal	Actividades de contabilidad, teneduría de libros, auditoría y asesoría fiscal
+M7010	Actividades profesionales, científicas y técnicas	Actividades de las sedes centrales; actividades de consultoría de gestión empresarial	Actividades de las sedes centrales	Actividades de las sedes centrales
+M7021	Actividades profesionales, científicas y técnicas	Actividades de las sedes centrales; actividades de consultoría de gestión empresarial	Actividades de consultoría de gestión empresarial	Relaciones públicas y comunicación
+M7022	Actividades profesionales, científicas y técnicas	Actividades de las sedes centrales; actividades de consultoría de gestión empresarial	Actividades de consultoría de gestión empresarial	Otras actividades de consultoría de gestión empresarial
+M7111	Actividades profesionales, científicas y técnicas	Servicios técnicos de arquitectura e ingeniería; ensayos y análisis técnicos	Servicios técnicos de arquitectura e ingeniería y otras actividades relacionadas con el asesoramiento técnico	Servicios técnicos de arquitectura
+M7112	Actividades profesionales, científicas y técnicas	Servicios técnicos de arquitectura e ingeniería; ensayos y análisis técnicos	Servicios técnicos de arquitectura e ingeniería y otras actividades relacionadas con el asesoramiento técnico	Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico
+M7120	Actividades profesionales, científicas y técnicas	Servicios técnicos de arquitectura e ingeniería; ensayos y análisis técnicos	Ensayos y análisis técnicos	Ensayos y análisis técnicos
+M7211	Actividades profesionales, científicas y técnicas	Investigación y desarrollo	Investigación y desarrollo experimental en ciencias naturales y técnicas	Investigación y desarrollo experimental en biotecnología
+M7219	Actividades profesionales, científicas y técnicas	Investigación y desarrollo	Investigación y desarrollo experimental en ciencias naturales y técnicas	Otra investigación y desarrollo experimental en ciencias naturales y técnicas
+M7220	Actividades profesionales, científicas y técnicas	Investigación y desarrollo	Investigación y desarrollo experimental en ciencias sociales y humanidades	Investigación y desarrollo experimental en ciencias sociales y humanidades
+M7311	Actividades profesionales, científicas y técnicas	Publicidad y estudios de mercado	Publicidad	Agencias de publicidad
+M7312	Actividades profesionales, científicas y técnicas	Publicidad y estudios de mercado	Publicidad	Servicios de representación de medios de comunicación
+M7320	Actividades profesionales, científicas y técnicas	Publicidad y estudios de mercado	Estudio de mercado y realización de encuestas de opinión pública	Estudio de mercado y realización de encuestas de opinión pública
+M7410	Actividades profesionales, científicas y técnicas	Otras actividades profesionales, científicas y técnicas	Actividades de diseño especializado	Actividades de diseño especializado
+M7420	Actividades profesionales, científicas y técnicas	Otras actividades profesionales, científicas y técnicas	Actividades de fotografía	Actividades de fotografía
+M7430	Actividades profesionales, científicas y técnicas	Otras actividades profesionales, científicas y técnicas	Actividades de traducción e interpretación	Actividades de traducción e interpretación
+M7490	Actividades profesionales, científicas y técnicas	Otras actividades profesionales, científicas y técnicas	Otras actividades profesionales, científicas y técnicas n.c.o.p.	Otras actividades profesionales, científicas y técnicas n.c.o.p.
+M7500	Actividades profesionales, científicas y técnicas	Actividades veterinarias	Actividades veterinarias	Actividades veterinarias
+N7711	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de vehículos de motor	Alquiler de automóviles y vehículos de motor ligeros
+N7712	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de vehículos de motor	Alquiler de camiones
+N7721	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de efectos personales y artículos de uso doméstico	Alquiler de artículos de ocio y deportivos
+N7722	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de efectos personales y artículos de uso doméstico	Alquiler de cintas de vídeo y discos
+N7729	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de efectos personales y artículos de uso doméstico	Alquiler de otros efectos personales y artículos de uso doméstico
+N7731	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de otra maquinaria, equipos y bienes tangibles	Alquiler de maquinaria y equipo de uso agrícola
+N7732	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de otra maquinaria, equipos y bienes tangibles	Alquiler de maquinaria y equipo para la construcción e ingeniería civil
+N7733	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de otra maquinaria, equipos y bienes tangibles	Alquiler de maquinaria y equipo de oficina, incluidos ordenadores
+N7734	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de otra maquinaria, equipos y bienes tangibles	Alquiler de medios de navegación
+N7735	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de otra maquinaria, equipos y bienes tangibles	Alquiler de medios de transporte aéreo
+N7739	Actividades administrativas y servicios auxliares	Actividades de alquiler	Alquiler de otra maquinaria, equipos y bienes tangibles	Alquiler de otra maquinaria, equipos y bienes tangibles n.c.o.p.
+N7740	Actividades administrativas y servicios auxliares	Actividades de alquiler	Arrendamiento de la propiedad intelectual y productos similares, excepto trabajos protegidos por los derechos de autor	Arrendamiento de la propiedad intelectual y productos similares, excepto trabajos protegidos por los derechos de autor
+N7810	Actividades administrativas y servicios auxliares	Actividades relacionadas con el empleo	Actividades de las agencias de colocación	Actividades de las agencias de colocación
+N7820	Actividades administrativas y servicios auxliares	Actividades relacionadas con el empleo	Actividades de las empresas de trabajo temporal	Actividades de las empresas de trabajo temporal
+N7830	Actividades administrativas y servicios auxliares	Actividades relacionadas con el empleo	Otra provisión de recursos humanos	Otra provisión de recursos humanos
+N7911	Actividades administrativas y servicios auxliares	Actividades de agencias de viajes, operadores turísticos, servicios de reservas y actividades relacionadas con los mismos	Actividades de agencias de viajes y operadores turísticos	Actividades de las agencias de viajes
+N7912	Actividades administrativas y servicios auxliares	Actividades de agencias de viajes, operadores turísticos, servicios de reservas y actividades relacionadas con los mismos	Actividades de agencias de viajes y operadores turísticos	Actividades de los operadores turísticos
+N7990	Actividades administrativas y servicios auxliares	Actividades de agencias de viajes, operadores turísticos, servicios de reservas y actividades relacionadas con los mismos	Otros servicios de reservas y actividades relacionadas con los mismos	Otros servicios de reservas y actividades relacionadas con los mismos
+N8010	Actividades administrativas y servicios auxliares	Actividades de seguridad e investigación	Actividades de seguridad privada	Actividades de seguridad privada
+N8020	Actividades administrativas y servicios auxliares	Actividades de seguridad e investigación	Servicios de sistemas de seguridad	Servicios de sistemas de seguridad
+N8030	Actividades administrativas y servicios auxliares	Actividades de seguridad e investigación	Actividades de investigación	Actividades de investigación
+N8110	Actividades administrativas y servicios auxliares	Servicios a edificios y actividades de jardinería	Servicios integrales a edificios e instalaciones	Servicios integrales a edificios e instalaciones
+N8121	Actividades administrativas y servicios auxliares	Servicios a edificios y actividades de jardinería	Actividades de limpieza	Limpieza general de edificios
+N8122	Actividades administrativas y servicios auxliares	Servicios a edificios y actividades de jardinería	Actividades de limpieza	Otras actividades de limpieza industrial y de edificios
+N8129	Actividades administrativas y servicios auxliares	Servicios a edificios y actividades de jardinería	Actividades de limpieza	Otras actividades de limpieza
+N8130	Actividades administrativas y servicios auxliares	Servicios a edificios y actividades de jardinería	Actividades de jardinería	Actividades de jardinería
+N8211	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Actividades administrativas y auxiliares de oficina	Servicios administrativos combinados
+N8219	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Actividades administrativas y auxiliares de oficina	Actividades de fotocopiado, preparación de documentos y otras actividades especializadas de oficina
+N8220	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Actividades de los centros de llamadas	Actividades de los centros de llamadas
+N8230	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Organización de convenciones y ferias de muestras	Organización de convenciones y ferias de muestras
+N8291	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Actividades de apoyo a las empresas n.c.o.p.	Actividades de las agencias de cobros y de información comercial
+N8292	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Actividades de apoyo a las empresas n.c.o.p.	Actividades de envasado y empaquetado
+N8299	Actividades administrativas y servicios auxliares	Actividades administrativas de oficina y otras actividades auxiliares a las empresas	Actividades de apoyo a las empresas n.c.o.p.	Otras actividades de apoyo a las empresas n.c.o.p.
+O8411	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y de la política económica y social	Actividades generales de la Administración Pública
+O8412	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y de la política económica y social	Regulación de las actividades sanitarias, educativas y culturales y otros servicios sociales, excepto Seguridad Social
+O8413	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y de la política económica y social	Regulación de la actividad económica y contribución a su mayor eficiencia
+O8421	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Prestación de servicios a la comunidad en general	Asuntos exteriores
+O8422	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Prestación de servicios a la comunidad en general	Defensa
+O8423	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Prestación de servicios a la comunidad en general	Justicia
+O8424	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Prestación de servicios a la comunidad en general	Orden público y seguridad
+O8425	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Prestación de servicios a la comunidad en general	Protección civil
+O8430	Administración Pública y defensa; Seguridad Social obligatoria	Administración Pública y defensa; Seguridad Social obligatoria	Seguridad Social obligatoria	Seguridad Social obligatoria
+P8510	Educación	Educación	Educación preprimaria	Educación preprimaria
+P8520	Educación	Educación	Educación primaria	Educación primaria
+P8531	Educación	Educación	Educación secundaria	Educación secundaria general
+P8532	Educación	Educación	Educación secundaria	Educación secundaria técnica y profesional
+P8541	Educación	Educación	Educación postsecundaria	Educación postsecundaria no terciaria
+P8543	Educación	Educación	Educación postsecundaria	Educación universitaria
+P8544	Educación	Educación	Educación postsecundaria	Educación terciaria no universitaria
+P8551	Educación	Educación	Otra educación	Educación deportiva y recreativa
+P8552	Educación	Educación	Otra educación	Educación cultural
+P8553	Educación	Educación	Otra educación	Actividades de las escuelas de conducción y pilotaje
+P8559	Educación	Educación	Otra educación	Otra educación n.c.o.p.
+P8560	Educación	Educación	Actividades auxiliares a la educación	Actividades auxiliares a la educación
+Q8610	Actividades sanitarias y de servicios sociales	Actividades sanitarias	Actividades hospitalarias	Actividades hospitalarias
+Q8621	Actividades sanitarias y de servicios sociales	Actividades sanitarias	Actividades médicas y odontológicas	Actividades de medicina general
+Q8622	Actividades sanitarias y de servicios sociales	Actividades sanitarias	Actividades médicas y odontológicas	Actividades de medicina especializada
+Q8623	Actividades sanitarias y de servicios sociales	Actividades sanitarias	Actividades médicas y odontológicas	Actividades odontológicas
+Q8690	Actividades sanitarias y de servicios sociales	Actividades sanitarias	Otras actividades sanitarias	Otras actividades sanitarias
+Q8710	Actividades sanitarias y de servicios sociales	Asistencia en establecimientos residenciales	Asistencia en establecimientos residenciales con cuidados sanitarios	Asistencia en establecimientos residenciales con cuidados sanitarios
+Q8720	Actividades sanitarias y de servicios sociales	Asistencia en establecimientos residenciales	Asistencia en establecimientos residenciales para personas con discapacidad intelectual, enfermedad mental y drogodependencia	Asistencia en establecimientos residenciales para personas con discapacidad intelectual, enfermedad mental y drogodependencia
+Q8731	Actividades sanitarias y de servicios sociales	Asistencia en establecimientos residenciales	Asistencia en establecimientos residenciales para personas mayores y con discapacidad física	Asistencia en establecimientos residenciales para personas mayores
+Q8732	Actividades sanitarias y de servicios sociales	Asistencia en establecimientos residenciales	Asistencia en establecimientos residenciales para personas mayores y con discapacidad física	Asistencia en establecimientos residenciales para personas con discapacidad física
+Q8790	Actividades sanitarias y de servicios sociales	Asistencia en establecimientos residenciales	Otras actividades de asistencia en establecimientos residenciales	Otras actividades de asistencia en establecimientos residenciales
+Q8811	Actividades sanitarias y de servicios sociales	Actividades de servicios sociales sin alojamiento	Actividades de servicios sociales sin alojamiento para personas mayores y con discapacidad	Actividades de servicios sociales sin alojamiento para personas mayores
+Q8812	Actividades sanitarias y de servicios sociales	Actividades de servicios sociales sin alojamiento	Actividades de servicios sociales sin alojamiento para personas mayores y con discapacidad	Actividades de servicios sociales sin alojamiento para personas con discapacidad
+Q8891	Actividades sanitarias y de servicios sociales	Actividades de servicios sociales sin alojamiento	Otros actividades de servicios sociales sin alojamiento	Actividades de cuidado diurno de niños
+Q8899	Actividades sanitarias y de servicios sociales	Actividades de servicios sociales sin alojamiento	Otros actividades de servicios sociales sin alojamiento	Otros actividades de servicios sociales sin alojamiento n.c.o.p.
+R9001	Actividades artísticas, recreativas y de entrenimiento	Actividades de creación, artísticas y espectáculos	Actividades de creación, artísticas y espectáculos	Artes escénicas
+R9002	Actividades artísticas, recreativas y de entrenimiento	Actividades de creación, artísticas y espectáculos	Actividades de creación, artísticas y espectáculos	Actividades auxiliares a las artes escénicas
+R9003	Actividades artísticas, recreativas y de entrenimiento	Actividades de creación, artísticas y espectáculos	Actividades de creación, artísticas y espectáculos	Creación artística y literaria
+R9004	Actividades artísticas, recreativas y de entrenimiento	Actividades de creación, artísticas y espectáculos	Actividades de creación, artísticas y espectáculos	Gestión de salas de espectáculos
+R9102	Actividades artísticas, recreativas y de entrenimiento	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de museos
+R9103	Actividades artísticas, recreativas y de entrenimiento	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Gestión de lugares y edificios históricos
+R9104	Actividades artísticas, recreativas y de entrenimiento	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de los jardines botánicos, parques zoológicos y reservas naturales
+R9105	Actividades artísticas, recreativas y de entrenimiento	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de bibliotecas
+R9106	Actividades artísticas, recreativas y de entrenimiento	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de bibliotecas, archivos, museos y otras actividades culturales	Actividades de archivos
+R9200	Actividades artísticas, recreativas y de entrenimiento	Actividades de juegos de azar y apuestas	Actividades de juegos de azar y apuestas	Actividades de juegos de azar y apuestas
+R9311	Actividades artísticas, recreativas y de entrenimiento	Actividades deportivas, recreativas y de entretenimiento	Actividades deportivas	Gestión de instalaciones deportivas
+R9312	Actividades artísticas, recreativas y de entrenimiento	Actividades deportivas, recreativas y de entretenimiento	Actividades deportivas	Actividades de los clubes deportivos
+R9313	Actividades artísticas, recreativas y de entrenimiento	Actividades deportivas, recreativas y de entretenimiento	Actividades deportivas	Actividades de los gimnasios
+R9319	Actividades artísticas, recreativas y de entrenimiento	Actividades deportivas, recreativas y de entretenimiento	Actividades deportivas	Otras actividades deportivas
+R9321	Actividades artísticas, recreativas y de entrenimiento	Actividades deportivas, recreativas y de entretenimiento	Actividades recreativas y de entretenimiento	Actividades de los parques de atracciones y los parques temáticos
+R9329	Actividades artísticas, recreativas y de entrenimiento	Actividades deportivas, recreativas y de entretenimiento	Actividades recreativas y de entretenimiento	Otras actividades recreativas y de entretenimiento
+S9411	Otros servicios	Actividades asociativas	Actividades de organizaciones empresariales, profesionales y patronales	Actividades de organizaciones empresariales y patronales
+S9412	Otros servicios	Actividades asociativas	Actividades de organizaciones empresariales, profesionales y patronales	Actividades de organizaciones profesionales
+S9420	Otros servicios	Actividades asociativas	Actividades sindicales	Actividades sindicales
+S9491	Otros servicios	Actividades asociativas	Otras actividades asociativas	Actividades de organizaciones religiosas
+S9492	Otros servicios	Actividades asociativas	Otras actividades asociativas	Actividades de organizaciones políticas
+S9499	Otros servicios	Actividades asociativas	Otras actividades asociativas	Otras actividades asociativas n.c.o.p.
+S9511	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de ordenadores y equipos de comunicación	Reparación de ordenadores y equipos periféricos
+S9512	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de ordenadores y equipos de comunicación	Reparación de equipos de comunicación
+S9521	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de efectos personales y artículos de uso doméstico	Reparación de aparatos electrónicos de audio y vídeo de uso doméstico
+S9522	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de efectos personales y artículos de uso doméstico	Reparación de aparatos electrodomésticos y de equipos para el hogar y el jardín
+S9523	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de efectos personales y artículos de uso doméstico	Reparación de calzado y artículos de cuero
+S9524	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de efectos personales y artículos de uso doméstico	Reparación de muebles y artículos de menaje
+S9525	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de efectos personales y artículos de uso doméstico	Reparación de relojes y joyería
+S9529	Otros servicios	Reparación de ordenadores, efectos personales y artículos de uso doméstico	Reparación de efectos personales y artículos de uso doméstico	Reparación de otros efectos personales y artículos de uso doméstico
+S9601	Otros servicios	Otros servicios personales	Otros servicios personales	Lavado y limpieza de prendas textiles y de piel
+S9602	Otros servicios	Otros servicios personales	Otros servicios personales	Peluquería y otros tratamientos de belleza
+S9603	Otros servicios	Otros servicios personales	Otros servicios personales	Pompas fúnebres y actividades relacionadas
+S9604	Otros servicios	Otros servicios personales	Otros servicios personales	Actividades de mantenimiento físico
+S9609	Otros servicios	Otros servicios personales	Otros servicios personales	Otras servicios personales n.c.o.p.
+T9700	Actividades de los hogares como empleadores de personal doméstico; actividades de los hogares como productores de bienes y servicios para uso propio	Actividades de los hogares como empleadores de personal doméstico	Actividades de los hogares como empleadores de personal doméstico	Actividades de los hogares como empleadores de personal doméstico
+T9810	Actividades de los hogares como empleadores de personal doméstico; actividades de los hogares como productores de bienes y servicios para uso propio	Actividades de los hogares como productores de bienes y servicios para uso propio	Actividades de los hogares como productores de bienes para uso propio	Actividades de los hogares como productores de bienes para uso propio
+T9820	Actividades de los hogares como empleadores de personal doméstico; actividades de los hogares como productores de bienes y servicios para uso propio	Actividades de los hogares como productores de bienes y servicios para uso propio	Actividades de los hogares como productores de servicios para uso propio	Actividades de los hogares como productores de servicios para uso propio
+U9900	Actividades de organizaciones y organismos extraterritoriales	Actividades de organizaciones y organismos extraterritoriales	Actividades de organizaciones y organismos extraterritoriales	Actividades de organizaciones y organismos extraterritoriales
