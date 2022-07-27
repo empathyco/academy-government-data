@@ -11,10 +11,10 @@
     </template>
     <template #sub-header>
       <!-- Predictive layer for the suggestions and the filters selected TODO: extract component for the same as in discovery view -->
-      <PredictiveLayer @filterApplied="manageFilter($event)" />
+      <PredictiveLayer />
       <div class="filter-container">
         <SelectedFiltersList :class="`filters-list`" v-slot="{ filter }">
-          <TagFilter :filter="filter" :color="getColorMap(filter.type)" />
+          <TagFilter :filter="filter" />
         </SelectedFiltersList>
       </div>
       <!--
@@ -50,7 +50,6 @@ import { MultiColumnMaxWidthLayout } from "@empathyco/x-components";
 import SearchBoxComponent from "@/components/search/SearchBoxComponent";
 import GrantCardGrid from "@/components/search/details/GrantCardGrid";
 
-import store from "@/store";
 import { SelectedFiltersList } from "@empathyco/x-components/facets";
 import TagFilter from "@/components/tags/TagFilter";
 import PredictiveLayer from "@/components/search/empathize/PredictiveLayer";
@@ -65,19 +64,13 @@ export default {
     TagFilter,
     PredictiveLayer,
   },
-  methods: {
-    getFiltersSelected() {
-      return store.state.filtersSelected;
-    },
-    async getColorMap(type) {
-      return await store.dispatch("getColor", type);
-    },
-    manageFilter(filterToManage) {
-      store.dispatch("modifySelectedFilters", filterToManage);
-    },
-  },
   beforeMount() {
-    store.commit("clearFiltersSelected");
+    this.$store.dispatch("initializeDictionary", [
+      "departamento",
+      "tipoBeneficiario",
+      "administracion",
+      "organo",
+    ]);
   },
 };
 </script>
@@ -89,5 +82,8 @@ export default {
 }
 h1 {
   margin-top: 0;
+}
+.filters-list {
+  list-style-type: none;
 }
 </style>

@@ -12,11 +12,7 @@
           :filters="filtergroup.content"
           v-slot="{ filter }"
         >
-          <TagSelectionFilter
-            :filter="filter"
-            :color="getColor(filter)"
-            :isSelected="isFilterSelected(filter)"
-          />
+          <TagSelectionFilter :filter="filter" />
         </FiltersList>
       </div>
     </div>
@@ -25,7 +21,6 @@
 
 <script>
 import { FiltersList } from "@empathyco/x-components/js";
-import store from "@/store";
 import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 
 export default {
@@ -38,14 +33,6 @@ export default {
   components: {
     TagSelectionFilter,
     FiltersList,
-  },
-  methods: {
-    getColor(filter) {
-      return store.dispatch("getColor", filter.type);
-    },
-    isFilterSelected(filter) {
-      return store.dispatch("isFilterSelected", filter);
-    },
   },
 };
 </script>

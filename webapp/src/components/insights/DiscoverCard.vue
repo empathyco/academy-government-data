@@ -39,11 +39,7 @@
         :filters="item.tags"
         v-slot="{ filter }"
       >
-        <TagSelectionFilter
-          :filter="filter"
-          :color="getColor(filter)"
-          :isSelected="isFilterSelected(filter)"
-        />
+        <TagSelectionFilter :filter="filter" />
       </FiltersList>
     </div>
   </div>
@@ -56,7 +52,6 @@ import LinePlotChart from "@/components/insights/charts/LinePlotChart";
 import PieChart from "@/components/insights/charts/PieChart";
 import WordCloud from "@/components/insights/charts/WordCloud";
 import { FiltersList } from "@empathyco/x-components/js";
-import store from "@/store";
 import TagSelectionFilter from "@/components/tags/TagSelectionFilter";
 
 export default {
@@ -77,22 +72,6 @@ export default {
      */
     dowlowadContent() {
       console.log(this.item);
-    },
-    /**
-     * Returns the color corresponding to a given filter
-     * @param filter
-     * @returns {Promise<any>}
-     */
-    getColor(filter) {
-      return store.dispatch("getColor", filter.type);
-    },
-    /**
-     * Returns if the filter given is selected
-     * @param filter
-     * @returns {Promise<any>}
-     */
-    isFilterSelected(filter) {
-      return store.dispatch("isFilterSelected", filter);
     },
   },
 };

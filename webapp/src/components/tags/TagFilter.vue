@@ -2,7 +2,7 @@
   <SimpleFilter
     class="filter"
     :filter="filter"
-    :style="`background-color:${colorData};`"
+    :style="`background-color:${getColorComputed()};`"
   >
     <template #label="{ filter }">
       <div class="discovery-filter">
@@ -16,7 +16,6 @@
 <script>
 import { SimpleFilter } from "@empathyco/x-components/js";
 import CrossTinyStyled from "@/components/icons/CrossTinyStyled";
-import store from "@/store";
 
 export default {
   name: "TagFilter",
@@ -31,13 +30,15 @@ export default {
   },
   props: ["filter", "color", "filtersSelected"],
   methods: {
-    manageFilter(filterToManage) {
-      store.dispatch("modifySelectedFilters", filterToManage);
+    getColorComputed() {
+      try {
+        return this.$store.getters.getColorMap.find(
+          (pair) => pair.type === this.filter.type
+        ).color;
+      } catch (e) {
+        return "grey";
+      }
     },
-  },
-  async mounted() {
-    // Same to TagSelectionFilter, it is a workaround for the asynchronous problem (check mounted on that class)
-    this.colorData = await this.color;
   },
 };
 </script>

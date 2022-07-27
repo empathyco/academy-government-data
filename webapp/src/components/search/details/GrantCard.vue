@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import store from "@/store";
 import CardRelatedTags from "@/components/tags/CardRelatedTags";
 import PlusStyled from "@/components/icons/PlusStyled";
 import { fromItemToFilters } from "@/utils/methods/BidItemToFilter";
@@ -61,24 +60,6 @@ export default {
       procurer: String,
       relatedTags: Array(filterType()),
     },*/
-  methods: {
-    /**
-     * Given a filter returns a promise from the store with the color of the corresponding tag depending its type
-     * @param filter
-     * @returns {Promise<any>}
-     */
-    getColor(filter) {
-      return store.dispatch("getColor", filter.type);
-    },
-    /**
-     * Given a filter returns a promise from the store with the state of its selection
-     * @param filter
-     * @returns {Promise<any>}
-     */
-    isFilterSelected(filter) {
-      return store.dispatch("isFilterSelected", filter);
-    },
-  },
   beforeMount() {
     this.itemFilters = fromItemToFilters(this.item).filter(
       (item) => item !== null

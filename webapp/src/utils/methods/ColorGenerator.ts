@@ -15,18 +15,24 @@ export const newColor: (currentSize: number) => string = (currentSize) => {
   // Sets the value that will represent the 4%
   let quantityToDark = 20;
   const numberOfTimesListWasIterated = currentSize / colorList.length;
+  quantityToDark *= Math.trunc(numberOfTimesListWasIterated);
   // Checks that there are enough colors
-  if (numberOfTimesListWasIterated > 0) {
+  if (numberOfTimesListWasIterated >= 1) {
     //Each 3 times the list is iterated, the value representing a 4% will be incremented by 1
     numberOfTimesListWasIterated % 3 === 0
       ? (quantityToDark += 1)
       : quantityToDark;
     // If there is no color given black will be returned
+    console.log(quantityToDark);
     if (rgbColorGiven) {
       rgbColorGiven.r -= quantityToDark;
       rgbColorGiven.g -= quantityToDark;
       rgbColorGiven.b -= quantityToDark;
-      return rgbToHex(rgbColorGiven.r, rgbColorGiven.g, rgbColorGiven.b);
+      return rgbToHex(
+        rgbColorGiven.r > 0 ? rgbColorGiven.r : 0,
+        rgbColorGiven.g > 0 ? rgbColorGiven.g : 0,
+        rgbColorGiven.b > 0 ? rgbColorGiven.b : 0
+      );
     } else {
       return "black";
     }

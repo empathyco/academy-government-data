@@ -24,14 +24,10 @@
     </template>
     <template #sub-header>
       <!-- Place for the suggestions and related tags/filters TODO: extract component for the same as in search view -->
-      <PredictiveLayer @filterApplied="manageFilter($event)" />
+      <PredictiveLayer />
       <div class="filter-container">
-        <FiltersList
-          :class="`filters-list`"
-          :filters="getFiltersSelected()"
-          v-slot="{ filter }"
-        >
-          <TagFilter :filter="filter" :color="getColorMap(filter.type)" />
+        <FiltersList :class="`filters-list`" v-slot="{ filter }">
+          <TagFilter :filter="filter" />
         </FiltersList>
       </div>
     </template>
@@ -42,7 +38,7 @@
         <FiltersComponent :filters="filters" />
       </div>
       <div v-else>
-        <DisplayCharts></DisplayCharts>
+        <DisplayCharts />
       </div>
     </template>
   </MultiColumnMaxWidthLayout>
@@ -81,20 +77,6 @@ export default {
   },
   methods: {
     /**
-     * Filters selected from the store
-     * @returns {*}
-     */
-    getFiltersSelected() {
-      return store.getters.filtersSelected;
-    },
-    /**
-     * Modifies the filtersSelected list in the store given a filter
-     * @param filterToManage
-     */
-    manageFilter(filterToManage) {
-      store.dispatch("modifySelectedFilters", filterToManage);
-    },
-    /**
      * Changes the style of the button to switch between views of discovery cards and filters
      */
     changeFilterSelected() {
@@ -104,19 +86,12 @@ export default {
         : (this.$refs.filterButton.className =
             this.$refs.filterButton.className.split(" ")[0]);
     },
-    /**
-     * Given a type returns a promise with the color assinged in the color map of the store
-     * @param type
-     * @returns {Promise<any>}
-     */
-    async getColorMap(type) {
-      return await store.dispatch("getColor", type);
-    },
   },
   async beforeMount() {
-    // In order to not collide with the search store, it cleans it up everytime the view is loaded (is improvable)
-    store.commit("clearFiltersSelected");
-    await store.dispatch("initializeDictionary", this.filters);
+    await store.dispatch(
+      "initializeDictionary",
+      this.filters.map((filter) => filter.title.toLowerCase())
+    );
   },
 };
 </script>

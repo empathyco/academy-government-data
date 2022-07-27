@@ -36,55 +36,8 @@ export default new Vuex.Store({
     addPair(state, payload) {
       state.colorMap = [...state.colorMap, payload];
     },
-    /**
-     * Adds a filter to the filters selected
-     * @param state of the store
-     * @param payload object that represents the filter
-     */
-    addFilterSelected(state, payload) {
-      state.filtersSelected = [...state.filtersSelected, payload];
-    },
-    /**
-     * Removes a filter from the filters selected
-     * @param state of the store
-     * @param payload object that represents the filter
-     */
-    removeFilterSelected(state, payload) {
-      state.filtersSelected = state.filtersSelected.filter(
-        (filter) => filter.label !== payload.label
-      );
-    },
-    /**
-     * Empties the filters selected array
-     * @param state
-     */
-    clearFiltersSelected(state) {
-      state.filtersSelected = [];
-    },
   },
   actions: {
-    /**
-     * Given a filter if it is already in the filtersSelected list it removes it. If not, it adds it to the list
-     * @param context
-     * @param filter
-     */
-    async modifySelectedFilters(context, filter) {
-      if (await context.dispatch("isFilterSelected", filter)) {
-        context.commit("removeFilterSelected", filter);
-      } else {
-        context.commit("addFilterSelected", filter);
-      }
-    },
-    /**
-     * Returns true if there is a filter in the selectedFilters list, false otherwise
-     * @param context
-     * @param filter
-     */
-    isFilterSelected(context, filter) {
-      return context.state.filtersSelected.some(
-        (filterSelected) => filterSelected.label === filter.label
-      );
-    },
     /**
      * Given a type it returns the corresponding color and, if there is any exception, returns the default empathy color
      * @param context
