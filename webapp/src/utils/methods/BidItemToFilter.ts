@@ -5,8 +5,8 @@ export const fromItemToFilters: (
   item: APIResponseType
 ) => (filterType | null)[] = (item) => {
   return [
+    fromParamToFilter(item.region_impacto, "regionImpacto"),
     fromParamToFilter(item.organo, "organo"),
-    fromParamToFilter(item.administracion, "administracion"),
     fromParamToFilter(item.departamento, "departamento"),
     fromParamToFilter(item.tipo_beneficiario, "tipoBeneficiario"),
   ];

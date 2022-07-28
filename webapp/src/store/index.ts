@@ -69,7 +69,7 @@ export default new Vuex.Store({
       for (const familyFilter of filters) {
         await context.dispatch(
           "getColorFromDictionary",
-          familyFilter.title.toLowerCase()
+          familyFilter.charAt(0).toLowerCase() + familyFilter.slice(1)
         );
       }
     },

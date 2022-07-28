@@ -49,7 +49,7 @@ export const adapter: SearchAdapter = {
         request.query
       }&lang=en${filters.reduce((acc, filter) => {
         return acc + addFilter(filter);
-      }, "")}`
+      }, "")}&size=20`
     )
       .then((response): any => (response.ok ? response.json() : {}))
       .then((responseData) => ({

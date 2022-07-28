@@ -66,10 +66,10 @@ export default {
   },
   beforeMount() {
     this.$store.dispatch("initializeDictionary", [
+      "regionImpacto",
+      "organo",
       "departamento",
       "tipoBeneficiario",
-      "administracion",
-      "organo",
     ]);
   },
 };
