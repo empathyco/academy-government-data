@@ -88,6 +88,7 @@ export default {
     },
   },
   async beforeMount() {
+    this.$store.commit("emptyColorMap");
     await store.dispatch(
       "initializeDictionary",
       this.filters.map((filter) => filter.title.toLowerCase())

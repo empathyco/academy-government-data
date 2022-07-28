@@ -2,7 +2,6 @@ import Vue from "vue";
 import Vuex from "vuex";
 import { colorList } from "@/utils/data/GlobalVariables";
 import { newColor } from "@/utils/methods/ColorGenerator";
-import { filterType } from "@/models/DataType";
 
 Vue.use(Vuex);
 
@@ -11,18 +10,8 @@ export default new Vuex.Store({
     // Map that has an object couple with a type and the color assigned to it
     colorMap: [] as { type: string; color: string }[],
     // Array of filters that are active during the search
-    filtersSelected: [] as filterType[],
-    searchFilters: [] as filterType[],
-    discoveryFilters: [] as filterType[],
   },
   getters: {
-    /**
-     * Returns filters selected
-     * @param state
-     */
-    filtersSelected(state) {
-      return state.filtersSelected;
-    },
     getColorMap(state) {
       return state.colorMap;
     },
@@ -35,6 +24,9 @@ export default new Vuex.Store({
      */
     addPair(state, payload) {
       state.colorMap = [...state.colorMap, payload];
+    },
+    emptyColorMap(state) {
+      state.colorMap = [];
     },
   },
   actions: {

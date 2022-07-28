@@ -65,6 +65,7 @@ export default {
     PredictiveLayer,
   },
   beforeMount() {
+    this.$store.commit("emptyColorMap");
     this.$store.dispatch("initializeDictionary", [
       "regionImpacto",
       "organo",
