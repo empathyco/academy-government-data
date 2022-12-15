@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "extra_lang": [
+        "en"
+      ],
+      "keywords": "apple",
+      "weight": 46602
+    },
+    {
+      "extra_lang": [
+        "en"
+      ],
+      "keywords": "golden apples",
+      "weight": 22229
+    },
+    {
+      "extra_lang": [
+        "en"
+      ],
+      "keywords": "breakfast",
+      "weight": 20000
+    }
+  ]
+}

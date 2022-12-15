@@ -1,0 +1,39 @@
+{
+  "documents": [
+    {
+      "context": {
+        "attribute_values": [
+          "01"
+        ],
+        "inheritance": true,
+        "attribute_name": "facet_categoriesIds",
+        "pivots": {
+          "lang": [
+            "en"
+          ]
+        }
+      },
+      "elements_ranking": [
+        {
+          "schedule": {
+          },
+          "field_value": "1",
+          "action": "BOOST",
+          "filters": {},
+          "type": "PRODUCTS",
+          "field_name": "id"
+        },
+        {
+          "schedule": {},
+          "field_value": "Ambrosia",
+          "action": "BURY",
+          "filters": {},
+          "type": "ATTRIBUTES",
+          "field_name": "facet_brand"
+        }
+      ],
+      "facets": [
+      ]
+    }
+  ]
+}

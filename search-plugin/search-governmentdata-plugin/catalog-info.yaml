@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: search-governmentdata-plugin
+  tags:
+    - plugin
+    - search
+  description: governmentdata's search plugin
+  links:
+    - url: https://github.com/empathyco/search-governmentdata-plugin
+      title: Repo 
+      icon: web
+  annotations:
+    github.com/project-slug: empathyco/search-governmentdata-plugin
+    backstage.io/techdocs-ref: url:https://github.com/empathyco/search-governmentdata-plugin/tree/main
+    backstage.io/edit-url: https://github.com/empathyco/search-governmentdata-plugin/edit/main/catalog-info.yaml
+    argocd/app-name: search-service
+    jira/project-key: HOR
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=search-service'
+    sonarqube.org/project-key: co.empathy:search-governmentdata-plugin
+    jenkins.io/github-folder: GitHub Search/search-governmentdata-plugin
+spec:
+  type: service
+  owner: Search
+  dependsOn: 
+    - component:search-core
+  lifecycle: experimental
+  providesApis: 
+    - search-governmentdata-plugin

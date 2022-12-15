@@ -1,0 +1,103 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "index.unassigned.node_left.delayed_timeout": "25m"
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "context_pivots": {
+          "path_match": "context.pivots.*",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "elements_ranking_filters": {
+          "path_match": "elements_ranking.filters.*",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "eb_job_properties": {
+          "path_match": "_jobProperties.*",
+          "mapping": {
+            "index": false,
+            "type": "keyword"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "context": {
+        "properties": {
+          "attribute_name": {
+            "type": "keyword"
+          },
+          "attribute_values": {
+            "type": "keyword"
+          },
+          "inheritance": {
+            "type": "boolean"
+          }
+        }
+      },
+      "elements_ranking": {
+        "type": "nested",
+        "properties": {
+          "type": {
+            "type": "keyword"
+          },
+          "action": {
+            "type": "keyword"
+          },
+          "field_name": {
+            "type": "keyword"
+          },
+          "field_value": {
+            "type": "keyword"
+          },
+          "schedule": {
+            "properties": {
+              "activation_date": {
+                "type": "date",
+                "format": "date_time_no_millis"
+              },
+              "deactivation_date": {
+                "type": "date",
+                "format": "date_time_no_millis"
+              }
+            }
+          }
+        }
+      },
+      "facets": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "pretty_name": {
+            "type": "keyword"
+          },
+          "sort_type": {
+            "type": "keyword"
+          },
+          "values_ranking": {
+            "properties": {
+              "id": {
+                "type": "keyword"
+              },
+              "action": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

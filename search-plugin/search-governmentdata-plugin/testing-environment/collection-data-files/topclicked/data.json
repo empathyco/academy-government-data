@@ -1,0 +1,36 @@
+{
+  "documents": [
+    {
+      "product_id": "1",
+      "extra": {
+        "lang": "en"
+      },
+      "click_count": 7122,
+      "lang": "en"
+    },
+    {
+      "product_id": "2",
+      "extra": {
+        "lang": "en"
+      },
+      "click_count": 647,
+      "lang": "en"
+    },
+    {
+      "product_id": "5",
+      "extra": {
+        "lang": "en"
+      },
+      "click_count": 254,
+      "lang": "en"
+    },
+    {
+      "product_id": "7",
+      "extra": {
+        "lang": "en"
+      },
+      "click_count": 221,
+      "lang": "en"
+    }
+  ]
+}

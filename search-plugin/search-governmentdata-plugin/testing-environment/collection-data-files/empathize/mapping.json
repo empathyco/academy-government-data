@@ -1,0 +1,99 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "index.unassigned.node_left.delayed_timeout": "25m",
+    "index": {
+      "sort.field": "weight",
+      "sort.order": "desc"
+    },
+    "analysis": {
+      "filter": {
+        "ngram_tokenizer": {
+          "type": "edgeNGram",
+          "min_gram": "1",
+          "max_gram": "20"
+        }
+      },
+      "analyzer": {
+        "searchauto_index_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding",
+            "ngram_tokenizer",
+            "remove_duplicates"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        },
+        "searchable_search_analyzer": {
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        },
+        "spellcheck_index_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase"
+          ]
+        },
+        "spellcheck_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "extra_fields": {
+          "match": "extra_*",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "eb_job_properties": {
+          "path_match": "_jobProperties.*",
+          "mapping": {
+            "index": false,
+            "type": "keyword"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "product_id": {
+        "type": "keyword"
+      },
+      "weight": {
+        "type": "long"
+      },
+      "keywords": {
+        "type": "text",
+        "analyzer": "searchauto_index_analyzer",
+        "search_analyzer": "searchable_search_analyzer",
+        "copy_to": "spellcheck",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "spellcheck": {
+        "type": "text",
+        "analyzer": "spellcheck_index_analyzer",
+        "search_analyzer": "spellcheck_search_analyzer"
+      }
+    }
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "params": {
+    "endPoints": [
+      {
+        "id": "search",
+        "requestors": [
+          {
+            "features": {
+              "fallback": [
+                {
+                  "name": "spellcheck",
+                  "config": {
+                    "collectionType": "CATALOG",
+                    "mainCollectionId": "governmentdata",
+                    "secondaryCollectionId": "governmentdata",
+                    "enablePhraseSuggester": true
+                  }
+                }
+              ],
+              "search": [
+                {
+                  "name": "multiMatchSearch",
+                  "config": {
+                    "searchableFields": [
+                      {
+                        "name": "titulo_convocatoria"
+                      },
+                      {
+                        "name": "administracion"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "sorting",
+                  "config": {
+                    "defaultOrder": "DESC",
+                    "fields": [
+                      {
+                        "field": "_score",
+                        "order": "DESC"
+                      }
+                    ],
+                    "whitelist": [
+                      "_score"
+                    ]
+                  }
+                },
+                {
+                  "name": "filtering",
+                  "config": {
+                    "fields": [
+                      {
+                        "name": "administracion.raw",
+                        "queryParam": "administracion",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "departamento.raw",
+                        "queryParam": "departamento",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "organo.raw",
+                        "queryParam": "organo",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "tipo_beneficiario.raw",
+                        "queryParam": "tipoBeneficiario",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_sectorBeneficiario",
+                        "queryParam": "sectorBeneficiario",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "region_impacto.raw",
+                        "queryParam": "regionImpacto",
+                        "type": "VALUE"
+                      },
+                      {
+                        "name": "facet_finalidad",
+                        "queryParam": "finalidad",
+                        "type": "VALUE"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "faceting",
+                  "config": {
+                    "context": "SEARCH",
+                    "enabled": true,
+                    "mainCollectionId": "governmentdata",
+                    "secondaryCollectionId": "governmentdata",
+                    "facetableFields": {
+                      "valueFacets": [
+                        {
+                          "field": "administracion.raw",
+                          "filterField": "administracion",
+                          "size": 100,
+                          "minCount": 1
+                        },
+                        {
+                          "field": "departamento.raw",
+                          "filterField": "departamento",
+                          "size": 100,
+                          "minCount": 1
+                        },
+                        {
+                           "field": "organo.raw",
+                           "filterField": "organo",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "tipo_beneficiario.raw",
+                           "filterField": "tipoBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_sectorBeneficiario",
+                           "filterField": "sectorBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "region_impacto.raw",
+                           "filterField": "regionImpacto",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_finalidad",
+                           "filterField": "finalidad",
+                           "size": 100,
+                           "minCount": 1
+                        }
+                      ]
+                    },
+                    "facets": [
+                      "administracion.raw",
+                      "departamento.raw",
+                      "organo.raw",
+                      "tipo_beneficiario.raw",
+                      "facet_sectorBeneficiario",
+                      "region_impacto.raw",
+                      "facet_finalidad"
+                    ]
+                  }
+                },
+                {
+                  "name": "pagination",
+                  "config": {
+                    "rows": 20,
+                    "start": 0
+                  }
+                },
+                {
+                  "name": "boosting",
+                  "config": {
+                    "context": "SEARCH",
+                    "mainCollectionId": "governmentdata",
+                    "secondaryCollectionId": "governmentdata"
+                  }
+                },
+                {
+                  "name": "searchHits"
+                },
+                {
+                  "name": "totalHits"
+                },
+                {
+                  "name": "debug"
+                }
+              ]
+            },
+            "postprocessors": [
+              {
+                "name": "explain"
+              }
+            ],
+            "id": "catalog",
+            "redisCached": false,
+            "redisTTL": 250,
+            "mainCollectionId": "governmentdata",
+            "type": "default"
+          },
+          {
+            "id": "direct",
+            "type": "links",
+            "secondaryCollectionId": "governmentdata",
+            "config": {
+              "linkType": "DIRECT",
+              "queryParamFilters": [
+                {
+                  "queryParam": "lang",
+                  "field": "langs"
+                },
+                {
+                  "queryParam": "scope",
+                  "field": "filters.scope"
+                }
+              ]
+            }
+          },
+          {
+            "id": "promoted",
+            "type": "links",
+            "secondaryCollectionId": "governmentdata",
+            "config": {
+              "linkType": "PROMOTED",
+              "queryParamFilters": [
+                {
+                  "queryParam": "lang",
+                  "field": "langs"
+                },
+                {
+                  "queryParam": "scope",
+                  "field": "filters.scope"
+                }
+              ]
+            }
+          },
+          {
+            "id": "banner",
+            "type": "links",
+            "secondaryCollectionId": "governmentdata",
+            "config": {
+              "linkType": "BANNER",
+              "queryParamFilters": [
+                {
+                  "queryParam": "lang",
+                  "field": "langs"
+                },
+                {
+                  "queryParam": "scope",
+                  "field": "filters.scope"
+                }
+              ]
+            }
+          }
+        ],
+        "type": "custom"
+      },
+      {
+        "id": "browse",
+        "requestors": [
+          {
+            "features": {
+              "search": [
+                {
+                  "name": "browsingSearch"
+                },
+                {
+                  "name": "sorting",
+                  "config": {
+                    "whitelist": [
+                      "boost_category"
+                    ],
+                    "fields": [
+                      {
+                        "field": "_score",
+                        "order": "DESC"
+                      }
+                    ],
+                    "defaultOrder": "DESC"
+                  }
+                },
+                {
+                  "name": "pagination",
+                  "config": {
+                    "rows": 20,
+                    "start": 0
+                  }
+                },
+                {
+                  "name": "boosting",
+                  "config": {
+                    "context": "BROWSE",
+                    "mainCollectionId": "governmentdata",
+                    "secondaryCollectionId": "governmentdata"
+                  }
+                },
+                {
+                  "name": "searchHits",
+                  "config": {
+                    "origin": "SOURCE",
+                    "returnableFields": [
+                      {
+                        "field": "codigo_bdns"
+                      },
+                      {
+                        "field": "mrr"
+                      },
+                      {
+                        "field": "administracion"
+                      },
+                      {
+                        "field": "departamento"
+                      },
+                      {
+                        "field": "organo"
+                      },
+                      {
+                        "field": "fecha_registro"
+                      },
+                      {
+                        "field": "titulo_convocatoria"
+                      },
+                      {
+                        "field": "url_bases_regul"
+                      },
+                      {
+                        "field": "importe_total"
+                      },
+                      {
+                        "field": "tipo_beneficiario"
+                      },
+                      {
+                        "field": "sector_beneficiario"
+                      },
+                      {
+                        "field": "region_impacto"
+                      },
+                      {
+                        "field": "finalidad"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "filtering",
+                  "config": {
+                    "fields": [
+                      {
+                          "name": "facet_administracion",
+                          "queryParam": "administracion",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_departamento",
+                          "queryParam": "departamento",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_organo",
+                          "queryParam": "organo",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_tipoBeneficiario",
+                          "queryParam": "tipoBeneficiario",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_sectorBeneficiario",
+                          "queryParam": "sectorBeneficiario",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_regionImpacto",
+                          "queryParam": "regionImpacto",
+                          "type": "VALUE"
+                        },
+                        {
+                          "name": "facet_finalidad",
+                          "queryParam": "finalidad",
+                          "type": "VALUE"
+                        }
+                    ]
+                  }
+                },
+                {
+                  "name": "faceting",
+                  "config": {
+                    "context": "BROWSE",
+                    "enabled": true,
+                    "mainCollectionId": "governmentdata",
+                    "secondaryCollectionId": "governmentdata",
+                    "facetableFields": {
+                      "valueFacets": [
+                        {
+                          "field": "facet_administracion",
+                          "filterField": "administracion",
+                          "size": 100,
+                          "minCount": 1
+                        },
+                        {
+                          "field": "facet_departamento",
+                          "filterField": "departamento",
+                          "size": 100,
+                          "minCount": 1
+                        },
+                        {
+                           "field": "facet_organo",
+                           "filterField": "organo",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_tipoBeneficiario",
+                           "filterField": "tipoBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_sectorBeneficiario",
+                           "filterField": "sectorBeneficiario",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_regionImpacto",
+                           "filterField": "regionImpacto",
+                           "size": 100,
+                           "minCount": 1
+                        },
+                        {
+                           "field": "facet_finalidad",
+                           "filterField": "finalidad",
+                           "size": 100,
+                           "minCount": 1
+                        }
+                      ]
+                    },
+                    "facets": [
+                      "facet_administracion",
+                        "facet_departamento",
+                        "facet_organo",
+                        "facet_tipoBeneficiario",
+                        "facet_sectorBeneficiario",
+                        "facet_regionImpacto",
+                        "facet_finalidad"
+                    ]
+                  }
+                },
+                {
+                  "name": "debug"
+                }
+              ]
+            },
+            "id": "catalog",
+            "redisCached": false,
+            "redisTTL": 250,
+            "mainCollectionId": "governmentdata",
+            "type": "default"
+          }
+        ],
+        "type": "custom"
+      },
+      {
+        "id": "empathize",
+        "requestors": [
+          {
+            "id": "topTrends",
+            "mainCollectionId": "governmentdata",
+            "secondaryCollectionId": "governmentdata",
+            "collectionType": "EMPATHIZE",
+            "type": "default",
+            "redisCached": true,
+            "redisTTL": 250,
+            "features": {
+              "search": [
+                {
+                  "name": "empathizeMatchSearch",
+                  "config": {
+                    "field": "keywords",
+                    "queryOperator": "AND",
+                    "emptyQueryParamAllowed": true,
+                    "excludeExactMatch": false
+                  }
+                },
+                {
+                  "name": "filtering",
+                  "config": {
+                    "fields": [
+                      {
+                        "name": "extra_lang",
+                        "queryParam": "lang",
+                        "type": "VALUE"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "sorting",
+                  "config": {
+                    "defaultOrder": "DESC",
+                    "fields": [
+                      {
+                        "field": "_score",
+                        "order": "DESC"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "pagination",
+                  "config": {
+                    "start": 0,
+                    "rows": 10
+                  }
+                },
+                {
+                  "name": "grouping",
+                  "config": {
+                    "enabled": true,
+                    "field": "keywords.keyword"
+                  }
+                },
+                {
+                  "name": "totalHits",
+                  "config": {
+                    "disableTracking": true
+                  }
+                },
+                {
+                  "name": "searchHits",
+                  "config": {
+                    "returnableFields": [
+                      {
+                        "field": "keywords",
+                        "mandatory": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "debug"
+                }
+              ],
+              "fallback": [
+                {
+                  "name": "spellcheck",
+                  "config": {
+                    "collectionType": "EMPATHIZE",
+                    "enablePhraseSuggester": false,
+                    "mainCollectionId": "governmentdata",
+                    "secondaryCollectionId": "governmentdata"
+                  }
+                }
+              ]
+            },
+            "transformers": {
+              "document": {
+                "name": "fieldRename",
+                "config": {
+                  "fieldMappings": [
+                    {
+                      "from": "keywords",
+                      "to": "title_raw"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "type": "custom"
+      },
+      {
+        "id": "topclicked",
+        "type": "custom",
+        "requestors": [
+          {
+            "id": "topclicked",
+            "type": "default",
+            "redisCached": false,
+            "redisTTL": 250,
+            "mainCollectionId": "governmentdata",
+            "secondaryCollectionId": "governmentdata",
+            "features": {
+              "search": [
+                {
+                  "name": "topClickedSearch",
+                  "config": {
+                    "idFieldName": "id",
+                    "redisCached": false,
+                    "redisTTL": 250,
+                    "filters": [
+                      {
+                        "queryParam": "lang",
+                        "field": "extra.lang"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "pagination",
+                  "config": {
+                    "start": 0,
+                    "rows": 20
+                  }
+                },
+                {
+                  "name": "grouping",
+                  "config": {
+                    "enabled": true,
+                    "field": "id"
+                  }
+                },
+                {
+                  "name": "searchHits"
+                },
+                {
+                  "name": "totalHits"
+                },
+                {
+                  "name": "debug"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "field-values",
+        "type": "custom",
+        "requestors": [
+          {
+            "id": "attributes",
+            "type": "default",
+            "redisCached": false,
+            "redisTTL": 250,
+            "mainCollectionId": "governmentdata",
+            "features": {
+              "search": [
+                {
+                  "name": "fieldValues",
+                  "config": {
+                    "allowedFields": [
+                      {
+                        "fieldName": "administracion",
+                        "aggregationSize": 1000,
+                        "aggregationField": "administracion.raw"
+                      },
+                      {
+                        "fieldName": "tipo_beneficiario",
+                        "aggregationSize": 1000,
+                        "aggregationField": "tipo_beneficiario.raw"
+                      },
+                      {
+                        "fieldName": "departamento",
+                        "aggregationSize": 1000,
+                        "aggregationField": "departamento.raw"
+                      },
+                      {
+                        "fieldName": "organo",
+                        "aggregationSize": 1000,
+                        "aggregationField": "organo.raw"
+                      },
+                      {
+                        "fieldName": "region_impacto",
+                        "aggregationSize": 1000,
+                        "aggregationField": "region_impacto.raw"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "debug"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

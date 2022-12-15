@@ -1,0 +1,87 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "index.unassigned.node_left.delayed_timeout": "25m",
+    "analysis": {
+      "normalizer": {
+        "links_normalizer": {
+          "type": "custom",
+          "filter": [
+            "lowercase",
+            "asciifolding"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "filters": {
+          "path_match": "filters.*",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "eb_job_properties": {
+          "path_match": "_jobProperties.*",
+          "mapping": {
+            "index": false,
+            "type": "keyword"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "keyword"
+      },
+      "url": {
+        "type": "keyword"
+      },
+      "image_url": {
+        "type": "keyword"
+      },
+      "weight": {
+        "type": "integer"
+      },
+      "keywords": {
+        "type": "keyword",
+        "normalizer": "links_normalizer"
+      },
+      "match_all": {
+        "type": "boolean"
+      },
+      "langs": {
+        "type": "keyword"
+      },
+      "schedule": {
+        "properties": {
+          "activation_date": {
+            "type": "date",
+            "format": "date_time_no_millis"
+          },
+          "deactivation_date": {
+            "type": "date",
+            "format": "date_time_no_millis"
+          }
+        }
+      },
+      "created_on": {
+        "type": "date"
+      },
+      "updated_on": {
+        "type": "date"
+      }
+    }
+  }
+}

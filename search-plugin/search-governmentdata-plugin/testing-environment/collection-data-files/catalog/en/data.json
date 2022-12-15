@@ -1,0 +1,178 @@
+{
+  "documents": [
+    {
+      "name": "Apple",
+      "description": "This is a fruit",
+      "id": "1",
+      "boost_category": "FR01",
+      "facet_brand": "Pink Lady",
+      "facet_price": 9.99,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Food|01__01012",
+        "01__01012/Fruits and Vegetables|01__01012__0101200004",
+        "01__01012__0101200004/Fruits|01__01012__0101200004__010120000400"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01012",
+        "01__01012__0101200004",
+        "01__01012__0101200004__010120000400"
+      ]
+    },
+    {
+      "name": "Orange",
+      "description": "This is a fruit",
+      "id": "2",
+      "boost_category": "FR01",
+      "facet_brand": "Pink Lady",
+      "facet_price": 19.99,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Breakfast|01__01011",
+        "01/Food|01__01012",
+        "01__01012/Fruits and Vegetables|01__01012__0101200004",
+        "01__01012__0101200004/Fruits|01__01012__0101200004__010120000400"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01011",
+        "01__01012",
+        "01__01012__0101200004",
+        "01__01012__0101200004__010120000400"
+      ]
+    },
+    {
+      "name": "Kiwi",
+      "description": "This is a fruit",
+      "id": "3",
+      "boost_category": "FR02",
+      "facet_brand": "Ambrosia",
+      "facet_price": 4.99,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Food|01__01012",
+        "01__01012/Fruits and Vegetables|01__01012__0101200004",
+        "01__01012__0101200004/Fruits|01__01012__0101200004__010120000400"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01012",
+        "01__01012__0101200004",
+        "01__01012__0101200004__010120000400"
+      ]
+    },
+    {
+      "name": "Lemon",
+      "description": "This is a fruit",
+      "id": "4",
+      "boost_category": "FR03",
+      "facet_brand": "Zespri",
+      "facet_price": 0.99,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Food|01__01012",
+        "01__01012/Fruits and Vegetables|01__01012__0101200004",
+        "01__01012__0101200004/Fruits|01__01012__0101200004__010120000400"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01012",
+        "01__01012__0101200004",
+        "01__01012__0101200004__010120000400"
+      ]
+    },
+    {
+      "name": "Pineapple",
+      "description": "This is a fruit",
+      "id": "5",
+      "boost_category": "FR02",
+      "facet_brand": "Golden Ripe",
+      "facet_price": 1.98,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Food|01__01012",
+        "01__01012/Fruits and Vegetables|01__01012__0101200004",
+        "01__01012__0101200004/Fruits|01__01012__0101200004__010120000400"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01012",
+        "01__01012__0101200004",
+        "01__01012__0101200004__010120000400"
+      ]
+    },
+    {
+      "name": "Milk",
+      "description": "This is for breakfast",
+      "id": "6",
+      "boost_category": "BR01",
+      "facet_brand": "Covap",
+      "facet_price": 6.99,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Dairy|01__01010",
+        "01__01010/Milk|01__01010__0101000005"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01010",
+        "01__01010__0101000005"
+      ]
+    },
+    {
+      "name": "Cereals",
+      "description": "This is for breakfast",
+      "id": "7",
+      "boost_category": "BR01",
+      "facet_brand": "Kellogg's",
+      "facet_price": 2.49,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Breakfast|01__01011",
+        "01__01011/Cereals|01__01011__0101100006"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01011",
+        "01__01011__0101100006"
+      ]
+    },
+    {
+      "name": "Chocolate",
+      "description": "This is for breakfast",
+      "id": "8",
+      "boost_category": "BR02",
+      "facet_brand": "Covap",
+      "facet_price": 30.99,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Candy and Chocolate|01__01013",
+        "01__01013/Chocolate|01__01013__0101300007"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01013",
+        "01__01013__0101300007"
+      ]
+    },
+    {
+      "name": "Cookies",
+      "description": "This is for breakfast",
+      "id": "9",
+      "boost_category": "BR03",
+      "facet_brand": "Hershey's",
+      "facet_price": 1.16,
+      "facet_categories": [
+        "/Supermarket|01",
+        "01/Candy and Chocolate|01__01013",
+        "01__01013/Chocolate|01__01013__0101300007"
+      ],
+      "facet_categoriesIds": [
+        "01",
+        "01__01013",
+        "01__01013__0101300007"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "documents": [
+    {
+      "context": {
+        "keywords": [
+          "fruit"
+        ],
+        "pivots": {
+          "lang": [
+            "en"
+          ]
+        }
+      },
+      "elements_ranking": [
+        {
+          "filters": {
+          },
+          "schedule": {
+          },
+          "field_value": "4",
+          "action": "BOOST",
+          "type": "PRODUCTS",
+          "field_name": "id"
+        },
+        {
+          "filters": {
+          },
+          "schedule": {
+          },
+          "field_value": "FR01",
+          "action": "BURY",
+          "type": "ATTRIBUTES",
+          "field_name": "boost_category"
+        }
+      ]
+    },
+    {
+      "context": {
+        "keywords": [
+          "breakfast"
+        ],
+        "pivots": {
+          "lang": [
+            "en"
+          ]
+        }
+      },
+      "elements_ranking": [
+        {
+          "filters": {
+          },
+          "schedule": {
+          },
+          "field_value": "BR02",
+          "action": "BOOST",
+          "type": "ATTRIBUTES",
+          "field_name": "boost_category"
+        },
+        {
+          "filters": {
+          },
+          "schedule": {
+          },
+          "field_value": "6",
+          "action": "BURY",
+          "type": "PRODUCTS",
+          "field_name": "id"
+        }
+      ]
+    }
+  ]
+}
