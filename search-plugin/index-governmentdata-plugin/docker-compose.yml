@@ -1,0 +1,134 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:3.6.8
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./mongoData:/data/db"
+    environment:
+      - "MONGO_INITDB_DATABASE=index-platform"
+      - "--bind_ip_all"
+
+  index-builder-api:
+    image: harbor.internal.shared.empathy.co/empathyco/index-builder-api:22.6.1
+    container_name: index-builder-api
+    environment:
+      - "JAVA_HEAP=256m"
+      - "JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5004"
+      - "FEEDS_BASE_URI=s3://feeds/"
+      - "MONGO_HOST=mongodb://docker.for.mac.localhost:27017"
+      - "SPRING_PROFILES_ACTIVE=storage.s3,index.key.clientId"
+      - "REQUEST_SOURCE_SQS_QUEUE=index-inbound-queue"
+      - "REQUEST_SOURCE_SQS_REGION=us-east-1"
+      - "STORAGE_S3_REGION=us-east-1"
+      - "LOCALSTACK_ENABLED=true"
+      - "LOCALSTACK_HOST=http://docker.for.mac.localhost:4566"
+      - "AWS_REGION=us-east-1"
+      - "AWS_ACCESS_KEY_ID=test"
+      - "AWS_SECRET_ACCESS_KEY=test"
+    ports:
+    - "8080:8080"
+    - "5004:5004"
+
+  index-builder-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: governmentdata-builder-worker
+    container_name: governmentdata-builder-worker
+    environment:
+      - "JAVA_HEAP=512m"
+      - "JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+      - "DEPLOYER_API_URL=http://docker.for.mac.localhost:8280"
+      - "FEEDS_BASE_URI=s3://feeds/"
+      - "DEPLOYER_PACKAGES_BASE_URI=s3://transformed-feeds/"
+      - "MONGO_HOST=mongodb://docker.for.mac.localhost:27017"
+      - "SPRING_PROFILES_ACTIVE=storage.s3,plugin-files.local,synonyms.none,output.type.directory,deployer.connection.http,index.key.clientId"
+      - "REQUEST_SOURCE_SQS_QUEUE=index-inbound-queue"
+      - "REQUEST_SOURCE_SQS_REGION=us-east-1"
+      - "STORAGE_S3_REGION=us-east-1"
+      - "LOCALSTACK_ENABLED=true"
+      - "LOCALSTACK_HOST=http://docker.for.mac.localhost:4566"
+      - "AWS_REGION=us-east-1"
+      - "AWS_ACCESS_KEY_ID=test"
+      - "AWS_SECRET_ACCESS_KEY=test"
+    volumes:
+      - "~/.config:/.config"
+    ports:
+      - "8180:8180"
+      - "5005:5005"
+    depends_on:
+      - mongo
+      - localstack
+
+  index-deployer-api:
+    image: harbor.internal.shared.empathy.co/empathyco/index-deployer-api:22.5.2-50-gd82bad82
+    container_name: index-deployer-api
+    environment:
+      - "JAVA_HEAP=512m"
+      - "SPRING_PROFILES_ACTIVE=aws,elastic"
+      - "SNS_TOPIC_ARN=arn:aws:sns:us-east-1:000000000000:api-outbound-topic"
+      - "SQS_QUEUE_NAME=api-inbound-queue"
+      - "LOCALSTACK_ENABLED=true"
+      - "LOCALSTACK_HOST=http://docker.for.mac.localhost:4566"
+      - "AWS_REGION=us-east-1"
+      - "AWS_ACCESS_KEY_ID=test"
+      - "AWS_SECRET_ACCESS_KEY=test"
+      - "PROMETHEUS_PORT=8083"
+      - "MONGO_HOST=mongodb://docker.for.mac.localhost:27017"
+    ports:
+    - "8280:8280"
+    depends_on:
+      - mongo
+
+  index-deployer-worker:
+    image: harbor.internal.shared.empathy.co/empathyco/index-deployer-worker:22.5.2-50-gd82bad82
+    container_name: index-deployer-worker
+    environment:
+      - "JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5007"
+      - "SPRING_PROFILES_ACTIVE=aws,elastic"
+      - "INDEX_DOCID_FIELD_NAME=id"
+      - "SNS_TOPIC_ARN=arn:aws:sns:us-east-1:000000000000:worker-outbound-topic"
+      - "SQS_QUEUE_NAME=worker-inbound-queue"
+      - "INDEX_DEPLOYER_INSTANCE_ID=worker"
+      - "MONGO_HOST=mongodb://docker.for.mac.localhost:27017"
+      - "JMX_PORT=10076"
+      - "LOCALSTACK_ENABLED=true"
+      - "LOCALSTACK_HOST=http://docker.for.mac.localhost:4566"
+      - "AWS_REGION=us-east-1"
+      - "AWS_ACCESS_KEY_ID=test"
+      - "AWS_SECRET_ACCESS_KEY=test"
+      - "ELASTIC_WRITE_URL=http://docker.for.mac.localhost:9200"
+    ports:
+      - "8380:8380"
+      - "5007:5007"
+    depends_on:
+      - mongo
+      - localstack
+
+  localstack:
+    container_name: "localstack"
+    image: "localstack/localstack:0.14.2"
+    ports:
+      - "4566:4566"
+      - "4571:4571"
+      - "8055:8080"
+    environment:
+      - "AWS_METADATA_SERVICE_NUM_ATTEMPTS=5"
+      - "AWS_METADATA_SERVICE_TIMEOUT=10"
+      - "AWS_REGION=us-east-1"
+      - "DOCKER_HOST=unix:///var/run/docker.sock"
+      - "HOSTNAME=localhost"
+      - "HOSTNAME_EXTERNAL=docker.for.mac.localhost"
+      - "SERVICES=s3,sqs,sns"
+    volumes:
+      - "localstack-data:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./init:/docker-entrypoint-initaws.d"
+      - "./feeds/startup_feeds:/startup_feeds"
+      - "./feeds/transformed_feeds:/transformed_feeds"
+volumes:
+  localstack-data:
+    driver: "local"

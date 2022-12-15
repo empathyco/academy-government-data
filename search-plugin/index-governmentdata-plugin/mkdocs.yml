@@ -1,0 +1,16 @@
+site_name: 'governmentdata Index Plugin documentation'
+repo_url: https://github.com/empathyco/index-governmentdata-plugin
+edit_uri: edit/main/docs/
+
+plugins:
+  - techdocs-core
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: "#"
+      baselevel: 1
+nav:
+  - Home: index.md
+  - Release_Notes: release-notes.md
